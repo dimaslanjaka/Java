@@ -1,0 +1,3 @@
+
+rootProject.name='Dimas Lanjaka Project'
+include ':app'//, ':jsevaluator'

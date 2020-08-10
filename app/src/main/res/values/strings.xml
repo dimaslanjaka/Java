@@ -1,0 +1,17 @@
+<resources>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">dimaslanjaka@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+
+    <string name="admob_app_id">ca-app-pub-1401042984941951~8841940252</string>
+    <string name="test_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="test_inter">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="test_reward">ca-app-pub-3940256099942544/5224354917</string>
+
+    <string name="error_no_yt_link">Not a valid YouTube link!</string>
+    <string name="app_update">Couldn\'t extract URLs you may need an update:
+        <a href="https://github.com/dimaslanjaka/Android/releases/latest">latest GitHub release</a></string>
+
+</resources>
