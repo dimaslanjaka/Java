@@ -5,3 +5,4 @@ git commit -am "Re-index Repository"
 rem git branch -D master
 rem git branch -m master
 git push -f origin master
+git push -u --force origin master
