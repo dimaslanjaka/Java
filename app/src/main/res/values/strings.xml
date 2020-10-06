@@ -1,0 +1,62 @@
+<resources>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">dimaslanjaka@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+
+    <string name="admob_app_id">ca-app-pub-1401042984941951~8841940252</string>
+    <string name="test_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="test_inter">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="test_reward">ca-app-pub-3940256099942544/5224354917</string>
+
+    <string name="error_no_yt_link">Not a valid YouTube link!</string>
+    <string name="app_update">Couldn\'t extract URLs you may need an update:
+        <a href="https://bit.ly/l3n4r0x-android">Latest release</a>
+    </string>
+    <string name="downloading">Downloading…</string>
+    <string name="title">Title</string>
+    <string name="settings">Settings</string>
+    <string name="friends">Friends</string>
+    <string name="group">Group</string>
+    <string name="fanpage">Fanpage</string>
+
+    <string name="restart">Restart</string>
+    <string name="permission_description">Please allow permission to access storage and unknown third party app</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="download_speed">Download Speed</string>
+    <string name="upload_speed">Upload Speed</string>
+    <string name="bot_status">Bot Status</string>
+    <string name="nightmode">NightMode</string>
+    <string name="banner_1_id">BANNER 1 ID</string>
+    <string name="banner_2_id">BANNER 2 ID</string>
+    <string name="masukkan_id_banner_1">Masukkan ID BANNER 1</string>
+    <string name="masukkan_id_banner_2">Masukkan ID BANNER 2</string>
+    <string name="banner_3_id">BANNER 3 ID</string>
+    <string name="masukkan_id_banner_3">Masukkan ID BANNER 3</string>
+    <string name="masukkan_id_banner_4">Masukkan ID BANNER 4</string>
+    <string name="banner_4_id">BANNER 4 ID</string>
+    <string name="banner_5_id">BANNER 5 ID</string>
+    <string name="masukkan_id_banner_5">Masukkan ID BANNER 5</string>
+    <string name="auto_mode">Auto Mode</string>
+    <string name="refresh_time_secs">refresh time (secs)</string>
+    <string name="refresh">Refresh</string>
+    <string name="interstitial">Interstritial</string>
+    <string name="rewarded">Rewarded</string>
+    <string name="info">Info</string>
+    <string name="action_settings">Settings</string>
+    <string name="change_log">Change Log</string>
+    <string name="icon">Icon</string>
+    <string name="hotspot_vpn_status">Hotspot VPN Status</string>
+    <string name="netspeed_desc">Android Internet Logger. Records all traffic and save usage data for unlimited date</string>
+    <string name="total">Total</string>
+    <string name="mobile">Mobile</string>
+    <string name="wifi">Wifi</string>
+    <string name="date">Date</string>
+    <string name="today">Today</string>
+    <string name="_0kb">0Kb</string>
+    <string name="simcard">Simcard</string>
+    <string name="otp_password">OTP Password</string>
+    <string name="key">Key</string>
+    <string name="telkomsel_number">Telkomsel Number</string>
+</resources>

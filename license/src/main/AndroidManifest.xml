@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dimaslanjaka.tools.Helpers.license">
+
+    <uses-sdk tools:overrideLibrary="com.google.android.gms.all, androidx.appcompat, android.app, android.support.test, android.support.test.rule, android.support.test.espresso, android.support.test.espresso.idling, android.support.test.uiautomator.v18" />
+
+    <!-- Required permission to check licensing. -->
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+
+    <application />
+</manifest>

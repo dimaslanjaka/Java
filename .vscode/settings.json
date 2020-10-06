@@ -1,0 +1,16 @@
+{
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "d:\\Cloned\\Libs\\java-json.jar",
+    "b:\\Users\\L3n4r0x\\AppData\\Local\\Android\\Sdk\\platforms\\android-29\\android.jar",
+    "b:\\Users\\L3n4r0x\\AppData\\Local\\Android\\Sdk\\platforms\\android-29\\android-stubs-src.jar",
+    "b:\\Users\\L3n4r0x\\AppData\\Local\\Android\\Sdk\\platforms\\android-29\\uiautomator.jar",
+    "b:\\Users\\L3n4r0x\\AppData\\Local\\Android\\Sdk\\platforms\\android-29\\data\\layoutlib.jar"
+  ],
+  "java.dependency.packagePresentation": "flat",
+  "java.completion.enabled": true,
+  "java.import.gradle.enabled": true,
+  "java.import.maven.enabled": false,
+  "java.dependency.syncWithFolderExplorer": true,
+  "java.configuration.updateBuildConfiguration": "automatic"
+}

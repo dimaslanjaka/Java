@@ -1,0 +1,3 @@
+[[ Build 2.1.1.20200915121901: ]]
+- Fix android 6 - 10
+- New release fix force close android 6 - 10

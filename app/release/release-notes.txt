@@ -1,0 +1,2 @@
+- Fix android 6 - 10
+- New release fix force close android 6 - 10
