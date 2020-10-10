@@ -1,0 +1,4 @@
+{
+  "npm.packageManager": "yarn",
+  "prettier.packageManager": "yarn"
+}
