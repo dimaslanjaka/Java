@@ -1,0 +1,194 @@
+package com.dimaslanjaka.webview
+
+import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
+import com.sun.webkit.network.CookieManager
+import java.io.File
+import java.net.CookieHandler
+import java.net.URI
+import java.nio.charset.StandardCharsets
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.util.*
+
+object CookieUtils {
+    private val DAYS = arrayOf("Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
+    private val MONTHS = arrayOf("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan")
+    @JvmStatic
+    var cookiepath: String = "cookies.json"
+        set(cookiepath1) {
+            FileUtils.write(File(cookiepath1), "{}")
+            field = cookiepath1
+        }
+
+    @JvmStatic
+    fun saveCookies() {
+        try {
+            val cookieManager = CookieHandler.getDefault() as CookieManager
+            val f = cookieManager.javaClass.getDeclaredField("store")
+            f.isAccessible = true
+            val cookieStore = f[cookieManager]
+            val bucketsField = Class.forName("com.sun.webkit.network.CookieStore").getDeclaredField("buckets")
+            bucketsField.isAccessible = true
+            val buckets = bucketsField[cookieStore] as Map<*, *>
+            f.isAccessible = true
+            val cookiesToSave: MutableMap<String, Collection<*>> = LinkedHashMap()
+            for (o in buckets.entries) {
+                val entry = o as Map.Entry<*, *>
+                val domain = entry.key as String
+                val cookies = entry.value as Map<*, *>
+                cookiesToSave[domain] = cookies.values
+            }
+            val gson = GsonBuilder().setPrettyPrinting().create()
+            val json = gson.toJson(cookiesToSave)
+            Files.write(Paths.get("cookies.json"), json.toByteArray(StandardCharsets.UTF_8))
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    @JvmStatic
+    fun loadCookies() {
+        try {
+            val bytes = Files.readAllBytes(Paths.get(cookiepath))
+            val json = String(bytes, StandardCharsets.UTF_8)
+            val gson = GsonBuilder().setPrettyPrinting().create()
+            val type = object : TypeToken<Map<String?, Collection<CookieJson?>?>?>() {}.type
+            val cookiesToLoad = gson.fromJson<Map<String, Collection<CookieJson>>>(json, type)
+            for (domain in cookiesToLoad.keys) {
+                val cookies = cookiesToLoad[domain]
+                val m: MutableMap<String, List<String>> = LinkedHashMap()
+                val list: MutableList<String> = ArrayList()
+                m["Set-Cookie"] = list
+                for (cookie in cookies!!) {
+                    list.add(format(
+                            cookie.name,
+                            cookie.value,
+                            cookie.domain,
+                            cookie.path,
+                            cookie.expiryTime!!,
+                            cookie.secureOnly,
+                            cookie.httpOnly
+                    ))
+                }
+                CookieHandler.getDefault().put(URI("http://$domain/"), m)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun format(
+            name: String?,
+            value: String?,
+            domain: String?,
+            path: String?,
+            maxAge: Long,
+            isSecure: Boolean,
+            isHttpOnly: Boolean): String {
+
+        // Check arguments
+        require(!(name == null || name.length == 0)) { "Bad cookie name" }
+
+        // Name is checked for legality by servlet spec, but can also be passed directly so check again for quoting
+        // Per RFC6265, Cookie.name follows RFC2616 Section 2.2 token rules
+        //Syntax.requireValidRFC2616Token(name, "RFC6265 Cookie name");
+        // Ensure that Per RFC6265, Cookie.value follows syntax rules
+        //Syntax.requireValidRFC6265CookieValue(value);
+
+        // Format value and params
+        val buf = StringBuilder()
+        buf.setLength(0)
+        buf.append(name).append('=').append(value ?: "")
+
+        // Append path
+        if (path != null && path.length > 0) buf.append(";Path=").append(path)
+
+        // Append domain
+        if (domain != null && domain.length > 0) buf.append(";Domain=").append(domain)
+
+        // Handle max-age and/or expires
+        if (maxAge >= 0) {
+            // Always use expires
+            // This is required as some browser (M$ this means you!) don't handle max-age even with v1 cookies
+            buf.append(";Expires=")
+            if (maxAge == 0L) {
+                buf.append(formatCookieDate(0).trim { it <= ' ' })
+            } else {
+                buf.append(formatCookieDate(System.currentTimeMillis() + 1000L * maxAge))
+            }
+            buf.append(";Max-Age=")
+            buf.append(maxAge)
+        }
+
+        // add the other fields
+        if (isSecure) {
+            buf.append(";Secure")
+        }
+        if (isHttpOnly) {
+            buf.append(";HttpOnly")
+        }
+        return buf.toString()
+    }
+
+    /**
+     * Format "EEE, dd-MMM-yy HH:mm:ss 'GMT'" for cookies
+     *
+     * @param date the date in milliseconds
+     */
+    private fun formatCookieDate(date: Long): String {
+        val gc = GregorianCalendar(TimeZone.getTimeZone("GMT"))
+        gc.timeInMillis = date
+        val day_of_week = gc[Calendar.DAY_OF_WEEK]
+        val day_of_month = gc[Calendar.DAY_OF_MONTH]
+        val month = gc[Calendar.MONTH]
+        var year = gc[Calendar.YEAR]
+        year = year % 10000
+        var epoch = (date / 1000 % (60 * 60 * 24)).toInt()
+        val seconds = epoch % 60
+        epoch = epoch / 60
+        val minutes = epoch % 60
+        val hours = epoch / 60
+        val buf = StringBuilder()
+        buf.append(DAYS[day_of_week])
+        buf.append(',')
+        buf.append(' ')
+        append2digits(buf, day_of_month)
+        buf.append('-')
+        buf.append(MONTHS[month])
+        buf.append('-')
+        append2digits(buf, year / 100)
+        append2digits(buf, year % 100)
+        buf.append(' ')
+        append2digits(buf, hours)
+        buf.append(':')
+        append2digits(buf, minutes)
+        buf.append(':')
+        append2digits(buf, seconds)
+        buf.append(" GMT")
+        return buf.toString()
+    }
+    /* ------------------------------------------------------------ */
+    /**
+     * Append 2 digits (zero padded) to the StringBuilder
+     *
+     * @param buf the buffer to append to
+     * @param i   the value to append
+     */
+    private fun append2digits(buf: StringBuilder, i: Int) {
+        if (i < 100) {
+            buf.append((i / 10 + '0'.toInt()).toChar())
+            buf.append((i % 10 + '0'.toInt()).toChar())
+        }
+    }
+
+    private class CookieJson {
+        val name: String? = null
+        val value: String? = null
+        val expiryTime: Long? = null
+        val domain: String? = null
+        val path: String? = null
+        val secureOnly = false
+        val httpOnly = false
+    }
+}

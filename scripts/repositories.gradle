@@ -1,0 +1,24 @@
+repositories {
+    google()
+    mavenCentral()
+    mavenLocal()
+    gradlePluginPortal()
+    jcenter()
+
+    maven { url = 'https://dl.google.com/dl/android/maven2/' }
+    maven { url = 'https://maven.google.com/' }
+    maven { url = "https://dl.bintray.com/kotlin/kotlin-eap" }
+    maven { url = "https://kotlin.bintray.com/kotlinx" }
+    maven { url = 'https://maven.repository.redhat.com/ga/' }
+    maven { url = 'https://jitpack.io' }
+    maven { url = 'https://plugins.gradle.org/m2/' }
+    maven { url = 'https://repo.maven.apache.org/maven2' }
+    maven { url = 'https://nexus.xebialabs.com/nexus/content/groups/public/' }
+    maven { url = 'https://repo1.maven.org/maven2' }
+    maven { url = 'http://devrepo.kakao.com:8088/nexus/content/repositories/central/' }
+    maven { url = 'http://maven.51haoyayi.com:18081/nexus/content/repositories/jcenter/' }
+    maven { url = 'https://packages.atlassian.com/maven-external/' }
+    maven { url = 'https://archiva.interlocsolutions.com/archiva/repository/internal/' }
+    maven { url = 'https://repository.axelor.com/nexus/service/rest/repository/browse/maven-public/' }
+}
+

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="Android.buildSrc" target="13" />
+      <module name="Android.buildSrc.main" target="13" />
+      <module name="Android.buildSrc.test" target="13" />
+      <module name="buildSrc2" target="13" />
+      <module name="buildSrc2.main" target="13" />
+      <module name="buildSrc2.test" target="13" />
+      <module name="Facebot.bot.ObservableCollections.observablecollections" target="13" />
+      <module name="Facebot.bot.PersistentCookieJar.okhttp3-persistent-cookiejar" target="13" />
+      <module name="gradle-plugin" target="13" />
+      <module name="gradle-plugin.main" target="13" />
+      <module name="gradle-plugin.test" target="13" />
+    </bytecodeTargetLevel>
   </component>
 </project>

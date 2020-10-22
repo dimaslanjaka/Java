@@ -1,16 +1,20 @@
 {
-  "java.project.referencedLibraries": [
-    "lib/**/*.jar",
-    "d:\\Cloned\\Libs\\java-json.jar",
-    "b:\\Users\\L3n4r0x\\AppData\\Local\\Android\\Sdk\\platforms\\android-29\\android.jar",
-    "b:\\Users\\L3n4r0x\\AppData\\Local\\Android\\Sdk\\platforms\\android-29\\android-stubs-src.jar",
-    "b:\\Users\\L3n4r0x\\AppData\\Local\\Android\\Sdk\\platforms\\android-29\\uiautomator.jar",
-    "b:\\Users\\L3n4r0x\\AppData\\Local\\Android\\Sdk\\platforms\\android-29\\data\\layoutlib.jar"
-  ],
-  "java.dependency.packagePresentation": "flat",
-  "java.completion.enabled": true,
-  "java.import.gradle.enabled": true,
-  "java.import.maven.enabled": false,
-  "java.dependency.syncWithFolderExplorer": true,
-  "java.configuration.updateBuildConfiguration": "automatic"
+  "gradle.disableConfirmations": true,
+  "gradle.debug": true,
+  "gradle.javaDebug": {
+    "clean": true,
+    "tasks": [
+      "run",
+      "runBoot",
+      "test",
+      "intTest",
+      "integration"
+    ]
+  },
+  "gradle.nestedProjects": false,
+  "gradle.autoDetect": "on",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+  "npm.packageManager": "yarn",
+  "prettier.packageManager": "yarn"
 }

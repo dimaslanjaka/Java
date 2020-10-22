@@ -22,29 +22,9 @@
       <option name="url" value="https://repo.maven.apache.org/maven2/" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="IDEScout, Inc." />
-      <option name="name" value="IDEScout, Inc." />
-      <option name="url" value="http://www.idescout.com/maven/repo/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="injected_offline_android-gradle-plugin-3.5.0-beta01" />
-      <option name="name" value="injected_offline_android-gradle-plugin-3.5.0-beta01" />
-      <option name="url" value="file:/$USER_HOME$/.android/manual-offline-m2/android-gradle-plugin-3.5.0-beta01/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="maven2" />
-      <option name="name" value="maven2" />
-      <option name="url" value="https://plugins.gradle.org/m2/" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="BintrayJCenter" />
       <option name="name" value="BintrayJCenter" />
       <option name="url" value="https://jcenter.bintray.com/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="maven3" />
-      <option name="name" value="maven3" />
-      <option name="url" value="https://maven.fabric.io/public" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="maven" />
@@ -55,6 +35,241 @@
       <option name="id" value="Google" />
       <option name="name" value="Google" />
       <option name="url" value="https://dl.google.com/dl/android/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven3" />
+      <option name="name" value="maven3" />
+      <option name="url" value="https://maven.mozilla.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven7" />
+      <option name="name" value="maven7" />
+      <option name="url" value="http://maven.restlet.org" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven9" />
+      <option name="name" value="maven9" />
+      <option name="url" value="https://repo.spring.io/milestone" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven6" />
+      <option name="name" value="maven6" />
+      <option name="url" value="http://maven.springframework.org/release" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="https://maven.google.com" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven10" />
+      <option name="name" value="maven10" />
+      <option name="url" value="https://repo.gradle.org/gradle/libs-releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven5" />
+      <option name="name" value="maven5" />
+      <option name="url" value="https://plugins.gradle.org/m2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Gradle Central Plugin Repository" />
+      <option name="name" value="Gradle Central Plugin Repository" />
+      <option name="url" value="https://plugins.gradle.org/m2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven8" />
+      <option name="name" value="maven8" />
+      <option name="url" value="https://repo.spring.io/snapshot" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven11" />
+      <option name="name" value="maven11" />
+      <option name="url" value="https://maven.pkg.github.com/dimaslanjaka/gradle-plugin" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven5" />
+      <option name="name" value="maven5" />
+      <option name="url" value="https://jetbrains.bintray.com/intellij-plugin-service" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven4" />
+      <option name="name" value="maven4" />
+      <option name="url" value="https://oss.sonatype.org/content/repositories/releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="http://nexus.openolat.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven6" />
+      <option name="name" value="maven6" />
+      <option name="url" value="http://esd4j.org/jabylon/repository/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="https://dl.bintray.com/kotlin/kotlinx" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven26" />
+      <option name="name" value="maven26" />
+      <option name="url" value="https://repo.spring.io/libs-milestone/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven30" />
+      <option name="name" value="maven30" />
+      <option name="url" value="http://www.jabylon.org/maven/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven12" />
+      <option name="name" value="maven12" />
+      <option name="url" value="https://maven.restlet.org" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven27" />
+      <option name="name" value="maven27" />
+      <option name="url" value="https://repo.hortonworks.com/content/repositories/releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven22" />
+      <option name="name" value="maven22" />
+      <option name="url" value="https://maven.fabric.io/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven16" />
+      <option name="name" value="maven16" />
+      <option name="url" value="https://repo1.maven.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven35" />
+      <option name="name" value="maven35" />
+      <option name="url" value="http://maven2.javacpp.googlecode.com/git/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven28" />
+      <option name="name" value="maven28" />
+      <option name="url" value="https://repo.spring.io/libs-release/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven20" />
+      <option name="name" value="maven20" />
+      <option name="url" value="https://dl.bintray.com/android/android-tools" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven4" />
+      <option name="name" value="maven4" />
+      <option name="url" value="https://dl.bintray.com/jetbrains/kotlin-native-dependencies" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven5" />
+      <option name="name" value="maven5" />
+      <option name="url" value="https://dl.bintray.com/kotlin/kotlin-eap" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven9" />
+      <option name="name" value="maven9" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/ea/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven3" />
+      <option name="name" value="maven3" />
+      <option name="url" value="https://dl.bintray.com/kotlin/ktor" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven36" />
+      <option name="name" value="maven36" />
+      <option name="url" value="http://maven2.javacv.googlecode.com/git/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven21" />
+      <option name="name" value="maven21" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven25" />
+      <option name="name" value="maven25" />
+      <option name="url" value="https://maven.atlassian.com/content/repositories/atlassian-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven24" />
+      <option name="name" value="maven24" />
+      <option name="url" value="https://repo.spring.io/plugins-release/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven32" />
+      <option name="name" value="maven32" />
+      <option name="url" value="http://backend.webmanajemen.com/artifact/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven7" />
+      <option name="name" value="maven7" />
+      <option name="url" value="https://dl.bintray.com/touchlabpublic/kotlin" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven6" />
+      <option name="name" value="maven6" />
+      <option name="url" value="https://dl.bintray.com/kodein-framework/Kodein-DI" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven11" />
+      <option name="name" value="maven11" />
+      <option name="url" value="https://maven.springframework.org/release" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven12" />
+      <option name="name" value="maven12" />
+      <option name="url" value="https://nexus.gluonhq.com/nexus/content/repositories/releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven42" />
+      <option name="name" value="maven42" />
+      <option name="url" value="https://kotlin.bintray.com/kotlinx" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven47" />
+      <option name="name" value="maven47" />
+      <option name="url" value="https://nexus.xebialabs.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven49" />
+      <option name="name" value="maven49" />
+      <option name="url" value="http://devrepo.kakao.com:8088/nexus/content/repositories/central/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven43" />
+      <option name="name" value="maven43" />
+      <option name="url" value="https://maven.repository.redhat.com/ga/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven51" />
+      <option name="name" value="maven51" />
+      <option name="url" value="https://packages.atlassian.com/maven-external/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven50" />
+      <option name="name" value="maven50" />
+      <option name="url" value="http://maven.51haoyayi.com:18081/nexus/content/repositories/jcenter/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven40" />
+      <option name="name" value="maven40" />
+      <option name="url" value="https://maven.google.com/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven46" />
+      <option name="name" value="maven46" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven53" />
+      <option name="name" value="maven53" />
+      <option name="url" value="https://repository.axelor.com/nexus/service/rest/repository/browse/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven52" />
+      <option name="name" value="maven52" />
+      <option name="url" value="https://archiva.interlocsolutions.com/archiva/repository/internal/" />
     </remote-repository>
   </component>
 </project>

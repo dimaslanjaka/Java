@@ -2,5 +2,28 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/clone-facebook" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/EasyGradle" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/IDEA.Dependencies" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/MavenHelper" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/NanoHTTPd/ngrok-java" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/StyleableToast" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/Toasty" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/ant-ivy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/ftp-sync" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/gradle-aggregate-javadocs-plugin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/gradle-taskinfo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/gradle-versions-plugin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/ivypot-gradle-plugin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/java-helper-library" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/javafxwebview" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/module-dependency-graph" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/protobuf-gradle-plugin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java-cookie" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java-cookie/DesktopApplicationBootstrap" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java-cookie/browser" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/CrossPlatformCrypto" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scripts/serve-index" vcs="Git" />
   </component>
 </project>
