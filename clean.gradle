@@ -1,68 +1,12 @@
-import org.gradle.work.ChangeType
-import org.gradle.work.Incremental
-import org.gradle.work.InputChanges
-
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.nio.file.attribute.BasicFileAttributes
 import java.nio.file.attribute.FileTime
 import java.util.function.BiPredicate
 
-def userhome = System.getProperty("user.home")
-def gradlehome = new File(userhome, ".gradle")
-def gradlecache = new File(gradlehome, "caches")
-def userdir = System.getProperty("user.dir")
-def scriptDir = new File(getClass().protectionDomain.codeSource.location.path).parent
-def scriptFile = getClass().protectionDomain.codeSource.location.path
-
-task CleanCache(){
+task CleanCache(type: IncrementalCacheCleaner, depensOn: clean) {
     description = "cleaning gradle cache from home directory"
     group = "gradle-plugin"
-    println 'Cleaning started'
-    doLast {
-        println 'Cleaning stopped'
-    }
-    def listCacheFiles = Files.find(Paths.get(gradlecache.absolutePath),
-            Integer.MAX_VALUE, new BiPredicate<java.nio.file.Path, BasicFileAttributes>() {
-        @Override
-        boolean test(java.nio.file.Path path, BasicFileAttributes basicFileAttributes) {
-            return basicFileAttributes.isRegularFile() || basicFileAttributes.isDirectory()
-        }
-    })
-    Date currentDate = new Date()
-    Calendar cal = Calendar.getInstance()
-    cal.setTime(currentDate)
-    cal.add(Calendar.HOUR, -96) // - 96 hour
-    Date expiredate = cal.getTime()
-    listCacheFiles.each { java.nio.file.Path file ->
-        BasicFileAttributes attrs = Files.readAttributes(file, BasicFileAttributes.class)
-        FileTime time = attrs.lastAccessTime()
-        Date modifiedDate = new Date(time.toMillis())
-        if (modifiedDate.before(expiredate)) {
-            File target = file.toFile()
-            if (target.name.equalsIgnoreCase("NUL")) {
-                // @see "https://stackoverflow.com/questions/15464111/run-cmd-commands-through-java"
-                ProcessBuilder builder = new ProcessBuilder("Del \\\\?\\${target.absolutePath}")
-                builder.redirectErrorStream(true)
-                Process p = builder.start()
-                BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()))
-                String line
-                while (true) {
-                    line = r.readLine()
-                    if (line == null) { break }
-                    System.out.println(line)
-                }
-                return
-            }
-            if (target.exists() && target.canWrite()) {
-                if (target.isDirectory()) {
-                    target.deleteDir()
-                } else if (target.isFile()) {
-                    target.delete()
-                }
-            }
-        }
-    }
 }
 
 allprojects {
@@ -70,43 +14,79 @@ allprojects {
     apply from: "${project.rootDir}/scripts/reporter.gradle"
 }
 
-static Properties readProps(File file){
-    Properties props = new Properties()
-    InputStream is = new FileInputStream(file.absolutePath)
-    props.load(is)
-    is.close()
-    return props
-}
 
 abstract class IncrementalCacheCleaner extends DefaultTask {
-    @Incremental
-    @PathSensitive(PathSensitivity.NAME_ONLY)
-    @InputDirectory
-    abstract DirectoryProperty getInputDir()
-
-    @OutputDirectory
-    abstract DirectoryProperty getOutputDir()
-
-    @Input
-    abstract Property<String> getInputProperty()
-
     @TaskAction
-    void execute(InputChanges inputChanges) {
-        println(inputChanges.incremental
-                ? 'Executing incrementally'
-                : 'Executing non-incrementally'
-        )
+    void execute() {
+        println 'Cleaning started'
+        Project project = getProject()
+        def userhome = System.getProperty("user.home")
+        def gradlehome = new File(userhome, ".gradle")
+        def gradlecache = new File(gradlehome, "caches")
+        def userdir = System.getProperty("user.dir")
+        def scriptDir = new File(getClass().protectionDomain.codeSource.location.path).parent
+        def scriptFile = getClass().protectionDomain.codeSource.location.path
+        def out = "${project.buildDir}/cleaner.properties" as File
+        Properties prop = readProps(out)
 
-        inputChanges.getFileChanges(inputDir).each { change ->
-            if (change.fileType == FileType.DIRECTORY) return
-
-            println "${change.changeType}: ${change.normalizedPath}"
-            def targetFile = outputDir.file(change.normalizedPath).get().asFile
-            if (change.changeType == ChangeType.REMOVED) {
-                targetFile.delete()
-            } else {
-                targetFile.text = change.file.text.reverse()
+        def listCacheFiles = Files.find(Paths.get(gradlecache.absolutePath),
+                Integer.MAX_VALUE, new BiPredicate<java.nio.file.Path, BasicFileAttributes>() {
+            @Override
+            boolean test(java.nio.file.Path path, BasicFileAttributes basicFileAttributes) {
+                return basicFileAttributes.isRegularFile() || basicFileAttributes.isDirectory()
+            }
+        })
+        Date currentDate = new Date()
+        Calendar cal = Calendar.getInstance()
+        cal.setTime(currentDate)
+        cal.add(Calendar.HOUR, -96) // - 96 hour
+        Date expiredate = cal.getTime()
+        listCacheFiles.each { java.nio.file.Path file ->
+            BasicFileAttributes attrs = Files.readAttributes(file, BasicFileAttributes.class)
+            FileTime time = attrs.lastAccessTime()
+            Date modifiedDate = new Date(time.toMillis())
+            if (modifiedDate.before(expiredate)) {
+                File target = file.toFile()
+                if (target.name.equalsIgnoreCase("NUL")) {
+                    // @see "https://stackoverflow.com/questions/15464111/run-cmd-commands-through-java"
+                    ProcessBuilder builder = new ProcessBuilder("Del \\\\?\\${target.absolutePath}")
+                    builder.redirectErrorStream(true)
+                    Process p = builder.start()
+                    BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()))
+                    String line
+                    while (true) {
+                        line = r.readLine()
+                        if (line == null) {
+                            break
+                        }
+                        System.out.println(line)
+                    }
+                    return
+                }
+                if (target.exists() && target.canWrite()) {
+                    if (target.isDirectory()) {
+                        target.deleteDir()
+                    } else if (target.isFile()) {
+                        target.delete()
+                    }
+                    prop.put(target.absolutePath, currentDate.toString())
+                }
             }
         }
+
+        // save information
+        OutputStream stream = new FileOutputStream(out)
+        prop.store(stream, new Date().toString())
+        println 'Cleaning stopped'
+    }
+
+    static Properties readProps(File file) {
+        if (!file.parentFile.exists()) file.parentFile.mkdirs()
+        if (!file.exists()) file.createNewFile()
+        Properties props = new Properties()
+        InputStream is = new FileInputStream(file.absolutePath)
+        props.load(is)
+        is.close()
+        return props
     }
 }

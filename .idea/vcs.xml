@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bot/ObservableCollections" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bot/PersistentCookieJar" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/clone-facebook" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gradle-plugin" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/EasyGradle" vcs="Git" />
