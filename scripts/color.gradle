@@ -1,0 +1,10 @@
+import org.gradle.logging.StyledTextOutput;
+import org.gradle.logging.StyledTextOutputFactory;
+import static org.gradle.logging.StyledTextOutput.Style;
+
+StyledTextOutput o = services.get(StyledTextOutputFactory).create("test string")
+
+task taskname << {
+    o.withStyle(Style.Description).append("Hello world!")
+    // Style.?? Can be normal, header, userinput, identifier, description, progressstatus, failure, info, or error
+}

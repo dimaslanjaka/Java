@@ -1,0 +1,111 @@
+allprojects {
+    afterEvaluate { subproject ->
+        subproject.version = getVersion()
+        subproject.ext.version = getVersion()
+        subproject.ext.kotlin_version = project["kotlin_version"]
+        subproject.ext.groovy_version = project["groovy_version"]
+        subproject.ext.ktor_version = project["ktor_version"]
+
+        // Only check if we are doing build type tasks. Things like dependency listing
+        // should still work with a "wrong" java version.
+        //final def buildTasks = ['build', 'preBuild', 'compileJava', 'assembleDebug', 'sync', 'compileGroovy', 'compileKotlin', 'classes', 'testClasses', 'assemble', 'check', 'compileDebugKotlin']
+        // Task.doFirst does not run if the task has no work to do. Need to be more aggressive than that.
+        // Some projects won't have all of these tasks, so need to use findByName.
+        //buildTasks.each { subproject.tasks.findByName(it)?.dependsOn(":bot:repack:RepackArtifacts") }
+        /*
+        subproject.tasks.each {
+            if (it.name != "RepackArtifacts" && it.name != "clean") {
+                subproject.tasks.findByName(it.name).dependsOn(":bot:repack:RepackArtifacts")
+            }
+        }
+        */
+        def propsFile = rootProject.file("keystore.properties")
+        boolean hasKotlin = subproject.plugins.hasPlugin("kotlin-android-extensions") || subproject.plugins.hasPlugin("kotlin-android") || subproject.plugins.hasPlugin("kotlin-multiplatform") || subproject.plugins.hasPlugin("kotlin")
+        boolean isAndroidProject = subproject.plugins.hasPlugin("com.android.library") || subproject.plugins.hasPlugin("com.android.application")
+
+        println "${subproject.name} [android=${isAndroidProject}, kotlin=${hasKotlin}]"
+
+        if (isAndroidProject) {
+            //println "${androidManifest.exists()}-${androidManifest.absolutePath}"
+
+            android.useLibrary 'org.apache.http.legacy'
+            // TODO: Exclude meta-inf dependencies
+            android.sourceSets.main.java.filter.exclude 'META-INF/**/*'
+            android.packagingOptions {
+                exclude 'META-INF/**/*'
+            }
+            android.buildTypes.release.manifestPlaceholders = [protectionLevel: "signature"]
+            android.buildTypes.debug.manifestPlaceholders = [protectionLevel: "normal"]
+            // TODO: override dex options
+            android.dexOptions {
+                incremental = false
+                preDexLibraries = false
+                jumboMode = false
+                javaMaxHeapSize = "1048M"
+                maxProcessCount = 1
+                threadCount = 1
+            }
+            // TODO: Override compiler options
+            android.compileOptions {
+                sourceCompatibility JavaVersion.VERSION_1_8
+                targetCompatibility JavaVersion.VERSION_1_8
+            }
+            if (propsFile.exists()) {
+                def props = new Properties()
+                props.load(new FileInputStream(propsFile))
+                android.signingConfigs {
+                    debug {}
+                    release {}
+                }
+                if (android.signingConfigs.hasProperty("debug")) {
+                    android.signingConfigs["debug"].storeFile = rootProject.file("debug.keystore")
+                    android.signingConfigs["debug"].storePassword = props["debugStorePassword"]
+                    android.signingConfigs["debug"].keyAlias = props["debugKeyAlias"]
+                    android.signingConfigs["debug"].keyPassword = props["debugKeyPassword"]
+                    android.buildTypes.debug.signingConfig = android.signingConfigs["debug"]
+                }
+                if (android.signingConfigs.hasProperty("release")) {
+                    android.signingConfigs["release"].storeFile = rootProject.file("release.keystore")
+                    android.signingConfigs["release"].storePassword = props["releaseStorePassword"]
+                    android.signingConfigs["release"].keyAlias = props["releaseKeyAlias"]
+                    android.signingConfigs["release"].keyPassword = props["releaseKeyPassword"]
+                    android.buildTypes.debug.signingConfig = android.signingConfigs["release"]
+                }
+            }
+            if (android.hasProperty("applicationVariants")) {
+                android.applicationVariants.all { variant ->
+                    def build = variant.name.capitalize()
+                    variant.outputs.each { output ->
+                        output.outputFileName = "${variant.buildType.name}-${subproject.version}.apk"
+                        def apk = output.outputFile
+                        def dir = "$project.rootDir/release"
+                        String taskNameCopy = "Copy-${build}"
+                        if (tasks.findByName(taskNameCopy) == null) {
+                            def releaseBuildTask = tasks.create(name: taskNameCopy, type: Copy) {
+                                group 'Build'
+                                from apk
+                                into dir
+                            }
+                            releaseBuildTask.dependsOn variant.assemble
+                        }
+                    }
+                    variant.productFlavors.each { flavor ->
+                        def flavorName = flavor.name.capitalize()
+                        def releaseFlavorTaskName = "release${flavorName}"
+                        def releaseFlavorTask
+                        if (tasks.findByName(releaseFlavorTaskName)) {
+                            releaseFlavorTask = tasks[releaseFlavorTaskName]
+                        } else {
+                            releaseFlavorTask = tasks.create(name: releaseFlavorTaskName) {
+                                group 'Build'
+                                description "Assembles and archives all Release builds for flavor $flavorName"
+                            }
+                            releaseTask.dependsOn releaseFlavorTask
+                        }
+                        releaseFlavorTask.dependsOn releaseBuildTask
+                    }
+                }
+            }
+        }
+    }
+}

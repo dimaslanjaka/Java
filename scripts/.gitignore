@@ -1,0 +1,7 @@
+node_modules
+etc
+exclude
+*.log
+info
+daemon
+tmp

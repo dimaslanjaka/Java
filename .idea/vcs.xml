@@ -4,8 +4,10 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bot/ObservableCollections" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/bot/PersistentCookieJar" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bot/cross-platform-aes/PHP/cryptolib-php" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/clone-facebook" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gradle-plugin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gradle-plugin/buildSrc" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/EasyGradle" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/IDEA.Dependencies" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gradle-plugin/repos/MavenHelper" vcs="Git" />

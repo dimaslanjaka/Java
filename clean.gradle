@@ -4,14 +4,14 @@ import java.nio.file.attribute.BasicFileAttributes
 import java.nio.file.attribute.FileTime
 import java.util.function.BiPredicate
 
-task CleanCache(type: IncrementalCacheCleaner, depensOn: clean) {
+task CleanCache(type: IncrementalCacheCleaner) {
     description = "cleaning gradle cache from home directory"
     group = "gradle-plugin"
 }
 
 allprojects {
-    apply from: "${project.rootDir}/scripts/repositories.gradle"
-    apply from: "${project.rootDir}/scripts/reporter.gradle"
+    apply from: "https://github.com/dimaslanjaka/Android/raw/master/scripts/repositories.gradle"
+    apply from: "https://github.com/dimaslanjaka/Android/raw/master/scripts/reporter.gradle"
 }
 
 

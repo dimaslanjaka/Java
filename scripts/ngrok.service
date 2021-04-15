@@ -1,0 +1,15 @@
+[Unit]
+Description=Ngrok Maven Repo
+
+[Service]
+ExecStart=/mnt/d/Workspaces/Android/Android/gradle-plugin/scripts/ngrok.js
+Restart=always
+User=nobody
+# Note Debian/Ubuntu uses 'nogroup', RHEL/Fedora uses 'nobody'
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/myapp
+
+[Install]
+WantedBy=multi-user.target

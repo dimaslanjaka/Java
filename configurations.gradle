@@ -1,0 +1,18 @@
+//TODO: use same version of dependencies
+configurations.all {
+    resolutionStrategy {
+        //force 'org.hamcrest:hamcrest-junit:2.0.0'
+        eachDependency { DependencyResolveDetails details ->
+            if (details.requested.group == 'com.google.guava') {
+                details.useVersion "14.0.1"
+            } else if (details.requested.group == 'org.jetbrains.kotlin') {
+                details.useVersion "1.4.10"
+            } else if (details.requested.group == 'org.hamcrest' && details.requested.module == 'hamcrest-junit') {
+                details.useVersion "2.0.0"
+            }
+        }
+    }
+    compile {
+        exclude group: "junit", module: "junit"
+    }
+}

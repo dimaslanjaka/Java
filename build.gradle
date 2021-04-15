@@ -1,0 +1,195 @@
+/**
+ * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
+ *
+ * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
+ * copy, modify, and distribute this software in source code or binary form for use
+ * in connection with the web services and APIs provided by Facebook.
+ *
+ * As with any software that integrates with the Facebook platform, your use of
+ * this software is subject to the Facebook Developer Principles and Policies
+ * [http://developers.facebook.com/policy/]. This copyright notice shall be
+ * included in all copies or substantial portions of the software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    //project.apply from: "${rootDir}/constants.gradle"
+
+    repositories {
+        jcenter()
+        google()
+        mavenCentral()
+        mavenLocal()
+        gradlePluginPortal()
+        maven { url = "https://maven.google.com" }
+        maven { url = "https://maven.mozilla.org/maven2/" }
+        maven { url = "https://jitpack.io" }
+        maven { url = "https://plugins.gradle.org/m2/" }
+        maven { url = "http://maven.springframework.org/release" }
+        maven { url = "http://maven.restlet.org" }
+        maven { url = "https://repo.spring.io/snapshot" }
+        maven { url = "https://repo.spring.io/milestone" }
+        maven { url = "https://repo.gradle.org/gradle/libs-releases" }
+        maven { url = "https://repo1.maven.org/maven2" }
+        maven { url = "https://nexus.gluonhq.com/nexus/content/repositories/releases/" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.dimaslanjaka:gradle-plugin:latest.release"
+        classpath "gradle.plugin.org.gradle.android:android-cache-fix-gradle-plugin:latest.release"
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:latest.release"
+        classpath "com.github.dcendents:android-maven-gradle-plugin:latest.release"
+        //classpath 'org.javafxports:jfxmobile-plugin:latest.release'
+        //classpath("org.jlleitschuh.gradle:ktlint-gradle:latest.release")
+        //classpath("org.jmailen.gradle:kotlinter-gradle:latest.release")
+        //classpath "com.netflix.nebula:gradle-lint-plugin:latest.release"
+    }
+}
+
+// Apply plugin from Composite Build
+plugins {
+    //id "com.dimaslanjaka"
+}
+apply plugin: "org.gradle.android.cache-fix"
+//apply plugin: 'org.javafxports.jfxmobile'
+//apply plugin: "base"
+apply plugin: "com.dimaslanjaka"
+apply from: "${project.rootDir}/clean.gradle"
+apply from: "${project.rootDir}/ide.gradle"
+apply from: "${project.rootDir}/configurations.gradle"
+
+allprojects {
+    version = getVersion()
+    ext.version = getVersion()
+    repositories {
+        mavenCentral()
+        google()
+        mavenLocal()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+
+    //project.apply from: "${rootDir}/constants.gradle"
+
+    afterEvaluate { subproject ->
+        subproject.version = getVersion()
+        subproject.ext.version = getVersion()
+        subproject.ext.kotlin_version = project["kotlin_version"]
+        subproject.ext.groovy_version = project["groovy_version"]
+        subproject.ext.ktor_version = project["ktor_version"]
+
+        // Only check if we are doing build type tasks. Things like dependency listing
+        // should still work with a "wrong" java version.
+        final def buildTasks = ['build', 'preBuild', 'compileJava', 'assembleDebug', 'sync', 'compileGroovy', 'compileKotlin', 'classes', 'testClasses', 'assemble', 'check', 'compileDebugKotlin']
+        // Task.doFirst does not run if the task has no work to do. Need to be more aggressive than that.
+        // Some projects won't have all of these tasks, so need to use findByName.
+        buildTasks.each { subproject.tasks.findByName(it)?.dependsOn(":bot:repack:RepackArtifacts") }
+        /*
+        subproject.tasks.each {
+            if (it.name != "RepackArtifacts" && it.name != "clean") {
+                subproject.tasks.findByName(it.name).dependsOn(":bot:repack:RepackArtifacts")
+            }
+        }
+        */
+        def propsFile = rootProject.file("keystore.properties")
+        boolean hasKotlin = subproject.plugins.hasPlugin("kotlin-android-extensions") || subproject.plugins.hasPlugin("kotlin-android") || subproject.plugins.hasPlugin("kotlin-multiplatform") || subproject.plugins.hasPlugin("kotlin")
+        boolean isAndroidProject = subproject.plugins.hasPlugin("com.android.library") || subproject.plugins.hasPlugin("com.android.application")
+
+        println "${subproject.name} [android=${isAndroidProject}, kotlin=${hasKotlin}]"
+
+        if (isAndroidProject) {
+            //println "${androidManifest.exists()}-${androidManifest.absolutePath}"
+
+            android.useLibrary 'org.apache.http.legacy'
+            // TODO: Exclude meta-inf dependencies
+            android.sourceSets.main.java.filter.exclude 'META-INF/**/*'
+            android.packagingOptions {
+                exclude 'META-INF/**/*'
+            }
+            android.buildTypes.release.manifestPlaceholders = [protectionLevel: "signature"]
+            android.buildTypes.debug.manifestPlaceholders = [protectionLevel: "normal"]
+            // TODO: override dex options
+            android.dexOptions {
+                incremental = false
+                preDexLibraries = false
+                jumboMode = false
+                javaMaxHeapSize = "1048M"
+                maxProcessCount = 1
+                threadCount = 1
+            }
+            // TODO: Override compiler options
+            android.compileOptions {
+                sourceCompatibility JavaVersion.VERSION_1_8
+                targetCompatibility JavaVersion.VERSION_1_8
+            }
+            if (propsFile.exists()) {
+                def props = new Properties()
+                props.load(new FileInputStream(propsFile))
+                android.signingConfigs {
+                    debug {}
+                    release {}
+                }
+                if (android.signingConfigs.hasProperty("debug")) {
+                    android.signingConfigs["debug"].storeFile = rootProject.file("debug.keystore")
+                    android.signingConfigs["debug"].storePassword = props["debugStorePassword"]
+                    android.signingConfigs["debug"].keyAlias = props["debugKeyAlias"]
+                    android.signingConfigs["debug"].keyPassword = props["debugKeyPassword"]
+                    android.buildTypes.debug.signingConfig = android.signingConfigs["debug"]
+                }
+                if (android.signingConfigs.hasProperty("release")) {
+                    android.signingConfigs["release"].storeFile = rootProject.file("release.keystore")
+                    android.signingConfigs["release"].storePassword = props["releaseStorePassword"]
+                    android.signingConfigs["release"].keyAlias = props["releaseKeyAlias"]
+                    android.signingConfigs["release"].keyPassword = props["releaseKeyPassword"]
+                    android.buildTypes.debug.signingConfig = android.signingConfigs["release"]
+                }
+            }
+            if (android.hasProperty("applicationVariants")) {
+                android.applicationVariants.all { variant ->
+                    def build = variant.name.capitalize()
+                    variant.outputs.each { output ->
+                        output.outputFileName = "${variant.buildType.name}-${subproject.version}.apk"
+                        def apk = output.outputFile
+                        def dir = "$project.rootDir/release"
+                        String taskNameCopy = "Copy-${build}"
+                        if (tasks.findByName(taskNameCopy) == null) {
+                            def releaseBuildTask = tasks.create(name: taskNameCopy, type: Copy) {
+                                group 'Build'
+                                from apk
+                                into dir
+                            }
+                            releaseBuildTask.dependsOn variant.assemble
+                        }
+                    }
+                    variant.productFlavors.each { flavor ->
+                        def flavorName = flavor.name.capitalize()
+                        def releaseFlavorTaskName = "release${flavorName}"
+                        def releaseFlavorTask
+                        if (tasks.findByName(releaseFlavorTaskName)) {
+                            releaseFlavorTask = tasks[releaseFlavorTaskName]
+                        } else {
+                            releaseFlavorTask = tasks.create(name: releaseFlavorTaskName) {
+                                group 'Build'
+                                description "Assembles and archives all Release builds for flavor $flavorName"
+                            }
+                            releaseTask.dependsOn releaseFlavorTask
+                        }
+                        releaseFlavorTask.dependsOn releaseBuildTask
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
