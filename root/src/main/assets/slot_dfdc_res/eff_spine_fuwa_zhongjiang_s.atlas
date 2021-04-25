@@ -1,0 +1,146 @@
+
+eff_spine_fuwa_zhongjiang_s.png
+size: 984,538
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+eff_labaji_zjm_1/eff_labaji_zjm_1_000
+  rotate: false
+  xy: 589, 24
+  size: 138, 256
+  orig: 200, 256
+  offset: 32, 0
+  index: -1
+eff_labaji_zjm_1/eff_labaji_zjm_1_001
+  rotate: false
+  xy: 446, 24
+  size: 142, 256
+  orig: 200, 256
+  offset: 30, 0
+  index: -1
+eff_labaji_zjm_1/eff_labaji_zjm_1_002
+  rotate: false
+  xy: 299, 24
+  size: 146, 256
+  orig: 200, 256
+  offset: 28, 0
+  index: -1
+eff_labaji_zjm_1/eff_labaji_zjm_1_003
+  rotate: false
+  xy: 1, 24
+  size: 148, 256
+  orig: 200, 256
+  offset: 27, 0
+  index: -1
+eff_labaji_zjm_1/eff_labaji_zjm_1_004
+  rotate: false
+  xy: 152, 281
+  size: 148, 256
+  orig: 200, 256
+  offset: 27, 0
+  index: -1
+eff_labaji_zjm_1/eff_labaji_zjm_1_005
+  rotate: false
+  xy: 1, 281
+  size: 150, 256
+  orig: 200, 256
+  offset: 26, 0
+  index: -1
+eff_labaji_zjm_1/eff_labaji_zjm_1_006
+  rotate: false
+  xy: 150, 24
+  size: 148, 256
+  orig: 200, 256
+  offset: 27, 0
+  index: -1
+eff_labaji_zjm_1/eff_labaji_zjm_1_007
+  rotate: false
+  xy: 301, 281
+  size: 148, 256
+  orig: 200, 256
+  offset: 27, 0
+  index: -1
+eff_labaji_zjm_1/eff_labaji_zjm_1_008
+  rotate: false
+  xy: 450, 281
+  size: 146, 256
+  orig: 200, 256
+  offset: 28, 0
+  index: -1
+eff_labaji_zjm_1/eff_labaji_zjm_1_009
+  rotate: false
+  xy: 597, 281
+  size: 142, 256
+  orig: 200, 256
+  offset: 30, 0
+  index: -1
+eff_labaji_zjm_2/eff_labaji_zjm_2_000
+  rotate: false
+  xy: 740, 429
+  size: 121, 108
+  orig: 128, 128
+  offset: 4, 12
+  index: -1
+eff_labaji_zjm_2/eff_labaji_zjm_2_001
+  rotate: false
+  xy: 740, 320
+  size: 121, 108
+  orig: 128, 128
+  offset: 4, 12
+  index: -1
+eff_labaji_zjm_2/eff_labaji_zjm_2_002
+  rotate: false
+  xy: 740, 214
+  size: 121, 105
+  orig: 128, 128
+  offset: 4, 12
+  index: -1
+eff_labaji_zjm_2/eff_labaji_zjm_2_003
+  rotate: false
+  xy: 728, 108
+  size: 121, 105
+  orig: 128, 128
+  offset: 4, 12
+  index: -1
+eff_labaji_zjm_2/eff_labaji_zjm_2_004
+  rotate: false
+  xy: 862, 215
+  size: 120, 107
+  orig: 128, 128
+  offset: 4, 12
+  index: -1
+eff_labaji_zjm_2/eff_labaji_zjm_2_005
+  rotate: false
+  xy: 862, 430
+  size: 121, 107
+  orig: 128, 128
+  offset: 4, 12
+  index: -1
+eff_labaji_zjm_2/eff_labaji_zjm_2_006
+  rotate: false
+  xy: 728, 1
+  size: 120, 106
+  orig: 128, 128
+  offset: 5, 12
+  index: -1
+eff_labaji_zjm_2/eff_labaji_zjm_2_007
+  rotate: false
+  xy: 862, 108
+  size: 120, 106
+  orig: 128, 128
+  offset: 5, 12
+  index: -1
+eff_labaji_zjm_2/eff_labaji_zjm_2_008
+  rotate: false
+  xy: 849, 1
+  size: 120, 106
+  orig: 128, 128
+  offset: 5, 12
+  index: -1
+eff_labaji_zjm_2/eff_labaji_zjm_2_009
+  rotate: false
+  xy: 862, 323
+  size: 121, 106
+  orig: 128, 128
+  offset: 4, 12
+  index: -1

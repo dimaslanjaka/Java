@@ -1,0 +1,139 @@
+
+eff_spine_slot_dfdc_fu.png
+size: 1009,212
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bf1
+  rotate: false
+  xy: 815, 138
+  size: 69, 73
+  orig: 71, 75
+  offset: 1, 1
+  index: -1
+bf2
+  rotate: false
+  xy: 939, 10
+  size: 69, 72
+  orig: 71, 74
+  offset: 1, 1
+  index: -1
+bf3
+  rotate: false
+  xy: 935, 139
+  size: 69, 72
+  orig: 71, 74
+  offset: 1, 1
+  index: -1
+bf4
+  rotate: false
+  xy: 870, 9
+  size: 68, 73
+  orig: 70, 75
+  offset: 1, 1
+  index: -1
+bianfu_body
+  rotate: true
+  xy: 613, 19
+  size: 22, 44
+  orig: 24, 46
+  offset: 1, 1
+  index: -1
+bianfu_cbL1
+  rotate: false
+  xy: 550, 2
+  size: 33, 39
+  orig: 35, 41
+  offset: 1, 1
+  index: -1
+bianfu_cbL2
+  rotate: true
+  xy: 658, 22
+  size: 19, 43
+  orig: 21, 45
+  offset: 1, 1
+  index: -1
+bianfu_glow
+  rotate: false
+  xy: 702, 3
+  size: 93, 79
+  orig: 93, 79
+  offset: 0, 0
+  index: -1
+bianfu_jb
+  rotate: false
+  xy: 584, 13
+  size: 28, 28
+  orig: 30, 30
+  offset: 1, 1
+  index: -1
+bianfu_mohu1
+  rotate: true
+  xy: 796, 6
+  size: 76, 73
+  orig: 76, 73
+  offset: 0, 0
+  index: -1
+bianfu_mohu2
+  rotate: false
+  xy: 885, 138
+  size: 49, 73
+  orig: 49, 73
+  offset: 0, 0
+  index: -1
+fu_jin
+  rotate: true
+  xy: 1, 1
+  size: 210, 182
+  orig: 214, 186
+  offset: 2, 4
+  index: -1
+fu_jin_glow
+  rotate: true
+  xy: 184, 1
+  size: 210, 182
+  orig: 214, 186
+  offset: 2, 4
+  index: -1
+glow3
+  rotate: false
+  xy: 686, 83
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+kuang1
+  rotate: true
+  xy: 367, 1
+  size: 210, 182
+  orig: 212, 184
+  offset: 1, 1
+  index: -1
+kuang2
+  rotate: true
+  xy: 550, 42
+  size: 169, 135
+  orig: 171, 137
+  offset: 1, 1
+  index: -1
+lizi
+  rotate: true
+  xy: 947, 89
+  size: 49, 47
+  orig: 49, 47
+  offset: 0, 0
+  index: -1
+zi
+  rotate: false
+  xy: 815, 83
+  size: 65, 54
+  orig: 67, 56
+  offset: 1, 1
+  index: -1
+zi_glow
+  rotate: false
+  xy: 881, 83
+  size: 65, 54
+  orig: 67, 56
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Workspaces\\Kotlin\\.Kotlin Workspace\\auto-click\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\Workspaces\\Kotlin\\.Kotlin Workspace\\auto-click\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "3,9,10,4,5,7,6,8",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "59,319,360,112,153,235,194,280",
+                        "endColumns": "51,39,40,39,39,43,39,37",
+                        "endOffsets": "106,354,396,147,188,274,229,313"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,107,147,188,228,268,312,352",
+                        "endColumns": "51,39,40,39,39,43,39,37",
+                        "endOffsets": "102,142,183,223,263,307,347,385"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+<com.randomappsinc.randomnumbergeneratorplus.theme.ThemedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage, RtlHardcoded">
+
+    <LinearLayout style="@style/rng_page_container">
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+            android:text="@string/lottery_simulator"
+            style="@style/page_title"/>
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:id="@+id/lotto_chooser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <Spinner
+                    android:id="@+id/lotto_options"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedDivider
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_below="@id/lotto_options"
+                    android:layout_alignLeft="@id/lotto_options"
+                    android:layout_alignRight="@id/lotto_options"
+                    android:background="@color/black"/>
+            </RelativeLayout>
+
+            <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/lotto_chooser"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/lottery_type"
+                android:textSize="15dp"
+                android:textColor="@color/dark_gray"/>
+        </com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout>
+
+        <TextView
+            android:id="@+id/generate"
+            android:text="@string/simulate"
+            style="@style/rounded_generate_button"/>
+
+        <include layout="@layout/results"/>
+    </LinearLayout>
+</com.randomappsinc.randomnumbergeneratorplus.theme.ThemedScrollView>

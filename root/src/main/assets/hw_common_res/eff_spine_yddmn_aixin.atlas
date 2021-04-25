@@ -1,0 +1,41 @@
+
+eff_spine_yddmn_aixin.png
+size: 568,187
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aixin
+  rotate: false
+  xy: 186, 1
+  size: 68, 56
+  orig: 68, 56
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 186, 58
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+guangquan
+  rotate: false
+  xy: 444, 63
+  size: 123, 123
+  orig: 123, 123
+  offset: 0, 0
+  index: -1
+guangquan2
+  rotate: false
+  xy: 1, 2
+  size: 184, 184
+  orig: 184, 184
+  offset: 0, 0
+  index: -1
+lizi
+  rotate: false
+  xy: 315, 58
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,180 @@
+buildscript {
+    ext {
+        composeVersion = System.getenv("COMPOSE_TEMPLATE_COMPOSE_VERSION") ?: "0.2.0-build132"
+        compose_version = "1.0.0-alpha11"
+        kotlin_version = "1.4.32"
+        ktor_version = "1.4.0"
+        jksfile = new File(projectDir, "release.jks").getAbsolutePath()
+    }
+    repositories {
+        mavenLocal()
+        jcenter()
+        mavenCentral()
+        google()
+        gradlePluginPortal()
+        maven { url = "https://maven.pkg.jetbrains.space/public/p/compose/dev" }
+        maven { url = "https://jitpack.io" }
+        flatDir {
+            dirs "plugin/build/libs"
+        }
+    }
+
+    dependencies {
+        //classpath("org.jetbrains.compose:compose-gradle-plugin:$composeVersion")
+        //noinspection GradleDependency
+        //classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:1.3.41" //1.3.41
+        // https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // https://plugins.gradle.org/plugin/org.jetbrains.kotlin.plugin.serialization
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+        //classpath "org.jetbrains.kotlin:kotlin-frontend-plugin:0.0.45"
+        classpath "com.android.tools.build:gradle:4.1.3" // 4.1.1
+        classpath "com.dimaslanjaka:gradle-plugin"
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            dependencySubstitution {
+                substitute module("net.sf.proguard:proguard-gradle") with module("com.guardsquare:proguard-gradle:7.0.1")
+            }
+        }
+    }
+}
+
+apply plugin: "project-report"
+// apply offline plugin
+apply plugin: "com.dimaslanjaka"
+// configure offline config
+if (project.hasProperty("offlineConfig")) {
+    offlineConfig {
+        // no limit equivalent
+        limit = Integer.MAX_VALUE
+    }
+}
+
+version = "1.0.0"
+htmlDependencyReport {
+    projects = project.allprojects
+    reports.html.destination = file("build/reports/project/dependencies")
+}
+
+allprojects { Project subproject ->
+    subproject.configurations.all {
+        resolutionStrategy.cacheDynamicVersionsFor 4, "hours"
+        resolutionStrategy.cacheChangingModulesFor 4, "hours"
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            Dep dep = new Dep(subproject, details)
+            String module = dep.module
+            String group = dep.group
+            String name = dep.name
+            String version = dep.version
+            String[] excludeName = ["kotlin-native-gradle-plugin", "kotlin-frontend-plugin"]
+
+            if (group == "org.jetbrains.kotlin"
+                    && version != kotlin_version
+                    && !Arrays.asList(excludeName).contains(name)) {
+                dep.change(kotlin_version, "Gradle 6.8-all uses version $kotlin_version")
+            }
+
+            if (group == "androidx.compose.ui") {
+                if (module == "ui-tooling") {
+                    dep.change("1.0.0-alpha11")
+                }
+            }
+
+            details = dep.details
+        }
+    }
+
+    // add repositories
+    repositories.add(repositories.maven { url = uri("https://jitpack.io") })
+    repositories.add(repositories.mavenLocal())
+    repositories.add(repositories.google())
+    repositories.add(repositories.mavenCentral())
+    repositories.add(repositories.jcenter())
+    repositories.add(repositories.maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") })
+
+    // Compile options
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+        sourceCompatibility = JavaVersion.VERSION_1_8.toString()
+        targetCompatibility = JavaVersion.VERSION_1_8.toString()
+    }
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            freeCompilerArgs += "-Xallow-jvm-ir-dependencies"
+            //-XXLanguage:+NonParenthesizedAnnotationsOnFunctionalTypes
+        }
+    }
+
+    afterEvaluate {
+        // IS android project
+        boolean android = subproject.plugins.hasPlugin("com.android.application") || subproject.plugins.hasPlugin("com.android.library")
+        println("${subproject.name}: " + (android ? "Android" : "Non Android"))
+        // TODO: Exclude library folder from android project
+        if (!android) {
+            //println("${subproject.name} isnt android project")
+            if (subproject.configurations.hasProperty("implementation")) {
+                //subproject.dependencies.add("implementation", fileTree(dir: "${rootProject.rootDir}/lib", include: ["*.jar"]))
+            }
+        }
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    google()
+}
+
+class Dep {
+    String group
+    String name
+    String version
+    String extention
+    String classifier
+    String module
+    DependencyResolveDetails details
+    Project project
+    Boolean debug = false
+
+    Dep(String group, String name, String version, String extension, String classifier) {
+        this.group = group
+        this.name = name
+        this.version = version
+        this.extention = extension
+        this.classifier = classifier
+    }
+
+    Dep(Project p, DependencyResolveDetails details) {
+        setDependencyResolveDetails(details)
+        this.project = p
+    }
+
+    Dep(DependencyResolveDetails details) {
+        setDependencyResolveDetails(details)
+    }
+
+    void setDependencyResolveDetails(DependencyResolveDetails details) {
+        this.details = details
+        this.module = details.getRequested().module
+        this.version = details.getRequested().version ?: "0.0.0"
+        this.group = details.getRequested().group
+        this.name = details.getRequested().name
+    }
+
+    public void change(String version) {
+        details.useVersion(version)
+        details.because("$group.$module force use version $version")
+        if (debug) println("${project.name} -> ${group}:${name} (${this.version} -> $version)")
+    }
+
+    public void change(String version, String because) {
+        details.useVersion(version)
+        details.because(because)
+        if (debug) println("${project.name} -> ${group}:${name} (${this.version} -> $version)")
+    }
+}
+
+//new File("C:\\Users\\dimas\\Documents\\AndroidStudio\\DeviceExplorer\\xiaomi-redmi_note_4-e501d60e9804\\sdcard\\Facebot\\cookies").mkdirs()

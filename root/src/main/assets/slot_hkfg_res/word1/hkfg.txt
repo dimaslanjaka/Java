@@ -1,0 +1,54 @@
+[大厅文字内容]
+##号后为注释内容，需要另存为UTF-8格式！！
+The network can't connect, please check your network
+Feature is temporarily unavailable
+Sending request data, please wait...
+The dialog will close after %d seconds
+Did not start the game for a long time, click YES to return to the lobby
+Network connection failed, unable to get room information
+Game maintenance, please try again later
+Failed to get room information, please log in again
+Login to the game server timed out, please log in again
+Your account is in another game
+Your account login is abnormal! Number: [L%d]
+Are you leaving the game?
+Exiting the game...
+Disconnected from the server, trying to reconnect...
+Failed to connect to the server, click YES to connect again
+Reconnect to the server failed, click YES to return to the lobby
+Disconnected from the server, click YES to return to the lobby
+The room is closed, please try again later
+Lack of gold coins, need %s least.
+The room is full.
+#
+#
+#
+#
+#
+#
+#
+Hold [SPIN] for auto
+Press [SPIN] to play the game
+Rolling in wealth
+BIG BONUS COMING
+Good luck
+Bonus all the way
+Congratulations on winning free games
+WIN %s
+UNTIL BOUNS
+You have a free game that is not over yet, tap to continue.
+Insufficient gold coins, please go to the lobby to get
+Do you go to the lobby to get gold coins?
+Please stop the game before proceeding
+guest
+Please input the message...
+Congratulate 
+Obtained on 
+Hua Kai Fu Gui 
+#
+High-level award
+Free game
+GRAND
+Win 
+coins
+Level %d keatas baru dapat masuk.

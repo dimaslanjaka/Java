@@ -1,0 +1,97 @@
+
+eff_spine_slot_dfdc_long.png
+size: 781,240
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm
+  rotate: false
+  xy: 708, 3
+  size: 39, 79
+  orig: 44, 88
+  offset: 4, 7
+  index: -1
+body
+  rotate: true
+  xy: 1, 113
+  size: 126, 484
+  orig: 126, 484
+  offset: 0, 0
+  index: -1
+body_d
+  rotate: false
+  xy: 361, 56
+  size: 119, 56
+  orig: 125, 64
+  offset: 5, 6
+  index: -1
+hair_d
+  rotate: false
+  xy: 361, 17
+  size: 87, 38
+  orig: 87, 38
+  offset: 0, 0
+  index: -1
+hair_t
+  rotate: false
+  xy: 481, 9
+  size: 130, 65
+  orig: 130, 65
+  offset: 0, 0
+  index: -1
+hair_z
+  rotate: true
+  xy: 685, 83
+  size: 156, 65
+  orig: 156, 65
+  offset: 0, 0
+  index: -1
+handL
+  rotate: true
+  xy: 748, 1
+  size: 27, 32
+  orig: 29, 34
+  offset: 1, 1
+  index: -1
+handR
+  rotate: true
+  xy: 449, 18
+  size: 37, 23
+  orig: 39, 25
+  offset: 1, 1
+  index: -1
+head
+  rotate: true
+  xy: 486, 75
+  size: 164, 198
+  orig: 164, 198
+  offset: 0, 0
+  index: -1
+huxu
+  rotate: true
+  xy: 751, 73
+  size: 166, 28
+  orig: 167, 28
+  offset: 1, 0
+  index: -1
+juanzhou
+  rotate: true
+  xy: 1, 9
+  size: 103, 359
+  orig: 108, 363
+  offset: 2, 1
+  index: -1
+leg
+  rotate: false
+  xy: 748, 29
+  size: 24, 43
+  orig: 24, 43
+  offset: 0, 0
+  index: -1
+xiabi
+  rotate: true
+  xy: 612, 17
+  size: 57, 95
+  orig: 58, 95
+  offset: 1, 0
+  index: -1

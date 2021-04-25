@@ -1,0 +1,55 @@
+
+eff_spine_yddmn_sc.png
+size: 414,130
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dengguang
+  rotate: false
+  xy: 353, 73
+  size: 56, 56
+  orig: 56, 56
+  offset: 0, 0
+  index: -1
+guangyun
+  rotate: false
+  xy: 1, 1
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+jinbi1
+  rotate: false
+  xy: 250, 19
+  size: 102, 110
+  orig: 102, 110
+  offset: 0, 0
+  index: -1
+jinbi2
+  rotate: false
+  xy: 130, 16
+  size: 119, 113
+  orig: 119, 113
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 353, 37
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
+xingxing
+  rotate: false
+  xy: 353, 4
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+yhc
+  rotate: false
+  xy: 389, 48
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1

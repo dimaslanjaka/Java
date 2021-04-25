@@ -1,0 +1,14 @@
+{
+  "photo": "https://graph.facebook.com/100001995776790/picture?type\u003dlarge\u0026width\u003d720\u0026height\u003d720",
+  "login": true,
+  "config": "D:\\Workspaces\\Kotlin\\Test\\build\\config\\facebook\\100001995776790\\config.json",
+  "id": "100001995776790",
+  "url": "https://free.facebook.com/100001995776790",
+  "config_folder": "D:\\Workspaces\\Kotlin\\Test\\build\\config\\facebook\\100001995776790",
+  "likes": {
+    "fanpages": true,
+    "groups": true,
+    "friends": true
+  },
+  "last_updated": 1618226918926
+}

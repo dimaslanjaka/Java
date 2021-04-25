@@ -1,0 +1,69 @@
+
+eff_spine_slot_dfdc_dt.png
+size: 549,152
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dfdc_jbp_grand
+  rotate: false
+  xy: 1, 30
+  size: 94, 25
+  orig: 94, 26
+  offset: 0, 0
+  index: -1
+dfdc_jbp_major
+  rotate: false
+  xy: 1, 4
+  size: 85, 25
+  orig: 86, 26
+  offset: 0, 0
+  index: -1
+dfdc_jbp_mini
+  rotate: false
+  xy: 180, 32
+  size: 58, 23
+  orig: 58, 26
+  offset: 0, 1
+  index: -1
+dfdc_jbp_minor
+  rotate: false
+  xy: 96, 32
+  size: 83, 23
+  orig: 86, 26
+  offset: 1, 1
+  index: -1
+glow
+  rotate: false
+  xy: 290, 29
+  size: 25, 26
+  orig: 32, 32
+  offset: 4, 3
+  index: -1
+kuang
+  rotate: false
+  xy: 1, 56
+  size: 324, 41
+  orig: 338, 55
+  offset: 7, 7
+  index: -1
+kuang_glow
+  rotate: false
+  xy: 1, 98
+  size: 335, 53
+  orig: 338, 55
+  offset: 1, 1
+  index: -1
+line
+  rotate: false
+  xy: 337, 1
+  size: 211, 150
+  orig: 226, 179
+  offset: 8, 17
+  index: -1
+star
+  rotate: false
+  xy: 239, 5
+  size: 50, 50
+  orig: 72, 72
+  offset: 11, 11
+  index: -1

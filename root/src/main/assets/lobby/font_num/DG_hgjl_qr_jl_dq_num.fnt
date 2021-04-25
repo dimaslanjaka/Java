@@ -1,0 +1,26 @@
+info face="DG_hgjl_qr_jl_dq_num" size=32 bold=0 italic=0 charset="" unicode=0 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=2,2
+common lineHeight=28 base=26 scaleW=84 scaleH=82 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="DG_hgjl_qr_jl_dq_num.png"
+chars count=20
+char id=43 x=24 y=0 width=16 height=15 xoffset=0 yoffset=11 xadvance=18 page=0 chnl=0 letter="+"
+char id=45 x=42 y=0 width=13 height=4 xoffset=0 yoffset=17 xadvance=15 page=0 chnl=0 letter="-"
+char id=48 x=19 y=40 width=16 height=19 xoffset=0 yoffset=9 xadvance=18 page=0 chnl=0 letter="0"
+char id=49 x=72 y=20 width=10 height=18 xoffset=0 yoffset=10 xadvance=12 page=0 chnl=0 letter="1"
+char id=50 x=19 y=61 width=16 height=19 xoffset=0 yoffset=9 xadvance=18 page=0 chnl=0 letter="2"
+char id=51 x=39 y=17 width=16 height=19 xoffset=0 yoffset=9 xadvance=18 page=0 chnl=0 letter="3"
+char id=52 x=21 y=20 width=16 height=18 xoffset=0 yoffset=10 xadvance=18 page=0 chnl=0 letter="4"
+char id=53 x=55 y=38 width=15 height=18 xoffset=0 yoffset=10 xadvance=17 page=0 chnl=0 letter="5"
+char id=54 x=37 y=61 width=16 height=18 xoffset=0 yoffset=10 xadvance=18 page=0 chnl=0 letter="6"
+char id=55 x=57 y=0 width=15 height=18 xoffset=0 yoffset=10 xadvance=17 page=0 chnl=0 letter="7"
+char id=56 x=37 y=40 width=16 height=19 xoffset=0 yoffset=9 xadvance=18 page=0 chnl=0 letter="8"
+char id=57 x=55 y=58 width=15 height=19 xoffset=0 yoffset=9 xadvance=17 page=0 chnl=0 letter="9"
+char id=75 x=0 y=20 width=19 height=18 xoffset=0 yoffset=10 xadvance=21 page=0 chnl=0 letter="K"
+char id=77 x=0 y=0 width=22 height=18 xoffset=0 yoffset=10 xadvance=24 page=0 chnl=0 letter="M"
+char id=66 x=0 y=60 width=17 height=18 xoffset=0 yoffset=10 xadvance=19 page=0 chnl=0 letter="B"
+char id=84 x=0 y=40 width=17 height=18 xoffset=0 yoffset=10 xadvance=19 page=0 chnl=0 letter="T"
+char id=46 x=57 y=20 width=6 height=5 xoffset=0 yoffset=23 xadvance=8 page=0 chnl=0 letter="."
+char id=44 x=42 y=6 width=8 height=7 xoffset=0 yoffset=24 xadvance=10 page=0 chnl=0 letter=","
+char id=32 x=0 y=0 width=0 height=0 xoffset=0 yoffset=0 xadvance=0 page=0 chnl=0 letter=" "
+char id=9 x=0 y=0 width=0 height=0 xoffset=0 yoffset=0 xadvance=0 page=0 chnl=0 letter="	"
+
+kernings count=0

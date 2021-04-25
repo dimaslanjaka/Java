@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.randomappsinc.randomnumbergeneratorplus.theme.ThemedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage, RtlHardcoded">
+
+    <LinearLayout
+        android:id="@+id/focal_point"
+        style="@style/rng_page_container">
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+            android:text="@string/coin_flipper"
+            style="@style/page_title"/>
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/num_coins"
+                android:layout_width="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="number"
+                android:maxLength="4"
+                android:imeOptions="actionDone"
+                style="@style/numeric_input"/>
+
+            <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/num_coins"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/num_coins_prefix"
+                android:textSize="15dp"
+                android:textColor="@color/dark_gray"/>
+        </com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout>
+
+        <TextView
+            android:id="@+id/flip"
+            android:text="@string/flip"
+            style="@style/rounded_generate_button"/>
+
+        <include layout="@layout/results"/>
+    </LinearLayout>
+</com.randomappsinc.randomnumbergeneratorplus.theme.ThemedScrollView>

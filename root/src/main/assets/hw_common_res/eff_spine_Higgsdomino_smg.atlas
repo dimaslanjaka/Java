@@ -1,0 +1,41 @@
+
+eff_spine_Higgsdomino_smg.png
+size: 399,258
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sh_guang
+  rotate: false
+  xy: 1, 1
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+sh_hua
+  rotate: false
+  xy: 258, 108
+  size: 140, 149
+  orig: 140, 149
+  offset: 0, 0
+  index: -1
+sh_huaban1
+  rotate: false
+  xy: 341, 36
+  size: 48, 38
+  orig: 48, 38
+  offset: 0, 0
+  index: -1
+sh_huaban2
+  rotate: false
+  xy: 341, 75
+  size: 56, 32
+  orig: 56, 32
+  offset: 0, 0
+  index: -1
+sh_star
+  rotate: false
+  xy: 258, 25
+  size: 82, 82
+  orig: 82, 82
+  offset: 0, 0
+  index: -1

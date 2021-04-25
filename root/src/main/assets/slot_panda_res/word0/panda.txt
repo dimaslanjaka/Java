@@ -1,0 +1,10 @@
+﻿[文字内容,需要另存为UTF-8格式]
+##以下内容是各自游戏特有##
+总赢 %s
+%s (x%d) = %s
+%s
+最低下注%s可获得%s奖金
+更高的押注可以开启更多黄金物件
+押注金额: %s
+赢
+Setelah SCATTER diputar, jika mendapatkan SCATTER lagi, berpeluang untuk menambah jumlah FREE GAME

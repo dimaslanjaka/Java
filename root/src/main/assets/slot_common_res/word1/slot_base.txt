@@ -1,0 +1,17 @@
+﻿[文字内容,需要另存为UTF-8格式]
+##以下内容是SLOT游戏共用##
+You have a free game that is not over yet, tap to continue.
+You have a bonus game that is not over yet, tap to continue.
+Lack of gold coins.Please recharge and enter the game.
+Do you go to the lobby to get gold coins?
+Please stop the game before proceeding
+Are you leaving the game?
+Your account login is abnormal[L%d]
+Disconnected from the server[L%d], click YES to return to the lobby
+Level %d keatas baru dapat masuk.
+Press [SPIN] to play the game
+Hold [SPIN] for auto
+Game Over - Play Now
+Good Luck
+Rolling in wealth
+Bonus all the way

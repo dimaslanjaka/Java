@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.StackPane?>
+<?import tornadofx.control.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/null"
+           fx:controller="tornadofx.control.test.FormFxmlDemo$FormController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Form fx:id="form" spacing="20">
+        <Fieldset text="Contact Information Responsive" wrapWidth="300" fx:id="responsiveFieldset">
+            <icon>
+                <FontAwesomeIconView glyphName="USER" glyphSize="20"/>
+            </icon>
+            <Field text="Id">
+                <TextField text="555"/>
+            </Field>
+            <Field text="Username">
+                <TextField text="john@doe.com"/>
+            </Field>
+            <Field text="Zip/City">
+                <TextField minWidth="80" maxWidth="80" text="10001"/>
+                <TextField prefWidth="300" text="New York"/>
+            </Field>
+            <Field text="Wrap at width">
+                <TextField fx:id="wrapAt"/>
+            </Field>
+            <Field text="">
+                <Button text="Save" />
+            </Field>
+        </Fieldset>
+
+        <Fieldset text="Contact Information Vertical" orientation="HORIZONTAL">
+            <icon>
+                <FontAwesomeIconView glyphName="USER" glyphSize="20"/>
+            </icon>
+            <Field text="Id">
+                <TextField text="555"/>
+            </Field>
+            <Field text="Username">
+                <TextField text="john@doe.com"/>
+            </Field>
+            <Field text="Zip/City">
+                <TextField minWidth="80" maxWidth="80" text="10001"/>
+                <TextField prefWidth="300" text="New York"/>
+            </Field>
+            <Field>
+                <Button text="Save"/>
+            </Field>
+        </Fieldset>
+
+    </Form>
+</StackPane>

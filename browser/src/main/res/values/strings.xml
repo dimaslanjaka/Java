@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android Browser</string>
+    <string name="name">Name</string>
+    <string name="cookie_debug">Cookie Debug</string>
+</resources>

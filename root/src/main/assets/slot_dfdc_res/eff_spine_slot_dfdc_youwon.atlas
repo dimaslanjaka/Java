@@ -1,0 +1,299 @@
+
+eff_spine_slot_dfdc_youwon.png
+size: 1022,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body1
+  rotate: true
+  xy: 1, 54
+  size: 262, 435
+  orig: 262, 435
+  offset: 0, 0
+  index: -1
+body2
+  rotate: false
+  xy: 422, 341
+  size: 298, 275
+  orig: 298, 275
+  offset: 0, 0
+  index: -1
+coin_004
+  rotate: true
+  xy: 988, 591
+  size: 77, 32
+  orig: 100, 100
+  offset: 13, 37
+  index: -1
+coin_005
+  rotate: false
+  xy: 624, 89
+  size: 76, 22
+  orig: 100, 100
+  offset: 14, 44
+  index: -1
+guang2
+  rotate: false
+  xy: 1, 317
+  size: 420, 299
+  orig: 451, 358
+  offset: 15, 34
+  index: -1
+guangxian
+  rotate: true
+  xy: 1, 4
+  size: 49, 210
+  orig: 53, 218
+  offset: 2, 4
+  index: -1
+hair_d
+  rotate: false
+  xy: 724, 17
+  size: 115, 48
+  orig: 115, 48
+  offset: 0, 0
+  index: -1
+hair_t
+  rotate: false
+  xy: 720, 66
+  size: 159, 90
+  orig: 159, 90
+  offset: 0, 0
+  index: -1
+hair_z
+  rotate: false
+  xy: 437, 12
+  size: 197, 73
+  orig: 197, 73
+  offset: 0, 0
+  index: -1
+hand
+  rotate: true
+  xy: 880, 18
+  size: 106, 116
+  orig: 106, 116
+  offset: 0, 0
+  index: -1
+head_shadow
+  rotate: false
+  xy: 635, 1
+  size: 88, 64
+  orig: 109, 87
+  offset: 7, 3
+  index: -1
+huxu
+  rotate: false
+  xy: 212, 14
+  size: 215, 39
+  orig: 215, 39
+  offset: 0, 0
+  index: -1
+kuang
+  rotate: false
+  xy: 1, 617
+  size: 828, 406
+  orig: 839, 411
+  offset: 6, 4
+  index: -1
+lizi
+  rotate: false
+  xy: 840, 33
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 437, 86
+  size: 186, 254
+  orig: 186, 254
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: true
+  xy: 624, 112
+  size: 228, 95
+  orig: 228, 103
+  offset: 0, 8
+  index: -1
+youwon
+  rotate: true
+  xy: 889, 125
+  size: 543, 98
+  orig: 548, 103
+  offset: 2, 4
+  index: -1
+youwon_sg00
+  rotate: false
+  xy: 422, 331
+  size: 7, 9
+  orig: 270, 40
+  offset: 0, 31
+  index: -1
+youwon_sg01
+  rotate: true
+  xy: 848, 168
+  size: 36, 40
+  orig: 270, 40
+  offset: 0, 0
+  index: -1
+youwon_sg03
+  rotate: true
+  xy: 848, 277
+  size: 72, 40
+  orig: 270, 40
+  offset: 22, 0
+  index: -1
+youwon_sg09
+  rotate: true
+  xy: 848, 205
+  size: 71, 40
+  orig: 270, 40
+  offset: 176, 0
+  index: -1
+youwon_sg11
+  rotate: false
+  xy: 830, 628
+  size: 36, 40
+  orig: 270, 40
+  offset: 234, 0
+  index: -1
+youwon_sg12
+  rotate: true
+  xy: 840, 25
+  size: 7, 39
+  orig: 270, 40
+  offset: 263, 1
+  index: -1
+yunL
+  rotate: true
+  xy: 721, 350
+  size: 266, 167
+  orig: 294, 169
+  offset: 27, 1
+  index: -1
+yunR1
+  rotate: true
+  xy: 720, 157
+  size: 183, 127
+  orig: 205, 129
+  offset: 1, 1
+  index: -1
+yunR2
+  rotate: true
+  xy: 830, 669
+  size: 354, 191
+  orig: 356, 194
+  offset: 1, 2
+  index: -1
+
+eff_spine_slot_dfdc_youwon2.png
+size: 685,221
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+coin_001
+  rotate: false
+  xy: 424, 68
+  size: 74, 75
+  orig: 100, 100
+  offset: 15, 18
+  index: -1
+coin_002
+  rotate: true
+  xy: 499, 68
+  size: 75, 71
+  orig: 100, 100
+  offset: 14, 18
+  index: -1
+coin_003
+  rotate: false
+  xy: 501, 11
+  size: 77, 56
+  orig: 100, 100
+  offset: 13, 25
+  index: -1
+coin_006
+  rotate: false
+  xy: 500, 172
+  size: 77, 48
+  orig: 100, 100
+  offset: 13, 32
+  index: -1
+coin_007
+  rotate: false
+  xy: 424, 1
+  size: 76, 66
+  orig: 100, 100
+  offset: 13, 23
+  index: -1
+coin_008
+  rotate: true
+  xy: 424, 144
+  size: 76, 75
+  orig: 100, 100
+  offset: 13, 17
+  index: -1
+glow
+  rotate: false
+  xy: 1, 7
+  size: 213, 213
+  orig: 256, 256
+  offset: 22, 21
+  index: -1
+guang
+  rotate: true
+  xy: 215, 4
+  size: 216, 208
+  orig: 256, 256
+  offset: 26, 23
+  index: -1
+youwon_sg02
+  rotate: false
+  xy: 619, 20
+  size: 61, 40
+  orig: 270, 40
+  offset: 4, 0
+  index: -1
+youwon_sg04
+  rotate: false
+  xy: 611, 142
+  size: 73, 39
+  orig: 270, 40
+  offset: 46, 0
+  index: -1
+youwon_sg05
+  rotate: false
+  xy: 578, 182
+  size: 85, 38
+  orig: 270, 40
+  offset: 67, 0
+  index: -1
+youwon_sg06
+  rotate: true
+  xy: 571, 82
+  size: 89, 39
+  orig: 270, 40
+  offset: 90, 0
+  index: -1
+youwon_sg07
+  rotate: false
+  xy: 619, 61
+  size: 65, 39
+  orig: 270, 40
+  offset: 138, 0
+  index: -1
+youwon_sg08
+  rotate: true
+  xy: 579, 5
+  size: 76, 39
+  orig: 270, 40
+  offset: 149, 0
+  index: -1
+youwon_sg10
+  rotate: false
+  xy: 611, 101
+  size: 64, 40
+  orig: 270, 40
+  offset: 205, 0
+  index: -1

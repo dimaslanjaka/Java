@@ -1,0 +1,286 @@
+
+eff_spine_Higgsdominoo_dt.png
+size: 567,520
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+armL
+  rotate: true
+  xy: 435, 136
+  size: 36, 83
+  orig: 36, 83
+  offset: 0, 0
+  index: -1
+armR
+  rotate: false
+  xy: 525, 206
+  size: 37, 77
+  orig: 37, 77
+  offset: 0, 0
+  index: -1
+biyanL
+  rotate: true
+  xy: 532, 342
+  size: 56, 33
+  orig: 56, 33
+  offset: 0, 0
+  index: -1
+biyanR
+  rotate: false
+  xy: 203, 1
+  size: 33, 35
+  orig: 33, 35
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 323, 166
+  size: 106, 111
+  orig: 106, 111
+  offset: 0, 0
+  index: -1
+d_an
+  rotate: false
+  xy: 525, 173
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+d_liang
+  rotate: false
+  xy: 519, 140
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+erhuanL
+  rotate: false
+  xy: 552, 147
+  size: 14, 25
+  orig: 14, 25
+  offset: 0, 0
+  index: -1
+erhuanR
+  rotate: true
+  xy: 133, 237
+  size: 11, 13
+  orig: 11, 13
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 133, 249
+  size: 150, 142
+  orig: 150, 142
+  offset: 0, 0
+  index: -1
+hairR1
+  rotate: true
+  xy: 237, 2
+  size: 28, 31
+  orig: 28, 31
+  offset: 0, 0
+  index: -1
+hairR2
+  rotate: true
+  xy: 113, 1
+  size: 35, 89
+  orig: 35, 89
+  offset: 0, 0
+  index: -1
+hair_d
+  rotate: true
+  xy: 557, 502
+  size: 17, 9
+  orig: 17, 9
+  offset: 0, 0
+  index: -1
+hand
+  rotate: true
+  xy: 284, 255
+  size: 136, 38
+  orig: 136, 38
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 316, 393
+  size: 134, 126
+  orig: 134, 126
+  offset: 0, 0
+  index: -1
+hua
+  rotate: false
+  xy: 451, 7
+  size: 53, 57
+  orig: 53, 57
+  offset: 0, 0
+  index: -1
+huarui
+  rotate: true
+  xy: 532, 304
+  size: 37, 31
+  orig: 37, 31
+  offset: 0, 0
+  index: -1
+meimaoL
+  rotate: true
+  xy: 505, 28
+  size: 36, 11
+  orig: 36, 11
+  offset: 0, 0
+  index: -1
+meimaoR
+  rotate: true
+  xy: 438, 112
+  size: 23, 12
+  orig: 23, 12
+  offset: 0, 0
+  index: -1
+penzai_pen
+  rotate: true
+  xy: 517, 59
+  size: 76, 44
+  orig: 76, 44
+  offset: 0, 0
+  index: -1
+penzai_yezi1
+  rotate: false
+  xy: 147, 37
+  size: 89, 60
+  orig: 89, 60
+  offset: 0, 0
+  index: -1
+penzai_yezi2
+  rotate: false
+  xy: 346, 2
+  size: 104, 102
+  orig: 104, 102
+  offset: 0, 0
+  index: -1
+penzai_yezi3
+  rotate: true
+  xy: 237, 31
+  size: 62, 108
+  orig: 62, 108
+  offset: 0, 0
+  index: -1
+xianglian
+  rotate: true
+  xy: 318, 105
+  size: 60, 98
+  orig: 60, 98
+  offset: 0, 0
+  index: -1
+yanbaiL
+  rotate: true
+  xy: 417, 105
+  size: 30, 20
+  orig: 30, 20
+  offset: 0, 0
+  index: -1
+yanbaiR
+  rotate: false
+  xy: 1, 1
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+yanqiuL
+  rotate: true
+  xy: 417, 145
+  size: 20, 17
+  orig: 20, 17
+  offset: 0, 0
+  index: -1
+yanqiuR
+  rotate: false
+  xy: 532, 285
+  size: 16, 18
+  orig: 16, 18
+  offset: 0, 0
+  index: -1
+yeshuR1
+  rotate: false
+  xy: 238, 94
+  size: 79, 154
+  orig: 79, 154
+  offset: 0, 0
+  index: -1
+yeshuR2
+  rotate: false
+  xy: 133, 392
+  size: 182, 127
+  orig: 182, 127
+  offset: 0, 0
+  index: -1
+yeshuR3
+  rotate: false
+  xy: 323, 273
+  size: 120, 119
+  orig: 120, 119
+  offset: 0, 0
+  index: -1
+yeshuR4
+  rotate: false
+  xy: 435, 173
+  size: 89, 99
+  orig: 89, 99
+  offset: 0, 0
+  index: -1
+yeshuR5
+  rotate: false
+  xy: 451, 65
+  size: 65, 70
+  orig: 65, 70
+  offset: 0, 0
+  index: -1
+yeshuR6
+  rotate: false
+  xy: 451, 399
+  size: 105, 120
+  orig: 105, 120
+  offset: 0, 0
+  index: -1
+yeshuR7
+  rotate: true
+  xy: 147, 98
+  size: 150, 90
+  orig: 150, 90
+  offset: 0, 0
+  index: -1
+yeshuR8
+  rotate: false
+  xy: 1, 27
+  size: 111, 201
+  orig: 111, 201
+  offset: 0, 0
+  index: -1
+zuiba
+  rotate: false
+  xy: 24, 10
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+zz1
+  rotate: true
+  xy: 444, 284
+  size: 108, 87
+  orig: 108, 87
+  offset: 0, 0
+  index: -1
+zz2
+  rotate: true
+  xy: 113, 44
+  size: 184, 33
+  orig: 184, 33
+  offset: 0, 0
+  index: -1
+zz3
+  rotate: false
+  xy: 1, 229
+  size: 131, 290
+  orig: 131, 290
+  offset: 0, 0
+  index: -1

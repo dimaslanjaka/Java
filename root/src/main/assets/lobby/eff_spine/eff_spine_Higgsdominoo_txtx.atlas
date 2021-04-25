@@ -1,0 +1,153 @@
+
+eff_spine_Higgsdominoo_txtx.png
+size: 991,544
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aixin
+  rotate: false
+  xy: 202, 1
+  size: 75, 74
+  orig: 75, 74
+  offset: 0, 0
+  index: -1
+jb_00000
+  rotate: false
+  xy: 1, 427
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00001
+  rotate: false
+  xy: 1, 310
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00002
+  rotate: false
+  xy: 253, 427
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00003
+  rotate: false
+  xy: 1, 193
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00004
+  rotate: false
+  xy: 253, 310
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00005
+  rotate: false
+  xy: 505, 427
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00006
+  rotate: false
+  xy: 1, 76
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00007
+  rotate: false
+  xy: 253, 193
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00008
+  rotate: false
+  xy: 505, 310
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00009
+  rotate: false
+  xy: 253, 76
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00010
+  rotate: false
+  xy: 505, 193
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00011
+  rotate: true
+  xy: 757, 292
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00012
+  rotate: false
+  xy: 505, 76
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00013
+  rotate: true
+  xy: 874, 292
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00014
+  rotate: true
+  xy: 757, 40
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jb_00015
+  rotate: true
+  xy: 874, 40
+  size: 251, 116
+  orig: 251, 116
+  offset: 0, 0
+  index: -1
+jinbi
+  rotate: false
+  xy: 343, 42
+  size: 47, 33
+  orig: 47, 33
+  offset: 0, 0
+  index: -1
+jinbidui
+  rotate: false
+  xy: 1, 1
+  size: 200, 74
+  orig: 200, 74
+  offset: 0, 0
+  index: -1
+lizi2
+  rotate: false
+  xy: 343, 28
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 278, 11
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

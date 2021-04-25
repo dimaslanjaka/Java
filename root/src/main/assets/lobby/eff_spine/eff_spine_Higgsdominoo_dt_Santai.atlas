@@ -1,0 +1,237 @@
+
+eff_spine_Higgsdominoo_dt_Santai.png
+size: 992,405
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ma
+  rotate: false
+  xy: 1, 215
+  size: 140, 189
+  orig: 142, 192
+  offset: 1, 2
+  index: -1
+ma_0
+  rotate: true
+  xy: 183, 13
+  size: 24, 51
+  orig: 256, 256
+  offset: 90, 41
+  index: -1
+ma_1
+  rotate: true
+  xy: 152, 38
+  size: 26, 85
+  orig: 256, 256
+  offset: 89, 43
+  index: -1
+ma_10
+  rotate: true
+  xy: 646, 1
+  size: 103, 75
+  orig: 256, 256
+  offset: 59, 158
+  index: -1
+ma_11
+  rotate: false
+  xy: 888, 106
+  size: 102, 57
+  orig: 256, 256
+  offset: 65, 177
+  index: -1
+ma_12
+  rotate: true
+  xy: 722, 1
+  size: 103, 39
+  orig: 256, 256
+  offset: 67, 195
+  index: -1
+ma_13
+  rotate: true
+  xy: 539, 3
+  size: 93, 38
+  orig: 256, 256
+  offset: 78, 195
+  index: -1
+ma_14
+  rotate: false
+  xy: 1, 2
+  size: 69, 35
+  orig: 256, 256
+  offset: 101, 196
+  index: -1
+ma_2
+  rotate: true
+  xy: 71, 9
+  size: 28, 111
+  orig: 256, 256
+  offset: 87, 44
+  index: -1
+ma_3
+  rotate: false
+  xy: 762, 2
+  size: 58, 114
+  orig: 256, 256
+  offset: 59, 44
+  index: -1
+ma_4
+  rotate: false
+  xy: 821, 12
+  size: 66, 104
+  orig: 256, 256
+  offset: 51, 69
+  index: -1
+ma_5
+  rotate: false
+  xy: 843, 164
+  size: 67, 102
+  orig: 256, 256
+  offset: 49, 90
+  index: -1
+ma_6
+  rotate: false
+  xy: 578, 4
+  size: 67, 92
+  orig: 256, 256
+  offset: 48, 116
+  index: -1
+ma_7
+  rotate: true
+  xy: 238, 2
+  size: 62, 91
+  orig: 256, 256
+  offset: 48, 128
+  index: -1
+ma_8
+  rotate: false
+  xy: 912, 177
+  size: 70, 98
+  orig: 256, 256
+  offset: 49, 130
+  index: -1
+ma_9
+  rotate: true
+  xy: 447, 3
+  size: 93, 91
+  orig: 256, 256
+  offset: 51, 140
+  index: -1
+qipan
+  rotate: true
+  xy: 1, 38
+  size: 176, 150
+  orig: 178, 152
+  offset: 1, 1
+  index: -1
+qizi
+  rotate: true
+  xy: 330, 1
+  size: 68, 116
+  orig: 68, 116
+  offset: 0, 0
+  index: -1
+xian1_1
+  rotate: false
+  xy: 888, 14
+  size: 83, 91
+  orig: 256, 256
+  offset: 45, 120
+  index: -1
+xian1_10
+  rotate: true
+  xy: 266, 245
+  size: 159, 142
+  orig: 256, 256
+  offset: 59, 47
+  index: -1
+xian1_11
+  rotate: true
+  xy: 142, 233
+  size: 171, 123
+  orig: 256, 256
+  offset: 39, 46
+  index: -1
+xian1_12
+  rotate: true
+  xy: 152, 65
+  size: 167, 97
+  orig: 256, 256
+  offset: 33, 46
+  index: -1
+xian1_13
+  rotate: true
+  xy: 409, 248
+  size: 156, 120
+  orig: 256, 256
+  offset: 31, 46
+  index: -1
+xian1_14
+  rotate: false
+  xy: 530, 255
+  size: 145, 149
+  orig: 256, 256
+  offset: 30, 48
+  index: -1
+xian1_2
+  rotate: true
+  xy: 746, 117
+  size: 138, 96
+  orig: 256, 256
+  offset: 45, 117
+  index: -1
+xian1_3
+  rotate: true
+  xy: 250, 70
+  size: 162, 93
+  orig: 256, 256
+  offset: 48, 120
+  index: -1
+xian1_4
+  rotate: true
+  xy: 344, 85
+  size: 159, 69
+  orig: 256, 256
+  offset: 59, 144
+  index: -1
+xian1_5
+  rotate: true
+  xy: 515, 97
+  size: 150, 98
+  orig: 256, 256
+  offset: 70, 114
+  index: -1
+xian1_6
+  rotate: true
+  xy: 786, 267
+  size: 137, 125
+  orig: 256, 256
+  offset: 84, 84
+  index: -1
+xian1_7
+  rotate: false
+  xy: 676, 256
+  size: 109, 148
+  orig: 256, 256
+  offset: 112, 57
+  index: -1
+xian1_8
+  rotate: false
+  xy: 414, 97
+  size: 100, 150
+  orig: 256, 256
+  offset: 121, 50
+  index: -1
+xian1_9
+  rotate: false
+  xy: 614, 105
+  size: 131, 149
+  orig: 256, 256
+  offset: 90, 47
+  index: -1
+yezi
+  rotate: true
+  xy: 912, 276
+  size: 128, 79
+  orig: 130, 82
+  offset: 1, 2
+  index: -1

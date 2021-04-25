@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.randomappsinc.randomnumbergeneratorplus.theme.ThemedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage, RtlHardcoded">
+
+    <LinearLayout
+        android:id="@+id/focal_point"
+        style="@style/rng_page_container">
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+            android:text="@string/dice_roller"
+            style="@style/page_title"/>
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <EditText
+                android:id="@+id/num_dice"
+                android:layout_width="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="number"
+                android:maxLength="4"
+                android:imeOptions="actionNext"
+                style="@style/numeric_input"/>
+
+            <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/num_dice"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/num_dice"
+                android:textSize="15dp"
+                android:textColor="@color/dark_gray"/>
+        </com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout>
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/num_dice_one"
+                android:text="@string/one"
+                style="@style/quick_option_button"/>
+
+            <TextView
+                android:id="@+id/num_dice_two"
+                android:text="@string/two"
+                style="@style/quick_option_button"/>
+
+            <TextView
+                android:id="@+id/num_dice_three"
+                android:text="@string/three"
+                style="@style/quick_option_button"/>
+
+            <TextView
+                android:id="@+id/num_dice_four"
+                android:text="@string/four"
+                style="@style/quick_option_button"/>
+        </com.randomappsinc.randomnumbergeneratorplus.theme.ThemedLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_gray"/>
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <EditText
+                android:id="@+id/num_sides"
+                android:layout_width="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="number"
+                android:maxLength="4"
+                android:imeOptions="actionDone"
+                style="@style/numeric_input"/>
+
+            <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/num_sides"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/num_sides"
+                android:textSize="15dp"
+                android:textColor="@color/dark_gray"/>
+        </com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout>
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/num_sides_four"
+                android:text="@string/four"
+                style="@style/quick_option_button"/>
+
+            <TextView
+                android:id="@+id/num_sides_six"
+                android:text="@string/six"
+                style="@style/quick_option_button"/>
+
+            <TextView
+                android:id="@+id/num_sides_eight"
+                android:text="@string/eight"
+                style="@style/quick_option_button"/>
+
+            <TextView
+                android:id="@+id/num_sides_ten"
+                android:text="@string/ten"
+                style="@style/quick_option_button"/>
+
+            <TextView
+                android:id="@+id/num_sides_twelve"
+                android:text="@string/twelve"
+                style="@style/quick_option_button"/>
+
+            <TextView
+                android:id="@+id/num_sides_twenty"
+                android:text="@string/twenty"
+                style="@style/quick_option_button"/>
+        </com.randomappsinc.randomnumbergeneratorplus.theme.ThemedLinearLayout>
+
+        <TextView
+            android:id="@+id/roll"
+            android:text="@string/roll"
+            style="@style/rounded_generate_button"/>
+
+        <include layout="@layout/results"/>
+    </LinearLayout>
+</com.randomappsinc.randomnumbergeneratorplus.theme.ThemedScrollView>

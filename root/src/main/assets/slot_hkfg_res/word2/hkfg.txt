@@ -1,0 +1,54 @@
+[大厅文字内容]
+##号后为注释内容，需要另存为UTF-8格式！！
+Koneksi tidak terhubung, silakan periksa jaringan Anda
+Untuk sementara fitur tidak tersedia
+Mengirim data permintaan, silakan tunggu
+Kotak dialog akan tutup setelah %d detik
+Belum mulai permainan dalam waktu lama, klik YES untuk balik ke lobby
+Sambungan jaringan gagal, informasi kamar tidak diperoleh
+Game sedang maintenance, silakan coba kembali lagi
+Gagal memperoleh informasi kamar, silakan login ulang 
+Login server game time out, silakan coba lagi
+Akun Anda sedang login di game lain
+Login akun Anda tidak normal! Nomor :[L%d]
+Yakin meninggalkan permainan?
+Sedang keluar dari permainan
+Sambungan ke server terputus, sedang tersambung kembali
+Sambungan ke server gagal, klik YES untuk coba lagi
+Sambungan ke server gagal lagi, klik YES untuk kembali ke lobby
+Koneksi terputus, klik YES untuk kembali ke lobby
+Ruangan ditutup, silakan coba lagi nanti
+Koin emas melebihi %s dapat masuk.
+Ruang ini sudah penuh.
+#
+#
+#
+#
+#
+#
+#
+Tekan lama [mulai] otomatis
+Tekan [mulai] untuk memulai
+Rejeki melimpah
+Hadiah utama segera hadir
+Semoga beruntung
+Bonus terus-terusan
+Selamat memenangkan game gratis
+Skor %s
+UNTIL BOUNS
+Anda masih ada bonus game gratis yang belum habis, klik untuk melanjutkan
+Koin emas tidak cukup, silakan pergi ke lobi untuk mendapatkan
+Apakah Anda pergi ke lobi untuk mendapatkan koin emas?
+Harap hentikan permainan sebelum melanjutkan
+tamu
+Silakan masukkan informasi...
+Selamat 
+Di 
+REZEKI NOMPLOK 
+memperoleh
+Reward dua kali lipat
+Game gratis
+GRAND
+Menangkan 
+koin
+Level %d keatas baru dapat masuk.

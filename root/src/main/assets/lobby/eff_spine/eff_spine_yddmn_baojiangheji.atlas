@@ -1,0 +1,146 @@
+
+eff_spine_yddmn_baojiangheji.png
+size: 884,898
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DG_dj_icon_hfk
+  rotate: true
+  xy: 258, 31
+  size: 176, 220
+  orig: 176, 220
+  offset: 0, 0
+  index: -1
+DG_qiuqiu_icon_hfk
+  rotate: true
+  xy: 689, 426
+  size: 214, 166
+  orig: 214, 166
+  offset: 0, 0
+  index: -1
+DG_qiuqiu_jsjl_btn_liang
+  rotate: false
+  xy: 626, 96
+  size: 70, 71
+  orig: 70, 71
+  offset: 0, 0
+  index: -1
+dj_jdt
+  rotate: true
+  xy: 225, 1
+  size: 168, 16
+  orig: 168, 16
+  offset: 0, 0
+  index: -1
+dj_jdt_glow
+  rotate: false
+  xy: 729, 653
+  size: 150, 18
+  orig: 150, 18
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 1, 170
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+guang
+  rotate: false
+  xy: 1, 427
+  size: 470, 470
+  orig: 470, 470
+  offset: 0, 0
+  index: -1
+guangdian
+  rotate: false
+  xy: 657, 297
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+guangmang
+  rotate: false
+  xy: 472, 641
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+guangquan
+  rotate: false
+  xy: 472, 251
+  size: 184, 184
+  orig: 184, 184
+  offset: 0, 0
+  index: -1
+guangyun
+  rotate: false
+  xy: 626, 31
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+hdb
+  rotate: true
+  xy: 472, 436
+  size: 204, 216
+  orig: 204, 216
+  offset: 0, 0
+  index: -1
+jiangquan
+  rotate: true
+  xy: 729, 672
+  size: 225, 154
+  orig: 225, 154
+  offset: 0, 0
+  index: -1
+jinbi
+  rotate: false
+  xy: 1, 5
+  size: 223, 164
+  orig: 223, 164
+  offset: 0, 0
+  index: -1
+line_1
+  rotate: true
+  xy: 786, 169
+  size: 256, 64
+  orig: 256, 64
+  offset: 0, 0
+  index: -1
+sbbj
+  rotate: false
+  xy: 258, 208
+  size: 210, 218
+  orig: 210, 218
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 697, 103
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+star2
+  rotate: false
+  xy: 762, 103
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+yuanhuan
+  rotate: false
+  xy: 657, 168
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+zhuanshi
+  rotate: true
+  xy: 479, 26
+  size: 224, 146
+  orig: 224, 146
+  offset: 0, 0
+  index: -1

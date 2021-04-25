@@ -1,0 +1,17 @@
+﻿[文字内容,需要另存为UTF-8格式]
+##以下内容是SLOT游戏共用##
+Anda masih ada free game gratis yang belum habis, klik untuk melanjutkan
+Anda masih ada bonus game gratis yang belum habis, klik untuk melanjutkan
+Koin tidak cukup,Silahkan melakukan transaksi pembelian koin.
+Apakah Anda pergi ke lobi untuk mendapatkan koin emas?
+Harap hentikan permainan sebelum melanjutkan
+Yakin meninggalkan permainan?
+Login akun Anda tidak normal[L%d]
+Koneksi terputus[L%d], klik TENTUKAN untuk kembali ke lobby
+Level %d keatas baru dapat masuk.
+Tekan [SPIN] untuk memulai
+Tekan lama [SPIN] otomatis
+Game Over - Mainkan Sekarang
+Semoga beruntung
+Rejeki melimpah
+Bonus all the way

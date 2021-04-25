@@ -1,0 +1,76 @@
+
+eff_spine_Higgsdominoo_qhgc.png
+size: 420,505
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow1
+  rotate: false
+  xy: 291, 376
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+glow1_0
+  rotate: true
+  xy: 291, 259
+  size: 116, 124
+  orig: 128, 128
+  offset: 6, 2
+  index: -1
+glow2_0
+  rotate: true
+  xy: 290, 151
+  size: 107, 110
+  orig: 128, 128
+  offset: 10, 9
+  index: -1
+guangdian_0
+  rotate: false
+  xy: 1, 1
+  size: 44, 44
+  orig: 64, 64
+  offset: 10, 10
+  index: -1
+xuanwo_0
+  rotate: false
+  xy: 1, 46
+  size: 143, 152
+  orig: 156, 156
+  offset: 7, 2
+  index: -1
+xuanwo_1
+  rotate: false
+  xy: 1, 352
+  size: 144, 152
+  orig: 156, 156
+  offset: 7, 2
+  index: -1
+xuanwo_2
+  rotate: false
+  xy: 1, 199
+  size: 144, 152
+  orig: 156, 156
+  offset: 7, 2
+  index: -1
+xuanwo_3
+  rotate: false
+  xy: 146, 199
+  size: 143, 152
+  orig: 156, 156
+  offset: 7, 2
+  index: -1
+xuanwo_4
+  rotate: false
+  xy: 146, 352
+  size: 144, 152
+  orig: 156, 156
+  offset: 7, 2
+  index: -1
+xuanwo_5
+  rotate: false
+  xy: 145, 46
+  size: 143, 152
+  orig: 156, 156
+  offset: 7, 2
+  index: -1

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="JProxyChecker">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/JProxyChecker.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

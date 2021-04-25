@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.randomappsinc.randomnumbergeneratorplus.theme.ThemedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage, RtlHardcoded">
+
+    <LinearLayout
+        android:id="@+id/focal_point"
+        style="@style/rng_page_container">
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+            android:text="@string/random_number_generator"
+            style="@style/page_title"/>
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/minimum"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/minimum"
+                    android:layout_marginTop="8dp"
+                    android:inputType="numberSigned"
+                    android:maxLength="9"
+                    android:imeOptions="actionNext"
+                    style="@style/numeric_input"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/background_gray"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/maximum"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/maximum"
+                    android:layout_marginTop="8dp"
+                    android:inputType="numberSigned"
+                    android:maxLength="9"
+                    android:imeOptions="actionNext"
+                    style="@style/numeric_input"/>
+            </LinearLayout>
+        </com.randomappsinc.randomnumbergeneratorplus.theme.ThemedLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_gray"/>
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="number"
+                android:maxLength="4"
+                android:imeOptions="actionDone"
+                style="@style/numeric_input"/>
+
+            <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/quantity"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/quantity"
+                android:textSize="15dp"
+                android:textColor="@color/dark_gray"/>
+        </com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_gray"/>
+
+        <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout
+            android:id="@+id/excluded_numbers_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/excluded_numbers"
+                android:layout_width="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                style="@style/numeric_input"/>
+
+            <com.randomappsinc.randomnumbergeneratorplus.theme.ThemedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/excluded_numbers"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/exclude_these"
+                android:textSize="15dp"
+                android:textColor="@color/dark_gray"/>
+        </com.randomappsinc.randomnumbergeneratorplus.theme.ThemedRelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rng_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plus_icon"
+                android:textSize="21dp"
+                android:textColor="@color/app_blue"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="@string/additional_settings"
+                android:textColor="@color/app_blue"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/generate"
+            android:text="@string/generate"
+            style="@style/rounded_generate_button"/>
+
+        <include layout="@layout/results"/>
+    </LinearLayout>
+</com.randomappsinc.randomnumbergeneratorplus.theme.ThemedScrollView>

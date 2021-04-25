@@ -1,0 +1,19 @@
+info face="dfdc_youwin_num1" size=32 bold=0 italic=0 charset="" unicode=0 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=2,2
+common lineHeight=128 base=26 scaleW=323 scaleH=335 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="dfdc_youwin_num1.png"
+chars count=13
+char id=48 x=179 y=0 width=87 height=110 xoffset=0 yoffset=18 xadvance=87 page=0 chnl=0 letter="0"
+char id=49 x=266 y=223 width=55 height=109 xoffset=0 yoffset=18 xadvance=55 page=0 chnl=0 letter="1"
+char id=50 x=179 y=112 width=86 height=109 xoffset=0 yoffset=18 xadvance=86 page=0 chnl=0 letter="2"
+char id=51 x=179 y=223 width=85 height=110 xoffset=0 yoffset=18 xadvance=85 page=0 chnl=0 letter="3"
+char id=52 x=0 y=0 width=89 height=107 xoffset=0 yoffset=20 xadvance=89 page=0 chnl=0 letter="4"
+char id=53 x=90 y=221 width=87 height=108 xoffset=0 yoffset=20 xadvance=87 page=0 chnl=0 letter="5"
+char id=54 x=0 y=109 width=88 height=110 xoffset=0 yoffset=18 xadvance=88 page=0 chnl=0 letter="6"
+char id=55 x=91 y=0 width=82 height=107 xoffset=0 yoffset=20 xadvance=82 page=0 chnl=0 letter="7"
+char id=56 x=90 y=109 width=87 height=110 xoffset=0 yoffset=18 xadvance=87 page=0 chnl=0 letter="8"
+char id=57 x=0 y=221 width=88 height=110 xoffset=0 yoffset=18 xadvance=88 page=0 chnl=0 letter="9"
+char id=44 x=267 y=112 width=36 height=46 xoffset=0 yoffset=100 xadvance=36 page=0 chnl=0 letter=","
+char id=32 x=0 y=0 width=0 height=0 xoffset=0 yoffset=0 xadvance=0 page=0 chnl=0 letter=" "
+char id=9 x=0 y=0 width=0 height=0 xoffset=0 yoffset=0 xadvance=0 page=0 chnl=0 letter="	"
+
+kernings count=0

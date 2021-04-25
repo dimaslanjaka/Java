@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.dimaslanjaka"},{"l":"com.dimaslanjaka.helper"},{"l":"de.mc.logging"},{"l":"lib"},{"l":"string"}]

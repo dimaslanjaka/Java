@@ -1,0 +1,10 @@
+﻿[文字内容,需要另存为UTF-8格式]
+##以下内容是各自游戏特有##
+TOTAL MENANG %s
+%s (x%d) = %s
+%s
+Persyaratan minimum taruhan %s untuk %s Jackpot
+Naikkan taruhan untuk membuka lebih banyak item emas
+BET AMOUNT: %s
+WINS
+Setelah SCATTER diputar, jika mendapatkan SCATTER lagi, berpeluang untuk menambah jumlah FREE GAME

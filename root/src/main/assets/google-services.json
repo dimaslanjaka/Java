@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "550097389504",
+    "firebase_url": "https://higgs-domino-island-gaple.firebaseio.com",
+    "project_id": "higgs-domino-island-gaple",
+    "storage_bucket": "higgs-domino-island-gaple.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550097389504:android:0623bdad00453d54",
+        "android_client_info": {
+          "package_name": "com.neptune.domino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550097389504-g5udl71abv0cuajsvd0qh8bn4pb4b1vu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neptune.domino",
+            "certificate_hash": "05d0fae54f76423e63aa94d03f09fd483e2e38dd"
+          }
+        },
+        {
+          "client_id": "550097389504-cdhm0nc3ng5hqrpc6335csrptdhvt3qd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOA8yhMOZLREFWiHnEcl42b6yDQbuitn8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550097389504-cdhm0nc3ng5hqrpc6335csrptdhvt3qd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

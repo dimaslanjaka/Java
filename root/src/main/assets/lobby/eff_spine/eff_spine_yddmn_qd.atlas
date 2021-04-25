@@ -1,0 +1,48 @@
+
+eff_spine_yddmn_qd.png
+size: 368,130
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+deng
+  rotate: false
+  xy: 305, 38
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+guangdian
+  rotate: false
+  xy: 263, 10
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+guangyun
+  rotate: false
+  xy: 134, 1
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 1, 1
+  size: 132, 128
+  orig: 132, 128
+  offset: 0, 0
+  index: -1
+line
+  rotate: false
+  xy: 263, 43
+  size: 41, 86
+  orig: 41, 86
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 305, 67
+  size: 62, 62
+  orig: 64, 64
+  offset: 1, 1
+  index: -1

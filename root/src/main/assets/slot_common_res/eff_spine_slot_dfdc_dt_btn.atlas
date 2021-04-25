@@ -1,0 +1,97 @@
+
+eff_spine_slot_dfdc_dt_btn.png
+size: 329,89
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+btn_sg00
+  rotate: false
+  xy: 212, 14
+  size: 8, 30
+  orig: 119, 43
+  offset: 0, 8
+  index: -1
+btn_sg01
+  rotate: false
+  xy: 137, 5
+  size: 23, 40
+  orig: 119, 43
+  offset: 0, 0
+  index: -1
+btn_sg02
+  rotate: true
+  xy: 161, 6
+  size: 38, 40
+  orig: 119, 43
+  offset: 0, 0
+  index: -1
+btn_sg03
+  rotate: false
+  xy: 82, 4
+  size: 54, 41
+  orig: 119, 43
+  offset: 0, 0
+  index: -1
+btn_sg04
+  rotate: false
+  xy: 232, 47
+  size: 69, 41
+  orig: 119, 43
+  offset: 0, 0
+  index: -1
+btn_sg05
+  rotate: false
+  xy: 82, 46
+  size: 78, 42
+  orig: 119, 43
+  offset: 6, 0
+  index: -1
+btn_sg06
+  rotate: false
+  xy: 1, 45
+  size: 80, 43
+  orig: 119, 43
+  offset: 19, 0
+  index: -1
+btn_sg07
+  rotate: false
+  xy: 1, 1
+  size: 78, 43
+  orig: 119, 43
+  offset: 34, 0
+  index: -1
+btn_sg08
+  rotate: false
+  xy: 161, 45
+  size: 70, 43
+  orig: 119, 43
+  offset: 49, 0
+  index: -1
+btn_sg09
+  rotate: false
+  xy: 232, 3
+  size: 55, 43
+  orig: 119, 43
+  offset: 64, 0
+  index: -1
+btn_sg10
+  rotate: false
+  xy: 288, 2
+  size: 40, 43
+  orig: 119, 43
+  offset: 79, 0
+  index: -1
+btn_sg11
+  rotate: false
+  xy: 302, 46
+  size: 24, 42
+  orig: 119, 43
+  offset: 95, 0
+  index: -1
+btn_sg12
+  rotate: false
+  xy: 202, 11
+  size: 9, 33
+  orig: 119, 43
+  offset: 110, 1
+  index: -1

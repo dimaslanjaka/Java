@@ -1,0 +1,9 @@
+﻿[文字内容,需要另存为UTF-8格式]
+##以下内容是各自游戏特有##
+TOTAL WIN %s
+%s (x%d) = %s
+%s
+Min bet requirement of %s for %s Jackpot
+Higher bets open more gold objects
+BET AMOUNT: %s
+WINS

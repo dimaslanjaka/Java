@@ -1,0 +1,97 @@
+
+eff_spine_slot_dfdc_5OFAKIND.png
+size: 897,416
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fangshe
+  rotate: true
+  xy: 1, 89
+  size: 326, 322
+  orig: 332, 330
+  offset: 2, 6
+  index: -1
+glow
+  rotate: false
+  xy: 750, 126
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+kind
+  rotate: false
+  xy: 324, 228
+  size: 370, 187
+  orig: 372, 189
+  offset: 1, 1
+  index: -1
+kind_glow
+  rotate: false
+  xy: 544, 114
+  size: 205, 113
+  orig: 205, 113
+  offset: 0, 0
+  index: -1
+line
+  rotate: false
+  xy: 1, 24
+  size: 256, 64
+  orig: 256, 64
+  offset: 0, 0
+  index: -1
+line_glow_bai
+  rotate: false
+  xy: 501, 34
+  size: 128, 68
+  orig: 128, 68
+  offset: 0, 0
+  index: -1
+lizi
+  rotate: false
+  xy: 713, 60
+  size: 53, 53
+  orig: 53, 53
+  offset: 0, 0
+  index: -1
+num
+  rotate: true
+  xy: 695, 255
+  size: 160, 201
+  orig: 162, 203
+  offset: 1, 1
+  index: -1
+num_glow
+  rotate: true
+  xy: 380, 2
+  size: 100, 120
+  orig: 100, 120
+  offset: 0, 0
+  index: -1
+num_shadow
+  rotate: false
+  xy: 767, 1
+  size: 124, 124
+  orig: 126, 126
+  offset: 1, 1
+  index: -1
+star
+  rotate: false
+  xy: 630, 31
+  size: 82, 82
+  orig: 82, 82
+  offset: 0, 0
+  index: -1
+yun1
+  rotate: false
+  xy: 324, 103
+  size: 219, 124
+  orig: 221, 126
+  offset: 1, 1
+  index: -1
+yun2
+  rotate: false
+  xy: 258, 5
+  size: 121, 83
+  orig: 123, 85
+  offset: 1, 1
+  index: -1

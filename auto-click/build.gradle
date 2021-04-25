@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.phicomm.hu"
+        minSdkVersion 17
+        targetSdkVersion 30
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: '*.jar')
+    implementation 'org.apache.commons:commons-text:1.8'
+    implementation 'org.apache.commons:commons-lang3:3.11'
+    implementation 'org.apache.commons:commons-collections4:4.4'
+    implementation 'org.apache.commons:commons-compress:1.20'
+    implementation 'commons-net:commons-net:3.6'
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'org.apache.commons:commons-exec:1.3'
+    implementation 'commons-codec:commons-codec:1.13'
+    implementation 'commons-validator:commons-validator:1.7'
+    implementation 'org.apache.commons:commons-math3:3.6.1'
+    //noinspection DuplicatePlatformClasses
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+}

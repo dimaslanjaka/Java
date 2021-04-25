@@ -1,0 +1,26 @@
+info face="DG_lb_bonus2" size=32 bold=0 italic=0 charset="" unicode=0 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1
+common lineHeight=48 base=26 scaleW=164 scaleH=162 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="DG_lb_bonus2.png"
+chars count=20
+char id=48 x=68 y=86 width=32 height=42 xoffset=0 yoffset=6 xadvance=33 page=0 chnl=0 letter="0"
+char id=49 x=133 y=86 width=24 height=42 xoffset=0 yoffset=6 xadvance=25 page=0 chnl=0 letter="1"
+char id=50 x=101 y=86 width=31 height=42 xoffset=0 yoffset=6 xadvance=32 page=0 chnl=0 letter="2"
+char id=51 x=133 y=43 width=30 height=42 xoffset=0 yoffset=6 xadvance=31 page=0 chnl=0 letter="3"
+char id=52 x=0 y=86 width=34 height=42 xoffset=0 yoffset=6 xadvance=35 page=0 chnl=0 letter="4"
+char id=53 x=111 y=0 width=30 height=42 xoffset=0 yoffset=6 xadvance=31 page=0 chnl=0 letter="5"
+char id=54 x=69 y=43 width=32 height=42 xoffset=0 yoffset=6 xadvance=33 page=0 chnl=0 letter="6"
+char id=55 x=102 y=43 width=30 height=42 xoffset=0 yoffset=6 xadvance=31 page=0 chnl=0 letter="7"
+char id=56 x=78 y=0 width=32 height=42 xoffset=0 yoffset=6 xadvance=33 page=0 chnl=0 letter="8"
+char id=57 x=35 y=86 width=32 height=42 xoffset=0 yoffset=6 xadvance=33 page=0 chnl=0 letter="9"
+char id=44 x=66 y=129 width=22 height=23 xoffset=0 yoffset=30 xadvance=23 page=0 chnl=0 letter=","
+char id=46 x=89 y=129 width=20 height=18 xoffset=0 yoffset=30 xadvance=21 page=0 chnl=0 letter="."
+char id=43 x=0 y=129 width=32 height=32 xoffset=0 yoffset=11 xadvance=33 page=0 chnl=0 letter="+"
+char id=45 x=33 y=129 width=32 height=17 xoffset=0 yoffset=19 xadvance=33 page=0 chnl=0 letter="-"
+char id=75 x=0 y=43 width=34 height=42 xoffset=0 yoffset=6 xadvance=35 page=0 chnl=0 letter="K"
+char id=77 x=0 y=0 width=43 height=42 xoffset=0 yoffset=6 xadvance=44 page=0 chnl=0 letter="M"
+char id=66 x=44 y=0 width=33 height=42 xoffset=0 yoffset=6 xadvance=34 page=0 chnl=0 letter="B"
+char id=84 x=35 y=43 width=33 height=42 xoffset=0 yoffset=6 xadvance=34 page=0 chnl=0 letter="T"
+char id=32 x=0 y=0 width=0 height=0 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=0 letter=" "
+char id=9 x=0 y=0 width=0 height=0 xoffset=0 yoffset=0 xadvance=160 page=0 chnl=0 letter="	"
+
+kernings count=0

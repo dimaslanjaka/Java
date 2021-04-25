@@ -1,0 +1,130 @@
+plugins {
+    id "groovy"
+    id "java"
+    id "org.jetbrains.kotlin.jvm" //version "1.4.32"
+    id "maven-publish"
+    //id "java-gradle-plugin"
+}
+
+description = "Java Library"
+group "com.dimaslanjaka.library"
+version "1.0.0"
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+//println("${project.name} using kotlin : $kotlin_version")
+
+dependencies {
+    // Local
+    implementation(files(new File("$projectDir/../plugin/build/libs/gradle-plugin.jar").absolutePath))
+
+    // others
+    implementation "org.slf4j:slf4j-api:1.7.30"
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+    implementation "org.codehaus.groovy:groovy-all:3.0.8"
+    testImplementation group: "junit", name: "junit", version: "4.13.2"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.7.1"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
+
+    // kotlin
+    implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlin_version")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
+
+    // html parser
+    implementation("org.jsoup:jsoup:1.13.1")
+
+    // JSON
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.12.3")
+    implementation("com.google.code.gson:gson:2.8.6")
+    implementation("org.json:json:20210307")
+
+    // Apache
+    implementation("org.apache.httpcomponents:httpclient:4.5.13")
+    implementation("org.apache.commons:commons-collections4:4.4")
+    implementation("org.apache.commons:commons-lang3:3.12.0")
+    implementation("org.apache.commons:commons-compress:1.20")
+    implementation("org.apache.commons:commons-exec:1.3")
+    implementation("org.apache.commons:commons-math3:3.6.1")
+    implementation("commons-codec:commons-codec:20041127.091804")
+    implementation("commons-net:commons-net:20030805.205232")
+    implementation("commons-validator:commons-validator:1.7")
+    implementation("commons-io:commons-io:20030203.000550")
+    implementation("commons-cli:commons-cli:20040117.000000")
+    implementation("xerces:xercesImpl:2.12.1")
+    implementation("org.apache.cxf:cxf-common-utilities:2.5.11")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// TODO: Fix duplicate class for android project
+/*
+new File("$projectDir/../plugin/build/libs").listFiles().each {
+    if (!it.name.contains("source") && !it.name.contains("doc") && it.name.matches("gradle-plugin-\\d+.\\d+.\\d+.jar")) {
+        jar.from(zipTree(it)) {
+            include("**")
+            exclude("META-INF", "META-INF/**")
+        }
+    }
+}
+ */
+
+jar {
+    manifest {
+        attributes["Multi-Release"] = "true"
+        attributes["Implementation-Title"] = project.description as String
+        attributes["Implementation-Version"] = project.version as String
+        attributes["Implementation-Vendor"] = "Dimas Lanjaka"
+        attributes["Created-By"] =
+                "${System.getProperty("java.version")} (${System.getProperty("java.vendor")} ${System.getProperty("java.vm.version")})"
+        attributes["Main-Class"] = "com.dimaslanjaka.library.helper.Main"
+    }
+    doLast {
+        def jarnoversion = new File(jar.archiveFile.get().asFile.parent, "library.jar")
+        copy {
+            from(jar.archiveFile.get().asFile)
+            into(jarnoversion)
+        }
+    }
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.withType(Javadoc) {
+    source = sourceSets.main.allJava
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption("html5", true)
+    }
+    options {
+        tags = ["attr:a:head", "url:a", "example:code", "usage:code"]
+        encoding = "UTF-8"
+        addStringOption("Xdoclint:none", "-quiet")
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = "library"
+            from components.java
+            versionMapping {
+                usage("java-api") {
+                    fromResolutionOf("runtimeClasspath")
+                }
+                usage("java-runtime") {
+                    fromResolutionResult()
+                }
+            }
+        }
+    }
+}
+

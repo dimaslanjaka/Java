@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@css/win7.css" xmlns="http://javafx.com/javafx/11.0.2">
+   <children>
+      <ProgressBar fx:id="progress" blendMode="SRC_ATOP" prefWidth="600.0" progress="0.0" stylesheets="@css/progress.css" />
+      <WebView fx:id="web" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/win7.css" />
+   </children>
+</VBox>

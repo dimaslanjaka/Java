@@ -1,0 +1,5 @@
+﻿[agent_info]
+game_id = 999
+use_section = release
+agent_id = 10000102
+

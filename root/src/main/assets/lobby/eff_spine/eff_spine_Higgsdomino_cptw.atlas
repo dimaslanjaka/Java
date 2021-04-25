@@ -1,0 +1,41 @@
+
+eff_spine_Higgsdomino_cptw.png
+size: 608,130
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gupai
+  rotate: false
+  xy: 515, 18
+  size: 52, 111
+  orig: 54, 113
+  offset: 1, 1
+  index: -1
+line_huang
+  rotate: true
+  xy: 1, 1
+  size: 128, 256
+  orig: 128, 256
+  offset: 0, 0
+  index: -1
+line_lan
+  rotate: true
+  xy: 258, 1
+  size: 128, 256
+  orig: 128, 256
+  offset: 0, 0
+  index: -1
+shandian
+  rotate: false
+  xy: 568, 65
+  size: 36, 64
+  orig: 128, 128
+  offset: 47, 32
+  index: -1
+xingxing
+  rotate: false
+  xy: 568, 25
+  size: 39, 39
+  orig: 51, 51
+  offset: 6, 6
+  index: -1

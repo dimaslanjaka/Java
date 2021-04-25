@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enable_shake">Shake enabled</string>
+    <string name="play_sounds">Play sounds</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="my_other_apps">My other apps</string>
+    <string name="rate_this_app">Rate this app</string>
+    <string name="source_code">Source code</string>
+    <string-array name="settings_options">
+        <item>@string/enable_shake</item>
+        <item>@string/play_sounds</item>
+        <item>@string/dark_mode</item>
+        <item>@string/send_feedback</item>
+        <item>@string/my_other_apps</item>
+        <item>@string/rate_this_app</item>
+        <item>@string/source_code</item>
+    </string-array>
+    <string name="play_store_error">Unable to open the Play Store.</string>
+    <string name="feedback_subject">RNG Plus Feedback</string>
+    <string name="send_email">Send email</string>
+
+    <!-- Icons -->
+    <string name="shake_icon">{ion-radio-waves}</string>
+    <string name="sound_icon">{ion-speakerphone}</string>
+    <string name="moon_icon">{fa-moon-o}</string>
+    <string name="email_icon">{ion-email}</string>
+    <string name="android_icon">{ion-social-android}</string>
+    <string name="like_icon">{ion-thumbsup}</string>
+    <string name="github_icon">{ion-social-github}</string>
+    <string-array name="settings_icons">
+        <item>@string/shake_icon</item>
+        <item>@string/sound_icon</item>
+        <item>@string/moon_icon</item>
+        <item>@string/email_icon</item>
+        <item>@string/android_icon</item>
+        <item>@string/like_icon</item>
+        <item>@string/github_icon</item>
+    </string-array>
+</resources>

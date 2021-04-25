@@ -1,0 +1,60 @@
+{
+"skeleton": { "hash": "Vo7FFtwUa4vt3wBgtKPifKuCoy4", "spine": "3.7.94", "width": 0, "height": 0, "images": "./images/", "audio": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "btn", "parent": "root" },
+	{ "name": "btn_sg", "parent": "btn", "x": -0.61, "y": -1.62, "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "btn_sg", "bone": "btn_sg", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"btn_sg": {
+			"btn_sg00": { "width": 119, "height": 43 },
+			"btn_sg01": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg02": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg03": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg04": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg05": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg06": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg07": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg08": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg09": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg10": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg11": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 },
+			"btn_sg12": { "x": 0.5, "y": 0.5, "width": 119, "height": 43 }
+		}
+	}
+},
+"animations": {
+	"btn": {
+		"slots": {
+			"btn_sg": {
+				"color": [
+					{ "time": 0, "color": "ffffff64" },
+					{ "time": 0.4, "color": "ffffffb4" },
+					{ "time": 0.8667, "color": "ffffff64" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "btn_sg00" },
+					{ "time": 0.0667, "name": "btn_sg01" },
+					{ "time": 0.1333, "name": "btn_sg02" },
+					{ "time": 0.2, "name": "btn_sg03" },
+					{ "time": 0.2667, "name": "btn_sg04" },
+					{ "time": 0.3333, "name": "btn_sg05" },
+					{ "time": 0.4, "name": "btn_sg06" },
+					{ "time": 0.4667, "name": "btn_sg07" },
+					{ "time": 0.5333, "name": "btn_sg08" },
+					{ "time": 0.6, "name": "btn_sg09" },
+					{ "time": 0.6667, "name": "btn_sg10" },
+					{ "time": 0.7333, "name": "btn_sg11" },
+					{ "time": 0.8, "name": "btn_sg12" },
+					{ "time": 0.8667, "name": null },
+					{ "time": 1.6667, "name": null }
+				]
+			}
+		}
+	}
+}
+}
