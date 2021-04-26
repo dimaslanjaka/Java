@@ -88,7 +88,7 @@ jar {
 /**
  * Compile jar with dependencies will causes
  * Duplicate Classes When Compiled On Android Project,
- * Compile to another filename then
+ * Compile to ending (-wd) filename then
  */
 tasks.create("fatjar", Jar) { fatjar ->
     fatjar.archiveFileName.set("library-wd.jar")
