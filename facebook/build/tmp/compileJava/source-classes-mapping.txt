@@ -1,4 +1,0 @@
-com/dimaslanjaka/libs/facebook/UserConfig.java
- com.dimaslanjaka.libs.facebook.UserConfig
-com/dimaslanjaka/libs/facebook/PostConfig.java
- com.dimaslanjaka.libs.facebook.PostConfig

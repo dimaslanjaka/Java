@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Multi-Release: true
-Implementation-Title: Java Library
-Implementation-Version: 1.0.0
-Implementation-Vendor: Dimas Lanjaka
-Created-By: 11.0.11 (BellSoft 11.0.11+9-LTS)
-Main-Class: com.dimaslanjaka.library.helper.Main
-

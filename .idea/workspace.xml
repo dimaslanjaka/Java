@@ -120,7 +120,7 @@
       <command value="gradle assemble" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle..Kotlin Workspace [assemble]">
+  <component name="RunManager" selected="Gradle..Kotlin Workspace [clean]">
     <configuration name="browser" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Kotlin_Workspace.browser" />
       <option name="DEPLOY" value="true" />
