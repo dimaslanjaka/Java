@@ -76,7 +76,8 @@ dependencies {
     }
 
     // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlin_version")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
 
     // MultiDex
     implementation "androidx.multidex:multidex:2.0.1"
@@ -97,6 +98,17 @@ dependencies {
     //implementation "com.google.android.gms:play-services-ads:20.0.0"
     //implementation "com.google.android.gms:play-services-basement:17.6.0"
     //implementation "com.google.android.gms:play-services-base:17.6.0"
+
+    // Additional
+    implementation "com.snatik:storage:2.1.0"
+
+    // html parser
+    implementation("org.jsoup:jsoup:1.13.1")
+
+    // JSON
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.12.3")
+    implementation("com.google.code.gson:gson:2.8.6")
+    implementation("org.json:json:20210307")
 
     // Junit
     testImplementation "junit:junit:4.13.2"

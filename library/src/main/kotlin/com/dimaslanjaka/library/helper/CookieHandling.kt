@@ -14,9 +14,9 @@ import java.util.regex.Pattern
 import java.io.File as JavaIoFile
 import java.net.CookieManager as JavaNetCookieManager
 
-class CookieHandling : CookieHandlingInterface {
+open class CookieHandling : CookieHandlingInterface {
     override lateinit var fileCookie: JavaIoFile
-    override lateinit var manager: JavaNetCookieManager
+    override var manager: JavaNetCookieManager
 
     constructor() {
         manager = JavaNetCookieManager()
@@ -93,10 +93,11 @@ class CookieHandling : CookieHandlingInterface {
             saveCookie()
         }
         try {
-            val json = File.read(fileCookie.absolutePath) as String
+            val json = File.read(fileCookie.absolutePath)
             // convert json string to list
             val httpCookies = Gson().fromJson<List<HttpCookie>>(json)
-            println("Load Cookie", fileCookie, httpCookies)
+            //println("Load Cookie", fileCookie, httpCookies)
+            println("(Load Cookie=${fileCookie}) (Total=${httpCookies.size})")
             for (cookie in httpCookies) {
                 manager.cookieStore.add(URI.create(cookie.domain), cookie)
             }
@@ -107,9 +108,10 @@ class CookieHandling : CookieHandlingInterface {
 
     override fun saveCookie() {
         try {
-            val listCookies = manager.cookieStore.cookies
-            val json = gson.toJson(listCookies)
-            println("Save Cookie", fileCookie, json, listCookies, listCookies.size)
+            val httpCookies = manager.cookieStore.cookies
+            val json = gson.toJson(httpCookies)
+            //println("Save Cookie", fileCookie, json, listCookies, listCookies.size)
+            println("(Save Cookie=${fileCookie}) (Total=${httpCookies.size})")
             File.write(fileCookie.absolutePath, json)
         } catch (e: Exception) {
             e.printStackTrace()
@@ -122,6 +124,15 @@ class CookieHandling : CookieHandlingInterface {
         manager.cookieStore.removeAll()
         // reload cookies from new file cookie
         loadCookie()
+    }
+
+    fun addCookie(uri: URI, name: String, value: String) {
+        val httpCookie = HttpCookie(name, value);
+        manager.cookieStore.add(uri, httpCookie)
+    }
+
+    fun addCookie(uri: URI, httpCookie: HttpCookie) {
+        manager.cookieStore.add(uri, httpCookie)
     }
 
     companion object {

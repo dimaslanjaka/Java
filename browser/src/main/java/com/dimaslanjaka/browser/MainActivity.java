@@ -1,5 +1,6 @@
 package com.dimaslanjaka.browser;
 
+import android.CookieHandling;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     restartApp();
                 })) {
             // YOUR BASE METHOD
-            new WebviewHandler(this, web);
+            new CookieHandling(this, web);
         }
     }
 

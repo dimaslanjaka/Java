@@ -9,14 +9,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0807558-6760-40e4-9d2a-06cfd0fa630d" name="Default Changelist" comment="Fix resolution files">
+    <list default="true" id="b0807558-6760-40e4-9d2a-06cfd0fa630d" name="Default Changelist" comment="Fix gitignore excluded and included files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/WebviewHandler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-android/build-old.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/build-old.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandling.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandling.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandlingWebviewClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandlingWebviewClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/WebkitCookieManagerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/WebkitCookieManagerProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$fromJson$$inlined$genericType$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$fromJson$$inlined$genericType$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$fromJson$$inlined$genericType$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$fromJson$$inlined$genericType$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$genericType$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$genericType$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$loadCookiesAsHttpURLConnection$$inlined$fromJson$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$loadCookiesAsHttpURLConnection$$inlined$fromJson$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$fromJson$$inlined$genericType$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$fromJson$$inlined$genericType$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$loadCookie$$inlined$fromJson$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$loadCookie$$inlined$fromJson$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/libs/library-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/libs/library-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/libs/library.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/libs/library.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/CookieHandling.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/CookieHandling.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[e501d60e9804]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -115,6 +135,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="android" />
       <recent name="com.dimaslanjaka.library.helper" />
     </key>
   </component>
@@ -127,7 +148,7 @@
       <command value="gradle clean jar" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle..Kotlin Workspace [clean jar]">
+  <component name="RunManager" selected="Android App.browser">
     <configuration name="browser" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Kotlin_Workspace.browser" />
       <option name="DEPLOY" value="true" />
@@ -364,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619416319343</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix gitignore excluded and included files">
+      <created>1619429446645</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1619429446645</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -388,7 +416,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Fix Duplicated Classes For Android Project.&#10;to import each modules into one library." />
     <MESSAGE value="Fix resolution files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix resolution files" />
+    <MESSAGE value="Fix gitignore excluded and included files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix gitignore excluded and included files" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

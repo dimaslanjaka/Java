@@ -76,9 +76,9 @@ dependencies {
     testImplementation "junit:junit:4.13.2"
 
     // Mockito
-    testImplementation "org.mockito:mockito-core:2.23.4"
+    testImplementation "org.mockito:mockito-core:3.9.0"
 
     // AssertJ
     testImplementation "com.android.support:support-annotations:28.0.0"
-    testImplementation "org.assertj:assertj-core:3.10.0"
+    testImplementation "org.assertj:assertj-core:3.19.0"
 }
