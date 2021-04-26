@@ -16,10 +16,11 @@ repositories {
 }
 
 //println("${project.name} using kotlin : $kotlin_version")
+def pluginJar = new File("$projectDir/../plugin/build/libs/gradle-plugin.jar")
 
 dependencies {
     // Local
-    implementation(files(new File("$projectDir/../plugin/build/libs/gradle-plugin.jar").absolutePath))
+    implementation(files(pluginJar.absolutePath))
 
     // others
     implementation "org.slf4j:slf4j-api:1.7.30"
@@ -61,19 +62,8 @@ test {
     useJUnitPlatform()
 }
 
-// TODO: Fix duplicate class for android project
-/*
-new File("$projectDir/../plugin/build/libs").listFiles().each {
-    if (!it.name.contains("source") && !it.name.contains("doc") && it.name.matches("gradle-plugin-\\d+.\\d+.\\d+.jar")) {
-        jar.from(zipTree(it)) {
-            include("**")
-            exclude("META-INF", "META-INF/**")
-        }
-    }
-}
- */
-
 jar {
+    dependsOn("fatjar")
     manifest {
         attributes["Multi-Release"] = "true"
         attributes["Implementation-Title"] = project.description as String
@@ -84,11 +74,27 @@ jar {
         attributes["Main-Class"] = "com.dimaslanjaka.library.helper.Main"
     }
     doLast {
-        def jarnoversion = new File(jar.archiveFile.get().asFile.parent, "library.jar")
+        // TODO: create jar without version
         copy {
             from(jar.archiveFile.get().asFile)
-            into(jarnoversion)
+            into(jar.archiveFile.get().asFile.parent)
+            rename {
+                jar.archiveFile.get().asFile.getName().replace("-$project.version", "")
+            }
         }
+    }
+}
+
+/**
+ * Compile jar with dependencies will causes
+ * Duplicate Classes When Compiled On Android Project,
+ * Compile to another filename then
+ */
+tasks.create("fatjar", Jar) { fatjar ->
+    fatjar.archiveFileName.set("library-wd.jar")
+    fatjar.from(zipTree(pluginJar)) {
+        include("**")
+        exclude("META-INF", "META-INF/**")
     }
 }
 

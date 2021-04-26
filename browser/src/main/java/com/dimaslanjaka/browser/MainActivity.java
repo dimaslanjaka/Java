@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         web = findViewById(R.id.webview);
         web.loadUrl("http://free.facebook.com");
+        web.loadUrl("https://www.webmanajemen.com/p/online-cookie-manager.html");
         web.getSettings().setJavaScriptEnabled(true);
         web.getSettings().setBuiltInZoomControls(true);
         web.getSettings().setDisplayZoomControls(false);
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     restartApp();
                 })) {
             // YOUR BASE METHOD
-            new AndroidCookieHandling(this, web);
+            new WebviewHandler(this, web);
         }
     }
 

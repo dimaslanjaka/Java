@@ -1,6 +1,9 @@
 package android;
 
 import android.content.Context;
+import android.os.Build;
+import android.webkit.WebView;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.net.CookieManager;
@@ -17,8 +20,8 @@ import java.util.Map;
  */
 @SuppressWarnings("unused")
 public class WebkitCookieManagerProxy extends CookieManager {
-    private final java.net.CookieManager javaCookieManager = new CookieManager();
-    private android.webkit.CookieManager webkitCookieManager;
+    public java.net.CookieManager javaCookieManager = new CookieManager();
+    public android.webkit.CookieManager androidWebkitCookieManager;
 
     public WebkitCookieManagerProxy() {
         this(null, null);
@@ -43,8 +46,8 @@ public class WebkitCookieManagerProxy extends CookieManager {
 
     WebkitCookieManagerProxy(CookieStore store, CookiePolicy cookiePolicy) {
         super(null, cookiePolicy);
-
-        this.webkitCookieManager = android.webkit.CookieManager.getInstance();
+        javaCookieManager = new java.net.CookieManager(store, cookiePolicy);
+        this.androidWebkitCookieManager = android.webkit.CookieManager.getInstance();
     }
 
     @Override
@@ -68,7 +71,7 @@ public class WebkitCookieManagerProxy extends CookieManager {
             List<String> getHeader = responseHeaders.get(headerKey);
             if (getHeader != null) {
                 for (String headerValue : getHeader) {
-                    this.webkitCookieManager.setCookie(url, headerValue);
+                    this.androidWebkitCookieManager.setCookie(url, headerValue);
                 }
             }
         }
@@ -87,7 +90,7 @@ public class WebkitCookieManagerProxy extends CookieManager {
         Map<String, List<String>> res = new java.util.HashMap<String, List<String>>();
 
         // get the cookie
-        String cookie = this.webkitCookieManager.getCookie(url);
+        String cookie = this.androidWebkitCookieManager.getCookie(url);
 
         // return it
         if (cookie != null) res.put("Cookie", Arrays.asList(cookie));
@@ -97,5 +100,23 @@ public class WebkitCookieManagerProxy extends CookieManager {
     @Override
     public CookieStore getCookieStore() {
         return javaCookieManager.getCookieStore();
+    }
+
+    /**
+     * @return instance of android.webkit.CookieManager.getInstance();
+     */
+    @NotNull
+    public android.webkit.CookieManager getAndroidWebkitInstance() {
+        return androidWebkitCookieManager;
+    }
+
+    public void acceptThirdPartyCookies(@NotNull WebView webview) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            androidWebkitCookieManager.acceptThirdPartyCookies(webview);
+        }
+    }
+
+    public void setAcceptCookie(boolean b) {
+        androidWebkitCookieManager.setAcceptCookie(b);
     }
 }

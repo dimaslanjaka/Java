@@ -82,6 +82,7 @@ tasks.withType<Javadoc> {
 
 val jar: Jar by tasks
 jar.doLast {
+    // TODO: create jar without version
     val jarnoversion = File(jar.archiveFile.get().asFile.parent, "facebook.jar")
     jar.archiveFile.get().asFile.copyTo(jarnoversion, true)
 }

@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.dimaslanjaka.libs.facebook","l":"PostConfig"},{"p":"com.dimaslanjaka.libs.facebook","l":"UserConfig"}]

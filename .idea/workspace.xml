@@ -1,10 +1,282 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0807558-6760-40e4-9d2a-06cfd0fa630d" name="Default Changelist" comment="Fix Duplicated Classes For Android Project.&#10;to import each modules into one library.">
+      <change afterPath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandlingWebviewClient.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/CookieHandlingInterface.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/CookieManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/AndroidCookieHandling.kt" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/WebviewHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/main/res/xml/network_security_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/res/xml/network_security_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/plugin/com.dimaslanjaka/clean-Kotlin Workspace" beforeDir="false" afterPath="$PROJECT_DIR$/build/plugin/com.dimaslanjaka/clean-Kotlin Workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/plugin/com.dimaslanjaka/offline" beforeDir="false" afterPath="$PROJECT_DIR$/build/plugin/com.dimaslanjaka/offline" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/plugin/com.dimaslanjaka/offline-Kotlin Workspace" beforeDir="false" afterPath="$PROJECT_DIR$/build/plugin/com.dimaslanjaka/offline-Kotlin Workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/0d9f2218c47eb4150dc4cccc5df72e90/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/0d9f2218c47eb4150dc4cccc5df72e90/transformed/jetified-facebook-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/20140a0a4cdda3aecd08ce1b4bb3b8c6/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/20140a0a4cdda3aecd08ce1b4bb3b8c6/transformed/jetified-facebook-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/20854778218044fcf74d581924be55f9/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/20854778218044fcf74d581924be55f9/transformed/jetified-facebook-1.0.0/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/2896e784cffd04849349ef90e3166b65/transformed/jetified-facebook-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build/.transforms/2896e784cffd04849349ef90e3166b65/transformed/jetified-facebook-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/312a07acde428f0bd952db59a401f660/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/45ad8f3bd8a46ebe591eacd8ca5b8c8a/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/8f3d3d901991cfd9750293d0e8dbd603/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/8f3d3d901991cfd9750293d0e8dbd603/transformed/jetified-facebook-1.0.0/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/b640d0cd6ae59fffb1d7eb446266820a/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/.transforms/b640d0cd6ae59fffb1d7eb446266820a/transformed/jetified-facebook-1.0.0/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/allclasses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/com/dimaslanjaka/libs/facebook/PostConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/com/dimaslanjaka/libs/facebook/UserConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/com/dimaslanjaka/libs/facebook/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/com/dimaslanjaka/libs/facebook/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/external/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jquery-3.5.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jszip/dist/jszip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/jquery/jszip/dist/jszip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/member-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/package-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/docs/javadoc/type-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/kotlin/compileKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build/kotlin/compileKotlin/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/kotlin/compileKotlin/caches-jvm/lookups/counters.tab" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build/kotlin/compileKotlin/caches-jvm/lookups/counters.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/kotlin/compileKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build/kotlin/compileKotlin/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/libs/facebook-1.0.0-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/libs/facebook-1.0.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/libs/facebook-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build/libs/facebook-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/libs/facebook.jar" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build/libs/facebook.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/tmp/javadoc/javadoc.options" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/tmp/javadocJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/tmp/sourcesJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandling.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandling.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/WebkitCookieManagerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/WebkitCookieManagerProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/3e839cd08a4a92e908ec6b8e7a858686/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/5d018441c34dc906e0960b6191cfc94e/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/84fcab4c1ff2648b152f1814bc923224/transformed/jetified-library-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/.transforms/84fcab4c1ff2648b152f1814bc923224/transformed/jetified-library-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/d0ed4356b29d7a0b16110de33d032ff1/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/d0ed4356b29d7a0b16110de33d032ff1/transformed/jetified-library-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/e6e954873b119b6efc4b3283a2cd8624/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/e6e954873b119b6efc4b3283a2cd8624/transformed/jetified-library-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/eecb1237ed7ed052bfe27a52680b7d47/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/eecb1237ed7ed052bfe27a52680b7d47/transformed/jetified-library-1.0.0/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/efe318bb3c03b0cd3c61a1b1aad91379/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/efe318bb3c03b0cd3c61a1b1aad91379/transformed/jetified-library-1.0.0/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/java/main/com/dimaslanjaka/library/helper/CustomBufferedReader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/java/main/com/dimaslanjaka/library/helper/CustomBufferedReader$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/java/main/com/dimaslanjaka/library/helper/CustomBufferedReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/java/main/com/dimaslanjaka/library/helper/CustomBufferedReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/java/main/com/dimaslanjaka/library/helper/ReadComplexDelimitedFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/java/main/com/dimaslanjaka/library/helper/ReadComplexDelimitedFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/java/main/de/mc/logging/AnsiOutput$Enabled.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/java/main/de/mc/logging/AnsiOutput$Enabled.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/java/main/de/mc/logging/AnsiOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/java/main/de/mc/logging/AnsiOutput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/java/main/de/mc/logging/ColorConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/java/main/de/mc/logging/ColorConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/Json$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/Json$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/Json.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/Json.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/allclasses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/com/dimaslanjaka/Library.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/com/dimaslanjaka/helper/CustomBufferedReader.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/com/dimaslanjaka/helper/ReadComplexDelimitedFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/com/dimaslanjaka/helper/Var.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/com/dimaslanjaka/helper/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/com/dimaslanjaka/helper/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/com/dimaslanjaka/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/com/dimaslanjaka/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/de/mc/logging/AnsiColor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/de/mc/logging/AnsiOutput.Enabled.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/de/mc/logging/AnsiOutput.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/de/mc/logging/ColorConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/de/mc/logging/ExtendedWhitespaceThrowableProxyConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/de/mc/logging/Log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/de/mc/logging/WhitespaceThrowableProxyConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/de/mc/logging/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/de/mc/logging/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/external/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jquery-3.5.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jszip/dist/jszip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/jquery/jszip/dist/jszip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/lib/ConsoleColors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/lib/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/lib/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/member-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/package-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/string/RandomString.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/string/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/string/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/docs/javadoc/type-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/counters.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/counters.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/compileKotlin/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/kotlin/library100jar-classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/kotlin/library100jar-classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/libs/library-1.0.0-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/libs/library-1.0.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/libs/library-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/libs/library-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/libs/library.jar/library-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/tmp/javadoc/javadoc.options" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/tmp/javadocJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/tmp/sourcesJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/CookieHandling.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/CookieHandling.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugin" beforeDir="false" afterPath="$PROJECT_DIR$/plugin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugin-android" beforeDir="false" afterPath="$PROJECT_DIR$/plugin-android" afterDir="false" />
     </list>
@@ -13,7 +285,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[e501d60e9804]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -28,12 +299,36 @@
         <task path="$PROJECT_DIR$/library-android">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/library">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/facebook">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Kotlin Workspace" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Kotlin Workspace" type="f1a62948:ProjectNode" />
+                <item name="library" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Kotlin Workspace" type="f1a62948:ProjectNode" />
+                <item name="library" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Kotlin Workspace" type="f1a62948:ProjectNode" />
+                <item name="library" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -45,6 +340,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -79,13 +375,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.dimaslanjaka.library.helper" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="gradle assemble" />
       <command value="gradle jar" />
+      <command value="gradle clean" />
+      <command value="gradle assemble" />
     </option>
   </component>
-  <component name="RunManager" selected="Android App.browser">
+  <component name="RunManager" selected="Gradle..Kotlin Workspace [assemble]">
     <configuration name="browser" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Kotlin_Workspace.browser" />
       <option name="DEPLOY" value="true" />
@@ -120,7 +422,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name=".Kotlin Workspace [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name=".Kotlin Workspace [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -131,7 +433,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jar" />
+            <option value="assemble" />
           </list>
         </option>
         <option name="vmOptions" value="" />
@@ -141,10 +443,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name=".Kotlin Workspace:library-android [androidDependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name=".Kotlin Workspace [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/library-android" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -152,7 +454,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="androidDependencies" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -162,31 +464,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name=".Kotlin Workspace:library-android [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name=".Kotlin Workspace [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/library-android" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--stacktrace" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="assemble" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name=".Kotlin Workspace:library-android [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/library-android" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -194,7 +475,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -204,26 +485,55 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CookieHandling" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="Kotlin_Workspace.library.main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.dimaslanjaka.library.helper.CookieHandling" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name=".Kotlin Workspace:facebook [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/facebook" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name=".Kotlin Workspace:library [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/library" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CookieHandling" />
-        <item itemvalue="Gradle..Kotlin Workspace:library-android [build]" />
-        <item itemvalue="Gradle..Kotlin Workspace:library-android [assemble]" />
-        <item itemvalue="Gradle..Kotlin Workspace:library-android [androidDependencies]" />
+        <item itemvalue="Gradle..Kotlin Workspace [assemble]" />
+        <item itemvalue="Gradle..Kotlin Workspace:library [jar]" />
+        <item itemvalue="Gradle..Kotlin Workspace [clean]" />
         <item itemvalue="Gradle..Kotlin Workspace [jar]" />
+        <item itemvalue="Gradle..Kotlin Workspace:facebook [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -278,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619382234607</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix Duplicated Classes For Android Project.&#10;to import each modules into one library.">
+      <created>1619382425422</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619382425422</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
