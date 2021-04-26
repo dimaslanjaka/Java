@@ -1,4 +1,0 @@
-driver/firefox/UA.java
- driver.firefox.UA
-driver/TestChrome.java
- driver.TestChrome
