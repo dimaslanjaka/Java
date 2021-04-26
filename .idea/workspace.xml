@@ -10,8 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0807558-6760-40e4-9d2a-06cfd0fa630d" name="Default Changelist" comment="Fix resolution files">
-      <change beforePath="$PROJECT_DIR$/plugin" beforeDir="false" afterPath="$PROJECT_DIR$/plugin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin-android" beforeDir="false" afterPath="$PROJECT_DIR$/plugin-android" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
