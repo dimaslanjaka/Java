@@ -14,7 +14,7 @@ public class Var {
     }.getType();
     public static Type typeMapStrStr = new TypeToken<Map<String, String>>() {
     }.getType();
-    public static Gson gson = new GsonBuilder().create();
+    public static Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 
     /**
      * @param o Object Variable

@@ -2,21 +2,24 @@ package android
 
 import android.content.Context
 import android.os.Build
-import com.dimaslanjaka.library.helper.CookieHandlingInterface
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
 import com.snatik.storage.Storage
 import java.io.File
 import java.lang.reflect.Type
 import java.net.CookieHandler
-import java.net.CookieManager
 import java.net.CookiePolicy
+import java.net.HttpCookie
+import java.net.URI
 import com.dimaslanjaka.library.helper.CookieHandling as LibraryCookieHandling
+import java.net.CookieManager as JavaNetCookieManager
 
 @Suppress("UsePropertyAccessSyntax")
 class CookieHandling(
     context: Context,
     webview: android.webkit.WebView
-) :
-    CookieHandlingInterface {
+) {
     private var storage = Storage(context)
     private var externalStorage = File(
         storage.externalStorageDirectory, "Facebot/cookies"
@@ -24,9 +27,11 @@ class CookieHandling(
         android.File.resolveDir(this)
     }
 
-    private var handler: LibraryCookieHandling
-    override lateinit var manager: CookieManager
-    override var fileCookie = File(externalStorage, "default.json")
+    private var coreCookieManager: WebkitCookieManagerProxy
+    private var librarych: LibraryCookieHandling
+    private var androidch: android.webkit.CookieManager
+    var manager: JavaNetCookieManager
+    var fileCookie = File(externalStorage, "default.json")
 
     init {
         android.webkit.CookieManager.getInstance().setAcceptCookie(true)
@@ -34,41 +39,66 @@ class CookieHandling(
             android.webkit.CookieManager.getInstance().acceptThirdPartyCookies(webview)
         }
 
-        val coreCookieManager = WebkitCookieManagerProxy(null, CookiePolicy.ACCEPT_ALL)
+        coreCookieManager = WebkitCookieManagerProxy(null, CookiePolicy.ACCEPT_ALL)
         CookieHandler.setDefault(coreCookieManager)
         manager = coreCookieManager.toJavaNetCookieManager()
+        androidch = coreCookieManager.toAndroidWebkitCookieManager()
 
-        handler = LibraryCookieHandling(fileCookie, coreCookieManager)
+        librarych = LibraryCookieHandling(fileCookie, coreCookieManager)
         webview.webViewClient = CookieHandlingWebviewClient()
+
+        loadCookie()
 
         instance = this
     }
 
-    override fun saveCookie() {
-        try {
-            val httpCookies = manager.cookieStore.cookies
-            val json = gson().toJson(httpCookies)
-            //println("Save Cookie", fileCookie, json, listCookies, listCookies.size)
-            com.dimaslanjaka.library.helper.CookieHandling.println("(Android Save Cookie=${fileCookie}) (Total=${httpCookies.size})")
-            com.dimaslanjaka.library.helper.File.write(fileCookie.absolutePath, json)
-        } catch (e: Exception) {
-            e.printStackTrace()
+    fun saveCookie(uri: URI, cookies: String?) {
+        cookies?.let { c ->
+            val splitcomma = c.split("; ")
+            splitcomma.map { cookie ->
+                val spliteq = cookie.split("=")
+                manager.cookieStore.add(uri, httpCookieCreate(uri, spliteq[0], spliteq[1]))
+            }
         }
+        saveCookie()
     }
 
-    override fun loadCookie() {
-        handler.loadCookie()
+    private fun httpCookieCreate(uri: URI, cname: String, cvalue: String): HttpCookie {
+        val httpCookie = HttpCookie(cname, cvalue)
+        httpCookie.domain = uri.host
+        httpCookie.path = uri.path
+        //println(uri.scheme)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            httpCookie.isHttpOnly = uri.scheme!! == "http"
+        }
+        httpCookie.secure = uri.scheme!! == "https"
+
+        return httpCookie
     }
 
-    override fun changeFileCookie(fileCookie: File) {
-        handler.changeFileCookie(fileCookie)
+    fun saveCookie() {
+        librarych.saveCookie()
+    }
+
+    fun loadCookie() {
+        librarych.loadCookie()
+    }
+
+    fun changeFileCookie(fileCookie: File) {
+        librarych.changeFileCookie(fileCookie)
     }
 
     companion object {
+        @JvmStatic
         lateinit var instance: CookieHandling
     }
 
+    @Suppress("unused")
     private inline fun <reified T> Gson.fromJson(json: String): T = fromJson<T>(json, genericType<T>())
+
+    @Suppress("unused")
     private inline fun <reified T> genericType(): Type = object : TypeToken<T>() {}.type
+
+    @Suppress("unused")
     private fun gson(): Gson = GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create()
 }

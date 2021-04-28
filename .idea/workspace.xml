@@ -9,16 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0807558-6760-40e4-9d2a-06cfd0fa630d" name="Default Changelist" comment="Fix gitignore excluded and included files">
+    <list default="true" id="b0807558-6760-40e4-9d2a-06cfd0fa630d" name="Default Changelist" comment="Fix gradle dependecies resolution">
+      <changelist_data name="Dimas Lanjaka" email="dimaslanjaka@gmail.com" />
+      <change afterPath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/Applicator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-android/src/main/java/android/Fun.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-android/src/main/java/android/Log.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/src/main/java/dimas/Reflection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/src/test/kotlin/CookieTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/WebviewHandler.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-android/build-old.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/build-old.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/res/values/themes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/App.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandling.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandling.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandlingWebviewClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandlingWebviewClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/WebkitCookieManagerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/WebkitCookieManagerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/java/main/com/dimaslanjaka/library/helper/Var.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/java/main/com/dimaslanjaka/library/helper/Var.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$fromJson$$inlined$genericType$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$fromJson$$inlined$genericType$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$fromJson$$inlined$genericType$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$fromJson$$inlined$genericType$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$genericType$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling$Companion$genericType$1.class" afterDir="false" />
@@ -29,6 +40,7 @@
       <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/CookieHandling.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/build/libs/library-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/libs/library-1.0.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/build/libs/library.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/libs/library.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/dimaslanjaka/library/helper/Var.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/dimaslanjaka/library/helper/Var.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/CookieHandling.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/CookieHandling.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,6 +110,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
+        <option value="Class" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -131,7 +144,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-viewC:/Users/dimas/.m2/repository/androidx/swiperefreshlayout/swiperefreshlayout/1.1.0/swiperefreshlayout-1.1.0-sources.jar!/androidx/swiperefreshlayout/widget/SwipeRefreshLayout.java_SELECTED" value="SwipeRefreshLayout" />
+    <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/library/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/plugin" />
+    <property name="multi-representation-previewC:/Users/dimas/.m2/repository/androidx/swiperefreshlayout/swiperefreshlayout/1.1.0/swiperefreshlayout-1.1.0-sources.jar!/androidx/swiperefreshlayout/widget/SwipeRefreshLayout.java_selected" value="Custom views" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -141,11 +158,11 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="gradle jar" />
       <command value="gradle assemble" />
       <command value="gradle clean" />
       <command value="gradle analyzeDebugAndroidTestDependencies" />
       <command value="gradle clean jar" />
+      <command value="gradle jar" />
     </option>
   </component>
   <component name="RunManager" selected="Android App.browser">
@@ -183,97 +200,80 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name=".Kotlin Workspace [analyzeDebugAndroidTestDependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="analyzeDebugAndroidTestDependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="Reflection (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dimas.Reflection" />
+      <module name="Kotlin_Workspace.library.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dimas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name=".Kotlin Workspace [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="assemble" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="Reflection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java.Reflection" />
+      <module name="Kotlin_Workspace.library.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name=".Kotlin Workspace [clean jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CookieTest.createHttpCookie" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" value="--tests &quot;CookieTest.createHttpCookie&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
-            <option value="jar" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name=".Kotlin Workspace [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
+            <option value=":library:test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name=".Kotlin Workspace:library [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CookieTest.parseHttpCookie" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/library" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;CookieTest.parseHttpCookie&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":library:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name=".Kotlin Workspace [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -282,7 +282,7 @@
             <option value="jar" />
           </list>
         </option>
-        <option name="vmOptions" />
+        <option name="vmOptions" value="" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
@@ -291,11 +291,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle..Kotlin Workspace [clean jar]" />
-        <item itemvalue="Gradle..Kotlin Workspace [analyzeDebugAndroidTestDependencies]" />
-        <item itemvalue="Gradle..Kotlin Workspace [assemble]" />
-        <item itemvalue="Gradle..Kotlin Workspace:library [jar]" />
-        <item itemvalue="Gradle..Kotlin Workspace [clean]" />
+        <item itemvalue="Application.Reflection (1)" />
+        <item itemvalue="Application.Reflection" />
+        <item itemvalue="Gradle..Kotlin Workspace [jar]" />
+        <item itemvalue="Gradle.CookieTest.parseHttpCookie" />
+        <item itemvalue="Gradle.CookieTest.createHttpCookie" />
       </list>
     </recent_temporary>
   </component>
@@ -392,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619429446645</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fix gradle dependecies resolution">
+      <created>1619434455397</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1619434455397</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -417,7 +424,8 @@
     <MESSAGE value="Fix Duplicated Classes For Android Project.&#10;to import each modules into one library." />
     <MESSAGE value="Fix resolution files" />
     <MESSAGE value="Fix gitignore excluded and included files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix gitignore excluded and included files" />
+    <MESSAGE value="Fix gradle dependecies resolution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix gradle dependecies resolution" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

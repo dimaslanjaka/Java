@@ -13,4 +13,12 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.Default" parent="@android:style/Theme"/>
+
+    <style name="Theme.KotlinWorkspace.NoTitle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FullScreen" parent="@android:style/Theme.NoTitleBar.Fullscreen"/>
 </resources>

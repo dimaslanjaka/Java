@@ -17,6 +17,7 @@ import java.net.CookieManager as JavaNetCookieManager
 open class CookieHandling : CookieHandlingInterface {
     override lateinit var fileCookie: JavaIoFile
     override var manager: JavaNetCookieManager
+    private var cookiesCount = 0
 
     constructor() {
         manager = JavaNetCookieManager()
@@ -92,15 +93,25 @@ open class CookieHandling : CookieHandlingInterface {
             println("FIrst creating cookie")
             saveCookie()
         }
+
         try {
             val json = File.read(fileCookie.absolutePath)
             // convert json string to list
             val httpCookies = Gson().fromJson<List<HttpCookie>>(json)
-            //println("Load Cookie", fileCookie, httpCookies)
-            println("(Load Cookie=${fileCookie}) (Total=${httpCookies.size})")
+            cookiesCount = httpCookies.size
+            val sb = StringBuilder(
+                " (Load Cookie=${fileCookie}) (Total=${httpCookies.size}) "
+            )
+            var validcookie = 0
             for (cookie in httpCookies) {
-                manager.cookieStore.add(URI.create(cookie.domain), cookie)
+                if (cookie.domain != null) {
+                    //sb.append("\t(Cookie Domain=${cookie.domain}) = ", cookie, "\n")
+                    validcookie++
+                    manager.cookieStore.add(URI.create(cookie.domain), cookie)
+                }
             }
+            sb.append("(Valid=${validcookie})")
+            println(sb.toString().trim())
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -110,9 +121,11 @@ open class CookieHandling : CookieHandlingInterface {
         try {
             val httpCookies = manager.cookieStore.cookies
             val json = gson.toJson(httpCookies)
-            //println("Save Cookie", fileCookie, json, listCookies, listCookies.size)
-            println("(Save Cookie=${fileCookie}) (Total=${httpCookies.size})")
-            File.write(fileCookie.absolutePath, json)
+            if (cookiesCount != httpCookies.size) {
+                println("(Save Cookie=${fileCookie}) (Total=${httpCookies.size})")
+                cookiesCount = httpCookies.size
+                File.write(fileCookie.absolutePath, json)
+            }
         } catch (e: Exception) {
             e.printStackTrace()
         }

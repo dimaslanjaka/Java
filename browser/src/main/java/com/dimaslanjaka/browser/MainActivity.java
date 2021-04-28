@@ -11,7 +11,6 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -23,14 +22,18 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import static android.Fun.disableAutoFill;
+import static android.Fun.removeNotificationBar;
+
 public class MainActivity extends AppCompatActivity {
-    WebView web;
+    private WebView web;
+    private CookieHandling cookieHandling;
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        removeNotificationBar(this);
         setContentView(R.layout.activity_main);
 
         web = findViewById(R.id.webview);
@@ -62,10 +65,17 @@ public class MainActivity extends AppCompatActivity {
             swipe.setOnRefreshListener(() -> {
                 if (web.getScrollY() == 0) {
                     web.reload();
-                    swipe.setRefreshing(false);
                 }
             });
         }
+
+        web.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                if (swipe.isRefreshing()) swipe.setRefreshing(false);
+            }
+        });
 
         // request permission
         String[] perms = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
@@ -76,7 +86,11 @@ public class MainActivity extends AppCompatActivity {
                     restartApp();
                 })) {
             // YOUR BASE METHOD
-            new CookieHandling(this, web);
+            cookieHandling = new CookieHandling(this, web);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            disableAutoFill(this);
         }
     }
 

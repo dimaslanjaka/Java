@@ -2,7 +2,6 @@ package android;
 
 import android.content.Context;
 import android.os.Build;
-import android.util.Log;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -10,6 +9,7 @@ import java.net.*;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 /**
@@ -18,11 +18,12 @@ import java.util.function.Consumer;
  */
 @SuppressWarnings("unused")
 public class WebkitCookieManagerProxy extends CookieManager {
-    public java.net.CookieManager javaCookieManager = new CookieManager();
+    public java.net.CookieManager javaCookieManager;
     public android.webkit.CookieManager androidWebkitCookieManager = android.webkit.CookieManager.getInstance();
 
     public WebkitCookieManagerProxy() {
         this(null, null);
+        javaCookieManager = this;
     }
 
     /**
@@ -38,23 +39,21 @@ public class WebkitCookieManagerProxy extends CookieManager {
 
         // magic starts here
         WebkitCookieManagerProxy coreCookieManager = new WebkitCookieManagerProxy(null, java.net.CookiePolicy.ACCEPT_ALL);
-        javaCookieManager.setCookiePolicy(java.net.CookiePolicy.ACCEPT_ALL);
+        setCookiePolicy(java.net.CookiePolicy.ACCEPT_ALL);
         java.net.CookieHandler.setDefault(coreCookieManager);
+
+        javaCookieManager = this;
     }
 
     WebkitCookieManagerProxy(CookieStore store, CookiePolicy cookiePolicy) {
         super(null, cookiePolicy);
-        javaCookieManager = new java.net.CookieManager(store, cookiePolicy);
+        javaCookieManager = this;
     }
 
     @Override
     public void put(URI uri, Map<String, List<String>> responseHeaders) throws IOException {
         // make sure our args are valid
         if ((uri == null) || (responseHeaders == null)) return;
-
-        // add to java.net.CookieManager
-        javaCookieManager.put(uri, responseHeaders);
-        Log.i("putX", String.valueOf(responseHeaders));
 
         // save our url once
         String url = uri.toString();
@@ -65,9 +64,11 @@ public class WebkitCookieManagerProxy extends CookieManager {
             if ((headerKey == null) || !(headerKey.equalsIgnoreCase("Set-Cookie2") || headerKey.equalsIgnoreCase("Set-Cookie"))) {
                 continue;
             }
+            //Log.i("responseHeaders", String.valueOf(responseHeaders));
+
             // process each of the headers
             List<String> getHeader = responseHeaders.get(headerKey);
-            Log.i("HeaderKey", headerKey);
+            //Log.i("HeaderKey", headerKey);
             if (getHeader != null) {
                 for (String headerValue : getHeader) {
                     this.androidWebkitCookieManager.setCookie(url, headerValue);
@@ -75,11 +76,11 @@ public class WebkitCookieManagerProxy extends CookieManager {
             }
 
             // go over the values
-            for (String headerValue : responseHeaders.get(headerKey)) {
+            for (String headerValue : Objects.requireNonNull(responseHeaders.get(headerKey))) {
                 try {
                     List<HttpCookie> cookies = HttpCookie.parse(headerValue);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                        cookies.stream().forEach(new Consumer<HttpCookie>() {
+                        cookies.forEach(new Consumer<HttpCookie>() {
                             @Override
                             public void accept(HttpCookie httpCookie) {
                                 getCookieStore().add(uri, httpCookie);
@@ -115,7 +116,7 @@ public class WebkitCookieManagerProxy extends CookieManager {
 
     @Override
     public CookieStore getCookieStore() {
-        return javaCookieManager.getCookieStore();
+        return super.getCookieStore();
     }
 
     private void println(Object... obj) {
@@ -129,7 +130,7 @@ public class WebkitCookieManagerProxy extends CookieManager {
      */
     @NotNull
     public CookieManager toJavaNetCookieManager() {
-        return javaCookieManager;
+        return this;
     }
 
     /**
