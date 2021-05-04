@@ -78,14 +78,16 @@ public class WebkitCookieManagerProxy extends CookieManager {
             // go over the values
             for (String headerValue : Objects.requireNonNull(responseHeaders.get(headerKey))) {
                 try {
-                    List<HttpCookie> cookies = HttpCookie.parse(headerValue);
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                        cookies.forEach(new Consumer<HttpCookie>() {
-                            @Override
-                            public void accept(HttpCookie httpCookie) {
-                                getCookieStore().add(uri, httpCookie);
-                            }
-                        });
+                    if (headerValue != null && !headerValue.isEmpty()) {
+                        List<HttpCookie> cookies = HttpCookie.parse(headerValue);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                            cookies.forEach(new Consumer<HttpCookie>() {
+                                @Override
+                                public void accept(HttpCookie httpCookie) {
+                                    getCookieStore().add(uri, httpCookie);
+                                }
+                            });
+                        }
                     }
                 } catch (IllegalArgumentException e) {
                     e.printStackTrace();

@@ -20,6 +20,9 @@ class App {
         var APPLICATION_ID = ""
         private lateinit var sApplication: Application
         fun getApplication(): Application {
+            if (!this::sApplication.isInitialized) {
+                throw Exception("Application not initialized, android.App.setApplication(this) from your activity")
+            }
             return sApplication
         }
 

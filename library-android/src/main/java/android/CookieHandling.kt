@@ -10,12 +10,10 @@ import java.io.File
 import java.lang.reflect.Type
 import java.net.CookieHandler
 import java.net.CookiePolicy
-import java.net.HttpCookie
-import java.net.URI
 import com.dimaslanjaka.library.helper.CookieHandling as LibraryCookieHandling
 import java.net.CookieManager as JavaNetCookieManager
 
-@Suppress("UsePropertyAccessSyntax")
+@Suppress("UsePropertyAccessSyntax", "MemberVisibilityCanBePrivate", "unused")
 class CookieHandling(
     context: Context,
     webview: android.webkit.WebView
@@ -52,40 +50,31 @@ class CookieHandling(
         instance = this
     }
 
-    fun saveCookie(uri: URI, cookies: String?) {
-        cookies?.let { c ->
-            val splitcomma = c.split("; ")
-            splitcomma.map { cookie ->
-                val spliteq = cookie.split("=")
-                manager.cookieStore.add(uri, httpCookieCreate(uri, spliteq[0], spliteq[1]))
-            }
-        }
-        saveCookie()
-    }
-
-    private fun httpCookieCreate(uri: URI, cname: String, cvalue: String): HttpCookie {
-        val httpCookie = HttpCookie(cname, cvalue)
-        httpCookie.domain = uri.host
-        httpCookie.path = uri.path
-        //println(uri.scheme)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            httpCookie.isHttpOnly = uri.scheme!! == "http"
-        }
-        httpCookie.secure = uri.scheme!! == "https"
-
-        return httpCookie
-    }
-
     fun saveCookie() {
         librarych.saveCookie()
     }
 
     fun loadCookie() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            android.webkit.CookieManager.getInstance().flush()
+        }
+        manager.cookieStore.removeAll()
         librarych.loadCookie()
     }
 
+    /**
+     * Change folder cookie
+     */
     fun changeFileCookie(fileCookie: File) {
+        this.fileCookie = fileCookie
         librarych.changeFileCookie(fileCookie)
+    }
+
+    /**
+     * Change filename of cookie file
+     */
+    fun changeFilenameCookie(filename: String) {
+        librarych.changeFileCookie(File(externalStorage, "$filename.json"))
     }
 
     companion object {

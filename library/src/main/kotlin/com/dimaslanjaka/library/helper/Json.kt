@@ -2,15 +2,27 @@ package com.dimaslanjaka.library.helper
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
+import java.lang.reflect.Type
 
 class Json {
-    lateinit var gson: Gson
+    var gson: Gson = gson()
+    var serialized = "{}"
+    lateinit var deserialized: Any
 
-    constructor(jsonString: String) {
-        gson = GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create()
+    constructor(gs: Gson) {
+        gson = gs
+    }
+
+    constructor(json: String, type: Type) {
+        deserialized = gson.fromJson(json, type)
+    }
+
+    constructor(json: String, type: Class<*>) {
+        deserialized = gson.fromJson(json, type)
     }
 
     constructor() {}
@@ -32,4 +44,8 @@ class Json {
             return true
         }
     }
+
+    inline fun <reified T> Gson.fromJson(json: String): T = fromJson<T>(json, genericType<T>())
+    inline fun <reified T> genericType(): Type = object : TypeToken<T>() {}.type
+    fun gson(): Gson = GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create()
 }

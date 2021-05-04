@@ -3,14 +3,20 @@ package android
 import android.annotation.TargetApi
 import android.os.Build
 import android.webkit.*
-import android.webkit.CookieManager
 import java.io.IOException
-import java.net.*
+import java.net.HttpCookie
+import java.net.MalformedURLException
+import java.net.URL
+import java.net.URLConnection
 
 
 class CookieHandlingWebviewClient() : WebViewClient() {
     var reloading = false
-    val allCookies = mutableMapOf<URI, HttpCookie>()
+
+    /**
+     * Initializer cookies parsed from {@link #parseCookie()}
+     */
+    val allCookies = mutableMapOf<String, HttpCookie>()
 
     /**
      * <a href="https://stackoverflow.com/a/41121660">https://stackoverflow.com/a/41121660</a>
@@ -57,22 +63,14 @@ class CookieHandlingWebviewClient() : WebViewClient() {
         return null
     }
 
-    fun parseCookie(connection: URLConnection, cookie: String, prefix: String = "Cookie Header") {
-        println(prefix, cookie)
-        val parse = HttpCookie.parse("Set-Cookie: $cookie")
-        parse.forEach {
-            allCookies[connection.url.toURI()] = it
-        }
-        //println(parse.size, gson.toJson(parse))
-    }
-
-    fun println(vararg msg: Any?) {
-        if (msg.isNotEmpty()) {
-            var i = 0
-            msg.forEach { any ->
-                i++
-                android.Log.d(i.toString(), any.toString())
+    fun parseCookie(connection: URLConnection, cookie: String?, prefix: String = "Cookie Header") {
+        if (cookie != null && cookie.isNotEmpty()) {
+            //Log.inline(prefix, cookie)
+            val parse = HttpCookie.parse("Set-Cookie: $cookie")
+            parse.forEach {
+                CookieHandling.instance.manager.cookieStore.add(connection.url.toURI(), it)
             }
+            //println(parse.size, gson.toJson(parse))
         }
     }
 
@@ -87,7 +85,7 @@ class CookieHandlingWebviewClient() : WebViewClient() {
     ) {
         super.onReceivedError(view, request, error)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            println("ERROR", request.url.toString())
+            Log.e("ERROR", request.url.toString())
         }
         // TODO: auto refresh webview
         if (!reloading) {
@@ -95,13 +93,17 @@ class CookieHandlingWebviewClient() : WebViewClient() {
         }
     }
 
+    /**
+     * On finish saving cookies
+     */
     override fun onPageFinished(view: WebView, url: String) {
         super.onPageFinished(view, url)
         CookieSyncManager.getInstance().sync()
         val cookies = CookieManager.getInstance().getCookie(url)
         //println("COOKIE", cookies ?: "NULL")
         //CookieHandling.instance.saveCookie(URI(url), cookies ?: "NULL=NULL")
-        println(allCookies)
+        //Log.inline(allCookies.size, allCookies)
+        CookieHandling.instance.saveCookie()
         reloading = false
     }
 }

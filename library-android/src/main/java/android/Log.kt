@@ -1,6 +1,7 @@
 package android
 
 import android.App.Companion.APPLICATION_ID
+import android.Fun.Type.Companion.isIterable
 import android.text.TextUtils
 import android.util.Log
 import com.dimaslanjaka.library.helper.Var.gson
@@ -20,7 +21,7 @@ import com.dimaslanjaka.library.helper.Var.gson
  *
  * Better to use with adb -s com.example.myapp
  */
-@Suppress("ProtectedInFinal", "MemberVisibilityCanBePrivate", "LocalVariableName")
+@Suppress("ProtectedInFinal", "MemberVisibilityCanBePrivate", "LocalVariableName", "unused")
 class Log protected constructor() {
     companion object {
         private const val VERBOSE = Log.VERBOSE
@@ -71,6 +72,37 @@ class Log protected constructor() {
             }
         }
 
+        @JvmStatic
+        fun println(vararg any: Any) {
+            any.forEach {
+                if (isIterable(any)) {
+                    log(DEBUG, gson.toJson(it), null)
+                } else {
+                    log(DEBUG, it.toString(), null)
+                }
+            }
+        }
+
+        /**
+         * Print as inline string
+         * <code>
+         *     inline("hello","world") // hello world
+         * </code>
+         */
+        @JvmStatic
+        fun inline(vararg any: Any?) {
+            val result = StringBuilder()
+            any.forEach {
+                if (isIterable(it)) {
+                    result.append(gson.toJson(it))
+                } else {
+                    result.append(it.toString())
+                }
+                result.append(" ")
+            }
+            log(DEBUG, result.toString().trim(), null)
+        }
+
         fun d(msg: String) {
             log(DEBUG, msg, null)
         }
@@ -85,27 +117,11 @@ class Log protected constructor() {
 
         @JvmStatic
         fun d(vararg msg: Any?) {
-            d(varargparser(msg))
-        }
-
-        /**
-         * Parse vararg by variable types
-         * - Object will transformed into json using GSON
-         */
-        private fun varargparser(vararg msg: Any): String {
-            val result_msg = mutableListOf<String>()
-            msg.forEachIndexed { index, any ->
-                if (any is String) {
-                    result_msg.add(any.toString())
-                } else if (any !is String) {
-                    if (any is Boolean || any is Int || any is Double || any is Float) {
-                        result_msg.add(any.toString())
-                    } else {
-                        result_msg.add(gson.toJson(any))
-                    }
-                }
+            if (msg.size > 1) {
+                d(msg.joinToString("\n-----------\n"))
+            } else {
+                d(msg.contentDeepToString())
             }
-            return result_msg.joinToString("\n--------\n")
         }
 
         fun v(msg: String) {
@@ -153,13 +169,17 @@ class Log protected constructor() {
             log(WTF, null, throwable)
         }
 
-        fun e(message: Any) {
-            e(message.toString())
+        fun e(msg: Any) {
+            e(msg.toString())
         }
 
         @JvmStatic
         fun e(vararg msg: Any?) {
-            e(varargparser(msg))
+            if (msg.size > 1) {
+                e(msg.joinToString("\n-----------\n"))
+            } else {
+                e(msg.contentDeepToString())
+            }
         }
 
         fun w(vararg msg: Any?) {
@@ -172,7 +192,11 @@ class Log protected constructor() {
 
         @JvmStatic
         fun i(vararg msg: Any?) {
-            i(varargparser(msg))
+            if (msg.size > 1) {
+                i(msg.joinToString("\n-----------\n"))
+            } else {
+                i(msg.contentDeepToString())
+            }
         }
 
         fun v(vararg msg: Any?) {

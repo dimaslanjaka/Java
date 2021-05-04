@@ -22,8 +22,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import static android.Fun.disableAutoFill;
-import static android.Fun.removeNotificationBar;
+import static android.Fun.Android.removeNotificationBar;
+import static android.Log.inline;
 
 public class MainActivity extends AppCompatActivity {
     private WebView web;
@@ -89,8 +89,10 @@ public class MainActivity extends AppCompatActivity {
             cookieHandling = new CookieHandling(this, web);
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            disableAutoFill(this);
+        String sessionId = getIntent().getStringExtra("COOKIE_FILENAME");
+        if (sessionId != null) {
+            inline("Using cookie ", sessionId);
+            cookieHandling.changeFilenameCookie(sessionId);
         }
     }
 
@@ -148,5 +150,14 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public boolean onKeyLongPress(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            finish();
+            return true;
+        }
+        return super.onKeyLongPress(keyCode, event);
     }
 }
