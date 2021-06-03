@@ -19,7 +19,7 @@
     <remote-repository>
       <option name="id" value="MavenLocal" />
       <option name="name" value="MavenLocal" />
-      <option name="url" value="file:/$MAVEN_REPOSITORY$/" />
+      <option name="url" value="file:/$MAVEN_REPO$/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="MavenRepo" />
@@ -105,6 +105,21 @@
       <option name="id" value="maven3" />
       <option name="name" value="maven3" />
       <option name="url" value="https://maven.restlet.com" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven4" />
+      <option name="name" value="maven4" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven3" />
+      <option name="name" value="maven3" />
+      <option name="url" value="https://repo1.maven.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven5" />
+      <option name="name" value="maven5" />
+      <option name="url" value="https://maven.repository.redhat.com/ga/" />
     </remote-repository>
   </component>
 </project>

@@ -6,34 +6,114 @@
     </shared>
   </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="Kotlin_Workspace.selenium-java" />
+      <module name="Kotlin_Workspace" />
+      <module name="Kotlin_Workspace.library" />
+      <module name="Kotlin_Workspace.library-android" />
+      <module name=".Kotlin Workspace" />
+      <module name="Kotlin_Workspace.facebook" />
+    </loaded-modules>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0807558-6760-40e4-9d2a-06cfd0fa630d" name="Default Changelist" comment="Integrate advanced android.util.Log">
-      <change afterPath="$PROJECT_DIR$/browser/pull.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/SettingsActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/browser/src/main/res/layout/settings_activity.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/browser/src/main/res/values/arrays.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/browser/src/main/res/xml/root_preferences.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-android/src/main/java/android/Activity.kt" afterDir="false" />
+    <list default="true" id="b0807558-6760-40e4-9d2a-06cfd0fa630d" name="Default Changelist" comment="Fix Selenium Chrome">
+      <change afterPath="$PROJECT_DIR$/.idea/.Kotlin Workspace.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/AdvancedJsonTreeActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/CustomJson.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/JsonTreeActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/utils/JSONObjectKeeped.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/utils/JSONTokenerKeeped.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/utils/JsonFormatUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/view/AdvancedJsonTreeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/view/AdvancedTreeItemView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/view/JsonTreeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/java/com/ew/jsontree/view/TreeItemView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/layout/activity_json_tree.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/layout/json_tree_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/layout/layout_json_tree_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/layout/layout_json_tree_item_advanced.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/values-w820dp/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JsonTreeApp/src/test/java/com/ew/jsontree/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-WebServer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/Resources.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium-java/bin/chromedriver-76.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium-java/bin/chromedriver-90.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium-java/bin/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium-java/src/main/java/driver/Callback.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium-java/src/main/java/driver/TestChrome.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium-java/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/browser/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/browser/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/browser/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/SettingsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/java/com/dimaslanjaka/browser/SettingsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/src/main/res/layout/settings_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/res/layout/settings_activity.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/browser/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/browser/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandling.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandling.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandlingWebviewClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/CookieHandlingWebviewClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/Fun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/Fun.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/Log.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/Log.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-android/src/main/java/android/WebkitCookieManagerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/src/main/java/android/WebkitCookieManagerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/Json.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/kotlin/com/dimaslanjaka/library/helper/Json.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/libs/facebook-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build/libs/facebook-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook/build/libs/facebook.jar" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/build/libs/facebook.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library-android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/Json$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/Json$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/Json.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/classes/kotlin/main/com/dimaslanjaka/library/helper/Json.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/libs/library-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/libs/library-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/libs/library-wd.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/libs/library-wd.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/libs/library.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/libs/library.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin" beforeDir="false" afterPath="$PROJECT_DIR$/plugin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-java/bin/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-java/src/main/java/driver/FirefoxTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/selenium-java/src/main/java/driver/FirefoxTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-java/src/main/java/driver/TestChrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -55,6 +135,12 @@
         <task path="$PROJECT_DIR$/facebook">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/browser">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/java-webserver">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -65,6 +151,12 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Kotlin Workspace" type="f1a62948:ProjectNode" />
+                <item name="java-webserver" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Kotlin Workspace" type="f1a62948:ProjectNode" />
+                <item name="java-webserver" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
@@ -80,6 +172,7 @@
         <option value="Kotlin Interface" />
         <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin Object" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -113,11 +206,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android-custom-viewC:/Users/dimas/.m2/repository/androidx/swiperefreshlayout/swiperefreshlayout/1.1.0/swiperefreshlayout-1.1.0-sources.jar!/androidx/swiperefreshlayout/widget/SwipeRefreshLayout.java_SELECTED" value="SwipeRefreshLayout" />
+    <property name="android-custom-viewD:/Workspaces/Kotlin/.Kotlin Workspace/JsonTreeApp/src/main/java/com/ew/jsontree/view/AdvancedJsonTreeView.java_SELECTED" value="AdvancedJsonTreeView" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/library/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../dimaslanjaka.github.io" />
     <property name="multi-representation-previewC:/Users/dimas/.m2/repository/androidx/swiperefreshlayout/swiperefreshlayout/1.1.0/swiperefreshlayout-1.1.0-sources.jar!/androidx/swiperefreshlayout/widget/SwipeRefreshLayout.java_selected" value="Custom views" />
+    <property name="multi-representation-previewD:/Workspaces/Kotlin/.Kotlin Workspace/JsonTreeApp/src/main/java/com/ew/jsontree/view/AdvancedJsonTreeView.java_selected" value="Custom views" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.-1506518528">
@@ -130,14 +229,60 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="gradle assemble" />
-      <command value="gradle clean" />
       <command value="gradle analyzeDebugAndroidTestDependencies" />
-      <command value="gradle clean jar" />
       <command value="gradle jar" />
+      <command value="gradle clean jar" />
+      <command value="gradle assemble" />
+      <command value="gradle clean jar assemble" />
+      <command value="gradle clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle..Kotlin Workspace [pull-Cookie]">
+  <component name="RunManager" selected="Kotlin.TestChrome">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonTreeApp" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="Kotlin_Workspace.JsonTreeApp" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="browser" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Kotlin_Workspace.browser" />
       <option name="DEPLOY" value="true" />
@@ -172,75 +317,27 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Reflection (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dimas.Reflection" />
-      <module name="Kotlin_Workspace.library.main" />
+    <configuration name="TestChrome" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="driver.TestChrome" />
+      <module name="Kotlin_Workspace.selenium-java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dasanjos.java.WebServer" />
+      <module name="Kotlin_Workspace.java-webserver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dimas.*" />
+          <option name="PATTERN" value="com.dasanjos.java.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Reflection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="java.Reflection" />
-      <module name="Kotlin_Workspace.library.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CookieTest.parseHttpCookie" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;CookieTest.parseHttpCookie&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":library:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
     </configuration>
     <configuration name=".Kotlin Workspace [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jar" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name=".Kotlin Workspace [pull-Cookie]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -251,7 +348,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="pull-Cookie" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -261,13 +358,39 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name=".Kotlin Workspace:library [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/library" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assemble" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestChrome" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="driver.TestChrome" />
+      <module name="Kotlin_Workspace.selenium-java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle..Kotlin Workspace [pull-Cookie]" />
-        <item itemvalue="Application.Reflection (1)" />
-        <item itemvalue="Application.Reflection" />
-        <item itemvalue="Gradle..Kotlin Workspace [jar]" />
-        <item itemvalue="Gradle.CookieTest.parseHttpCookie" />
+        <item itemvalue="Kotlin.TestChrome" />
+        <item itemvalue="Application.TestChrome" />
+        <item itemvalue="Application.WebServer" />
       </list>
     </recent_temporary>
   </component>
@@ -279,6 +402,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619363206756</updated>
+      <workItem from="1620631555606" duration="246000" />
+      <workItem from="1620632667845" duration="3761000" />
+      <workItem from="1620747403219" duration="556000" />
+      <workItem from="1620750236439" duration="597000" />
+      <workItem from="1620758755530" duration="4814000" />
+      <workItem from="1620765374062" duration="55000" />
+      <workItem from="1620779866051" duration="1078000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Duplicated Classes For Android Project.&#10;to import each modules into one library.">
       <created>1619363585791</created>
@@ -378,8 +508,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619641636080</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fix plugin, re-start project">
+      <created>1620134077010</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1620134077010</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnloadedModulesList">
+    <module name="Kotlin_Workspace.JsonTreeApp" />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
@@ -405,9 +548,12 @@
     <MESSAGE value="Fix gitignore excluded and included files" />
     <MESSAGE value="Fix gradle dependecies resolution" />
     <MESSAGE value="Integrate advanced android.util.Log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrate advanced android.util.Log" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Fix plugin, re-start project" />
+    <MESSAGE value="Fix Selenium Chrome" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Selenium Chrome" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

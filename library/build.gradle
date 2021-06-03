@@ -63,6 +63,9 @@ test {
 }
 
 jar {
+    from(zipTree(pluginJar)) {
+        include("**")
+    }
     dependsOn("fatjar")
     manifest {
         attributes["Multi-Release"] = "true"
@@ -91,6 +94,7 @@ jar {
  * Compile to ending (-wd) filename then
  */
 tasks.create("fatjar", Jar) { fatjar ->
+    group = "build"
     fatjar.archiveFileName.set("library-wd.jar")
     fatjar.from(zipTree(pluginJar)) {
         include("**")
@@ -106,7 +110,7 @@ java {
 }
 
 tasks.withType(Javadoc) {
-    source = sourceSets.main.allJava
+    source = sourceSets.main.allSource
     if (JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption("html5", true)
     }

@@ -30,6 +30,11 @@ class SettingsActivity : AppCompatActivity() {
             }
             startOtherActivity(MainActivity::class.java, extras)
         }
+
+        val clearcookie = findViewById<Button>(R.id.clearcookie)
+        clearcookie.setOnClickListener {
+
+        }
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {

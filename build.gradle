@@ -28,8 +28,7 @@ buildscript {
         // https://plugins.gradle.org/plugin/org.jetbrains.kotlin.plugin.serialization
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
         //classpath "org.jetbrains.kotlin:kotlin-frontend-plugin:0.0.45"
-        classpath "com.android.tools.build:gradle:4.1.3" // 4.1.1
-        //classpath "com.dimaslanjaka:gradle-plugin"
+        classpath "com.android.tools.build:gradle:4.1.3" // 4.1.1 
         classpath(files("plugin/build/libs/gradle-plugin.jar"))
     }
 
@@ -43,6 +42,7 @@ buildscript {
 }
 
 apply plugin: "project-report"
+/*
 // apply offline plugin
 apply plugin: "com.dimaslanjaka"
 // configure offline config
@@ -52,6 +52,7 @@ if (project.hasProperty("offlineConfig")) {
         limit = Integer.MAX_VALUE
     }
 }
+*/
 
 version = "1.0.0"
 htmlDependencyReport {
@@ -112,7 +113,7 @@ allprojects { Project subproject ->
     afterEvaluate {
         // IS android project
         boolean android = subproject.plugins.hasPlugin("com.android.application") || subproject.plugins.hasPlugin("com.android.library")
-        println("${subproject.name}: " + (android ? "Android" : "Non Android"))
+        //println("${subproject.name}: " + (android ? "Android" : "Non Android"))
         // TODO: Exclude library folder from android project
         if (!android) {
             //println("${subproject.name} isnt android project")

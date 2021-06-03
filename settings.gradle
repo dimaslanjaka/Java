@@ -5,13 +5,16 @@ rootProject.name = "Kotlin Workspace"
 // libraries
 include(":library", ":library-android", ":facebook")
 
+//web-server - debug
+//include(":java-webserver")
+
 // android
-//include(":androidApp")
-include(":browser")
-//include(":root")
+//include(":browser")
+//include(":JsonTreeApp")
 //include(":auto-click")
 
 // javafx
+include(":selenium-java")
 //include(":selenium-java", ":javafx") //, ":selenium-jmeter-plugins")
 //include(":javafx:repo:aerofx", ":javafx:repo:aerofx:aerofx", ":javafx:repo:aerofx:aerofx-demo")
 //include(":javafx:repo:tornadofx-controls")

@@ -8,14 +8,13 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.WindowManager;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.webkit.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
@@ -37,18 +36,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         web = findViewById(R.id.webview);
-        web.loadUrl("http://free.facebook.com");
+        web.loadUrl("https://free.facebook.com");
         web.loadUrl("https://www.webmanajemen.com/p/online-cookie-manager.html");
         web.getSettings().setJavaScriptEnabled(true);
+        web.getSettings().setDatabaseEnabled(true);
         web.getSettings().setBuiltInZoomControls(true);
         web.getSettings().setDisplayZoomControls(false);
+        web.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+        web.getSettings().setGeolocationEnabled(true);
+        if (!isNetworkAvailable()) { // loading offline
+            web.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        }
         web.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 return super.shouldOverrideUrlLoading(view, request);
             }
         });
-        web.setWebChromeClient(new WebChromeClient());
+        web.setWebChromeClient(new WebChromeClient() {
+            public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
+                // callback.invoke(String origin, boolean allow, boolean remember);
+                callback.invoke(origin, true, false);
+            }
+        });
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         // swipe to refresh
@@ -94,6 +104,13 @@ public class MainActivity extends AppCompatActivity {
             inline("Using cookie ", sessionId);
             cookieHandling.changeFilenameCookie(sessionId);
         }
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     private void restartApp() {

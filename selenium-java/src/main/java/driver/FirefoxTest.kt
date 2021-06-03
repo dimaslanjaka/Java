@@ -2,7 +2,6 @@ package driver
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import driver.TestChrome.driver
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.JavascriptExecutor
 import org.openqa.selenium.WebDriver
@@ -21,6 +20,7 @@ import java.util.logging.Level
 
 
 object FirefoxTest {
+    var driver: WebDriver? = null
     val webip = "https://whatismyipaddress.com/"
     val webinfo = "https://www.whatismybrowser.com/"
 
@@ -101,7 +101,7 @@ object FirefoxTest {
     var cookieFile = File("build/cookie.json")
     fun saveCookies() {
         try {
-            val allCookies: Set<Cookie> = driver.manage().cookies
+            val allCookies: Set<Cookie> = driver!!.manage().cookies
             val json: String = gson.toJson(allCookies)
             cookieFile.writeText(json)
         } catch (e: java.lang.Exception) {
@@ -121,11 +121,11 @@ object FirefoxTest {
                 if (cookie is Cookie) {
                     //driver.manage().cookies.add(cookie)
                     //driver.manage().addCookie(cookie)
-                    driver.manage().addCookie(Cookie(cookie.name, cookie.value))
+                    driver!!.manage().addCookie(Cookie(cookie.name, cookie.value))
                 }
                 //println("C: " + cookie.toString())
             }
-            driver.navigate().refresh()
+            driver!!.navigate().refresh()
         } catch (e: Exception) {
             println(e.message)
             e.printStackTrace()
@@ -136,12 +136,12 @@ object FirefoxTest {
         driver = FirefoxDriver(options)
         ///WebDriverCookie(driver)
         try {
-            driver.get(url)
+            (driver as FirefoxDriver).get(url)
             //waitForPageLoad()
             loadCookie()
         } catch (e: Exception) {
-            val currentUrl = driver.currentUrl
-            driver.quit()
+            val currentUrl = (driver as FirefoxDriver).currentUrl
+            (driver as FirefoxDriver).quit()
             //loadUrl(options, currentUrl)
             Utils.killWebDriver()
             e.printStackTrace()

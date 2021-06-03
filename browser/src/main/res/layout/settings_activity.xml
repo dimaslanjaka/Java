@@ -1,6 +1,6 @@
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
         android:layout_height="match_parent">
     <FrameLayout
             android:id="@+id/settings"
@@ -13,6 +13,12 @@
         <Button
                 android:text="@string/start_browser"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/startbrowser" android:layout_weight="1"/>
+                android:layout_height="wrap_content" android:id="@+id/startbrowser" android:layout_weight="1"
+                android:layout_marginRight="2dp" android:layout_marginEnd="2dp"/>
+        <Button
+                android:text="@string/clear_cookies"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/clearcookie" android:layout_weight="1"
+                android:layout_marginLeft="2dp" android:layout_marginStart="2dp" app:backgroundTint="#FB0000"/>
     </LinearLayout>
 </RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fileReadWrapper">
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/pick_a_file_to_view"
+                android:ems="10"
+                android:id="@+id/filePicker" android:layout_weight="1"/>
+        <Button
+                android:text="@string/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/viewFile"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/sampleWrapper"
+            android:layout_below="@id/fileReadWrapper">
+
+        <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simple_view" android:layout_weight="1"/>
+
+        <Button
+                android:text="@string/advanced_view"
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+</RelativeLayout>

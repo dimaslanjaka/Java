@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JsonTreeApp</string>
+    <string name="advanced_view">Advanced View</string>
+    <string name="simple_view">Simple View</string>
+    <string name="pick_a_file_to_view">Pick A File To View</string>
+    <string name="view">View</string>
+</resources>

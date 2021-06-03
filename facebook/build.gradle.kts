@@ -17,7 +17,13 @@ repositories {
 
 @Suppress("GradleDependency") dependencies {
     // Local
-    implementation(project(":library"))
+    implementation(project(":library")) {
+        /**
+         * keep :library only compiled on this project,
+         * prevent duplicate class on android projects.
+         */
+        isTransitive = false
+    }
 
     // Annotation
     implementation("org.jetbrains:annotations:20.1.0")
