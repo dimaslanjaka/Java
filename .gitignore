@@ -1,5 +1,5 @@
 # ignore default list
-**/.gradle/
+**/.gradle/**
 **/build/*
 
 # ignore except
