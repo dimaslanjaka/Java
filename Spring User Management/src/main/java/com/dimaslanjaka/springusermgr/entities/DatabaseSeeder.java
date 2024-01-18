@@ -1,25 +1,26 @@
 package com.dimaslanjaka.springusermgr.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 // create default user and admin account
 
 import org.jetbrains.annotations.NotNull;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import com.dimaslanjaka.springusermgr.CustomPassword;
 
 @Component
 public class DatabaseSeeder implements ApplicationListener<ContextRefreshedEvent> {
     private final RoleRepository roleRepository;
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
+    private final CustomPassword passwordEncoder;
 
     public DatabaseSeeder(RoleRepository roleRepository, UserRepository userRepository,
-                          PasswordEncoder passwordEncoder) {
+            CustomPassword passwordEncoder) {
         this.roleRepository = roleRepository;
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;

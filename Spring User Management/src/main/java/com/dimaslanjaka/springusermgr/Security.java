@@ -24,8 +24,8 @@ public class Security {
     DataSource dataSource;
 
     @Bean
-    public static PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+    public static CustomPassword passwordEncoder() {
+        return new CustomPassword("SALT");
     }
 
     @Autowired
