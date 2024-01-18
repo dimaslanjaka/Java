@@ -34,27 +34,21 @@ public class Security {
                 .passwordEncoder(passwordEncoder());
     }
 
-//    @Autowired
-//    protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-//        auth.jdbcAuthentication()
-//                .dataSource(dataSource)
-//                .passwordEncoder(passwordEncoder());
-//    }
-
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((authorize) -> authorize
-//                        .requestMatchers("/webjars/**").permitAll()
-//                        .requestMatchers("/register/**").permitAll()
-//                        .requestMatchers("/forgot/**").permitAll()
-//                        .requestMatchers("/index").permitAll()
-//                        .requestMatchers("/").permitAll()
                         // admin area
                         .requestMatchers("/users/**").hasRole("ADMIN")
                         .requestMatchers("/add/**").hasRole("ADMIN")
                         .requestMatchers("/delete/**").hasRole("ADMIN")
                         .requestMatchers("/edit/**").hasRole("ADMIN")
+
+                        // need login area
+                        // .requestMatchers("/dashboard") // dashboard already have programatic authenticated checker
+
+                        // allow all non configured endpoint from above
+                        // like css, js, and other static assets
                         .anyRequest().permitAll())
                 .formLogin(
                         form -> form
