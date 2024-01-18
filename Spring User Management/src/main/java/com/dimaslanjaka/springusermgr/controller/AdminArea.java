@@ -39,7 +39,7 @@ public class AdminArea {
     User existingUser = userService.findUserByEmail(userDto.getEmail());
 
     if (existingUser != null && existingUser.getEmail() != null && !existingUser.getEmail().isEmpty()) {
-      result.rejectValue("email", null,
+      result.rejectValue("email", "field.user.exist",
           "There is already an account registered with the same email");
     }
 
