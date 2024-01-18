@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
-<head>
-    <title>Hello World!</title>
-</head>
-<body>
-<!--<h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>-->
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 
-<pre>
+<head>
+
+    <head th:include="fragments/head :: headerFragment">
+        <title id="pageTitle">Dashboard</title>
+        <!-- other elements you want to reference in your layout -->
+    </head>
+</head>
+
+<body class="container">
+    <pre>
     User: <span sec:authentication="name"></span>
     Role(s): <span sec:authentication="principal.authorities"></span>
 </pre>
 
-<form th:action="@{/logout}" method="post">
-    <input type="submit" value="Sign Out"/>
-</form>
+    <div sec:authorize="hasRole('ADMIN')" class="mb-3">
+        <h2 class="text-center">Admin tools</h2>
+        <p>this element will visible to admin only</p>
+        <a href="/users">user area</a>
+    </div>
+
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out" class="btn btn-danger btn-sm" />
+    </form>
+
+    <div th:replace="fragments/footer.html :: footerFragment"></div>
 </body>
+
 </html>
