@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -37,6 +38,10 @@ public class Security {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
+                // disable csrf for @PostMapping
+                // fixed for 403 forbidden ajax request
+                .csrf(AbstractHttpConfigurer::disable)
+                // setup endpoint security
                 .authorizeHttpRequests((authorize) -> authorize
                         // admin area
                         .requestMatchers("/users/**").hasRole("ADMIN")
@@ -45,17 +50,19 @@ public class Security {
                         .requestMatchers("/edit/**").hasRole("ADMIN")
 
                         // need login area
-                        // .requestMatchers("/dashboard") // dashboard already have programatic authenticated checker
+                        // .requestMatchers("/dashboard").authenticated() // dashboard already have programmatic authenticated checker
 
                         // allow all non configured endpoint from above
                         // like css, js, and other static assets
                         .anyRequest().permitAll())
+                // login endpoint
                 .formLogin(
                         form -> form
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
                                 .defaultSuccessUrl("/dashboard")
                                 .permitAll())
+                // logout endpoint /logout
                 .logout(
                         logout -> logout
                                 .logoutRequestMatcher(
