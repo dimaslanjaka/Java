@@ -11,7 +11,10 @@ public class Dashboard {
     public String dashboard() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null) {
-            if (!authentication.isAuthenticated()) {
+            // check anonymous
+            boolean isAnon = authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().toLowerCase().contains("anonymous"));
+            // check if is not anonymous and not authenticated
+            if (!authentication.isAuthenticated() || isAnon) {
                 return "redirect:/login";
             }
         }
