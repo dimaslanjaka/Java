@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@SuppressWarnings({"ArraysAsListWithZeroOrOneArgument", "OptionalIsPresent", "FieldMayBeFinal", "Convert2MethodRef"})
+@SuppressWarnings({ "ArraysAsListWithZeroOrOneArgument", "OptionalIsPresent", "FieldMayBeFinal", "Convert2MethodRef" })
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -18,8 +18,8 @@ public class UserServiceImpl implements UserService {
     private PasswordEncoder passwordEncoder;
 
     public UserServiceImpl(UserRepository userRepository,
-                           RoleRepository roleRepository,
-                           PasswordEncoder passwordEncoder) {
+            RoleRepository roleRepository,
+            PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.passwordEncoder = passwordEncoder;
@@ -106,7 +106,6 @@ public class UserServiceImpl implements UserService {
         userRepository.save(existingUser);
     }
 
-
     @Override
     public List<UserDto> findAllUsers() {
         List<User> users = userRepository.findAll();
@@ -120,7 +119,7 @@ public class UserServiceImpl implements UserService {
         userDto.setId(user.getId());
         String[] str = user.getName().split(" ");
         userDto.setFirstName(str[0]);
-        userDto.setLastName(str[1]);
+        userDto.setLastName(str.length == 2 ? str[1] : "");
         userDto.setEmail(user.getEmail());
         userDto.setAge(user.getAge());
         userDto.setPhone(user.getPhone());
