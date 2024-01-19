@@ -35,6 +35,10 @@ public class DatabaseSeeder implements ApplicationListener<ContextRefreshedEvent
         }
     }
 
+    /**
+     * create user with multiple roles
+     * @return
+     */
     private boolean createMultiAuthoritiesUser() {
         User user = new User();
         user.setName("multiple authorities user");
