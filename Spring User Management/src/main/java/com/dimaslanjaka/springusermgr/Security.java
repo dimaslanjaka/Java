@@ -3,6 +3,7 @@ package com.dimaslanjaka.springusermgr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -28,6 +29,12 @@ public class Security {
         return new CustomPassword("SALT");
     }
 
+    @Bean
+    public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
+        return http.getSharedObject(AuthenticationManagerBuilder.class)
+                .build();
+    }
+
     @Autowired
     public void configureGlobal(final AuthenticationManagerBuilder auth) throws Exception {
         auth
@@ -50,7 +57,8 @@ public class Security {
                         .requestMatchers("/edit/**").hasRole("ADMIN")
 
                         // need login area
-                        // .requestMatchers("/dashboard").authenticated() // dashboard already have programmatic authenticated checker
+                        // .requestMatchers("/dashboard").authenticated() // dashboard already
+                        // have programmatic authenticated checker
 
                         // allow all non configured endpoint from above
                         // like css, js, and other static assets

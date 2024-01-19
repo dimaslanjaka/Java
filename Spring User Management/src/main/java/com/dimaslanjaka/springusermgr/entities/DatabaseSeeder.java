@@ -37,6 +37,7 @@ public class DatabaseSeeder implements ApplicationListener<ContextRefreshedEvent
 
     /**
      * create user with multiple roles
+     *
      * @return
      */
     private boolean createMultiAuthoritiesUser() {
@@ -49,6 +50,8 @@ public class DatabaseSeeder implements ApplicationListener<ContextRefreshedEvent
         user.setAge(20);
         user.setPassword(passwordEncoder.encode("multi"));
         user.setGender("MALE");
+        // set custom token for default account
+        user.setToken("custom-token-for-multi-account");
         Optional<Role> role = Optional.ofNullable(roleRepository.findByName("ROLE_USER"));
         Optional<Role> role2 = Optional.ofNullable(roleRepository.findByName("ROLE_ADMIN"));
         Optional<User> optionalUser = Optional.ofNullable(userRepository.findUserByEmail(user.getEmail()));
@@ -81,6 +84,8 @@ public class DatabaseSeeder implements ApplicationListener<ContextRefreshedEvent
         user.setAge(20);
         user.setPassword(passwordEncoder.encode("user"));
         user.setGender("MALE");
+        // set custom token for default account
+        user.setToken("custom-token-for-user-account");
         Optional<Role> role = Optional.ofNullable(roleRepository.findByName("ROLE_USER"));
         Optional<User> optionalUser = Optional.ofNullable(userRepository.findUserByEmail(user.getEmail()));
         if (role.isEmpty()) {
@@ -111,6 +116,8 @@ public class DatabaseSeeder implements ApplicationListener<ContextRefreshedEvent
         user.setAge(20);
         user.setPassword(passwordEncoder.encode("admin"));
         user.setGender("MALE");
+        // set custom token for default account
+        user.setToken("custom-token-for-admin-account");
         Optional<Role> role = Optional.ofNullable(roleRepository.findByName("ROLE_ADMIN"));
         Optional<User> optionalUser = Optional.ofNullable(userRepository.findUserByEmail(user.getEmail()));
         if (role.isEmpty()) {

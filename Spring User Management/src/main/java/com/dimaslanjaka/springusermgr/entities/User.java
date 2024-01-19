@@ -9,12 +9,14 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="users")
+@Table(name = "users")
 
 public class User {
 
@@ -22,33 +24,38 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String name;
 
-    @Column(nullable=false, unique=true)
+    @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private Integer age;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String phone;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String gender;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String address;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String password;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
-    @JoinTable(
-            name="users_roles",
-            joinColumns={@JoinColumn(name="USER_ID", referencedColumnName="ID")},
-            inverseJoinColumns={@JoinColumn(name="ROLE_ID", referencedColumnName="ID")})
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "users_roles", joinColumns = {
+            @JoinColumn(name = "USER_ID", referencedColumnName = "ID") }, inverseJoinColumns = {
+                    @JoinColumn(name = "ROLE_ID", referencedColumnName = "ID") })
 
     private List<Role> roles = new ArrayList<>();
 
+    /**
+     * user token for login using token only (without email and password).
+     * set random string as default token value
+     */
+    @Column()
+    private String token = RandomStringUtils.randomAlphanumeric(12);
 }

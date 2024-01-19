@@ -2,10 +2,12 @@
 
 ## Features
 
-- email service
-- register and login with email password
-- role authentication based
+- Email service
+- Register and login with email password
+- Role authentication based
 - SQLite database
+- Custom password encoder [READ MORE](https://www.webmanajemen.com/2024/01/spring-boot-login-programatically.html)
+- Token login without email password [READ MORE](https://www.webmanajemen.com/2024/01/spring-boot-custom-passwordEncoder.html)
 
 ## Requirements
 - Java JDK 19
@@ -20,8 +22,8 @@ please open `src/main/resources/application.properties`
 
 all default accounts generated from `src/java/com/dimaslanjaka/springusermgr/entities/DatabaseSeeder.java`
 
-| Email | Password | ROLES |
-| :--- | :--- | :--- |
-| user@webmanajemen.com | user | ROLE_USER |
-| admin@webmanajemen.com | admin | ROLE_ADMIN |
-| multi@webmanajemen.com | multi | ROLE_USER, ROLE_ADMIN |
+| Email | Password | Roles | Token |
+| :--- | :--- | :--- | :--- |
+| user@webmanajemen.com | user | ROLE_USER | custom-token-for-user-account |
+| admin@webmanajemen.com | admin | ROLE_ADMIN | custom-token-for-admin-account |
+| multi@webmanajemen.com | multi | ROLE_USER, ROLE_ADMIN | custom-token-for-multi-account |

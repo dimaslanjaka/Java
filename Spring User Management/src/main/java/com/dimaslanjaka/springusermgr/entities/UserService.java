@@ -15,6 +15,14 @@ public interface UserService {
 
     User findUserByEmailPassword(String email, String password);
 
+    /**
+     * find user by token from table row 'token' (@Column User.token)
+     *
+     * @param token
+     * @return
+     */
+    User findUserByToken(String token);
+
     UserDto findUserById(Long userId);
 
     boolean doesUserExist(Long userId);

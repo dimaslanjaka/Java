@@ -81,6 +81,17 @@ public class UserServiceImpl implements UserService {
         return userRepository.findUserByEmail(email);
     }
 
+    /**
+     * find user by token from table row 'token' (@Column User.token)
+     *
+     * @param token
+     * @return
+     */
+    @Override
+    public User findUserByToken(String token) {
+        return userRepository.findUserByToken(token);
+    }
+
     @Override
     public User findUserByEmailPassword(String email, String password) {
         return userRepository.findUserByEmailAndPassword(email, password);
