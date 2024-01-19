@@ -27,3 +27,10 @@ all default accounts generated from `src/java/com/dimaslanjaka/springusermgr/ent
 | user@webmanajemen.com | user | ROLE_USER | custom-token-for-user-account |
 | admin@webmanajemen.com | admin | ROLE_ADMIN | custom-token-for-admin-account |
 | multi@webmanajemen.com | multi | ROLE_USER, ROLE_ADMIN | custom-token-for-multi-account |
+
+## Preview
+
+login using token programmatically
+![user](https://github.com/dimaslanjaka/Java/assets/12471057/397ba233-404b-4f18-b6ad-d12190dd819f)
+![admin](https://github.com/dimaslanjaka/Java/assets/12471057/46b34269-fe65-432d-b61e-5d2baa49a264)
+![multi](https://github.com/dimaslanjaka/Java/assets/12471057/d8103d7e-d3ee-4833-8385-e196a30c6632)
