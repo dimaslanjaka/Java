@@ -34,3 +34,8 @@ login using token programmatically
 ![user](https://github.com/dimaslanjaka/Java/assets/12471057/397ba233-404b-4f18-b6ad-d12190dd819f)
 ![admin](https://github.com/dimaslanjaka/Java/assets/12471057/46b34269-fe65-432d-b61e-5d2baa49a264)
 ![multi](https://github.com/dimaslanjaka/Java/assets/12471057/d8103d7e-d3ee-4833-8385-e196a30c6632)
+
+admin dashboard
+![admin dashboard](https://github.com/dimaslanjaka/Java/assets/12471057/dc2922cd-0966-41d1-ad49-eba6fb532d1b)
+user dashboard
+![user dashboard](https://github.com/dimaslanjaka/Java/assets/12471057/d97b24b5-f3c8-4b59-9e79-5ed7f4449520)
