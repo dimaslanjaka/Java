@@ -1,0 +1,7 @@
+{
+  "java.project.referencedLibraries": [
+    "build/classes/java/main",
+    "build/resources/main",
+    "lib/**/*.jar"
+  ]
+}
