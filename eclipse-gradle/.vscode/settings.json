@@ -1,7 +1,25 @@
 {
+  "java.project.outputPath": "build",
+  "java.import.generatesMetadataFilesAtProjectRoot": false,
+  "java.editor.reloadChangedSources": "auto",
+  "java.configuration.updateBuildConfiguration": "disabled",
+  "java.server.launchMode": "Hybrid",
   "java.project.referencedLibraries": [
     "build/classes/java/main",
     "build/resources/main",
     "lib/**/*.jar"
+  ],
+  "java.edit.smartSemicolonDetection.enabled": true,
+  "terminal.integrated.env.windows": {
+    "PATH": "${workspaceFolder};${workspaceFolder}\\bin;${workspaceFolder}\\node_modules\\.bin;${env:PATH}"
+  },
+  "terminal.integrated.env.linux": {
+    "PATH": "${workspaceFolder}:${workspaceFolder}/bin:${workspaceFolder}/node_modules/.bin:${env:PATH}"
+  },
+  "java.sharedIndexes.enabled": "off",
+  "java.project.resourceFilters": [
+    "node_modules",
+    "\\.git",
+    "\\.cache"
   ]
 }
